@@ -1,0 +1,20 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--任务-->
+	<class entity-name="t_taskdispatch" table="t_taskdispatch">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 任务id -->
+		<property name="f_taskid" type="int"/>
+		<!-- 执行人 -->
+		<property name="f_actor" type="string"/>
+		<!-- 任务方案 -->
+		<property name="f_way" type="string" length="1000"/>
+		<!-- 要求完成时间 -->
+		<property name="f_musttime" type="date"/>
+	</class>
+</hibernate-mapping>

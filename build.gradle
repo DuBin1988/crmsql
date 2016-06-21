@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+
+version = '1.0.0'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	maven {
+		url "http://125.76.225.203:3002/nexus/content/repositories/thirdparty/"
+	}
+	maven {
+		url "http://mvnrepository.com/artifact/"
+	}
+}
+
+dependencies {
+	compile(
+		"org.hibernate:hibernate-entitymanager:4.3.5.Final",
+		"org.springframework:spring-context:4.2.5.RELEASE",
+		"org.springframework:spring-orm:4.2.5.RELEASE",
+		"org.glassfish.jersey.containers:jersey-container-servlet:2.22.2",
+		"org.glassfish.jersey.media:jersey-media-json-jettison:2.22.2",
+		"aspectj:aspectjweaver:1.5.3",
+		"log4j:log4j:1.2.12",
+		"org.slf4j:slf4j-simple:1.5.8",
+		"commons-dbcp:commons-dbcp:1.2.2",
+		"af:expression:1.1.10",
+		"af:restful:1.0.3",
+		"javax.servlet:servlet-api:2.5",
+	)
+
+	testCompile(
+		"junit:junit:4.4",
+		"org.apache.httpcomponents:httpclient:4.1.2"
+	)
+
+	runtime(
+		"org.springframework:spring-web:4.2.5.RELEASE",
+		"org.glassfish.jersey.ext:jersey-spring3:2.22.2",
+		"jdbc:sqlserver:1",
+		"cglib:cglib:2.2"
+	)
+}
+
+task release(type:Exec) {
+	workingDir '.'
+	commandLine 'cmd', '/c', 'release.bat ' + version
+}

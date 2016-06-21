@@ -1,0 +1,33 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--任务-->
+	<class entity-name="t_task" table="t_task">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 任务名称 -->
+		<property name="f_name" type="string"/>
+		<!-- 任务状态：登记、已派、开始、完成 -->
+		<property name="f_state" type="string"/>
+		<!-- 任务内容 -->
+		<property name="f_content" type="string" length="1000"/>
+		<!-- 执行人 -->
+		<property name="f_actor" type="string"/>
+		<!-- 任务方案 -->
+		<property name="f_way" type="string" length="1000"/>
+		<!-- 要求完成时间 -->
+		<property name="f_musttime" type="date"/>
+		<!-- 项目id -->
+		<property name="f_projectid" type="int"/>
+		<!-- 父id -->
+		<property name="f_parentid" type="int"/>
+		<!-- 对应的子任务 -->
+		<set name="f_subtask" cascade="all-delete-orphan">
+          <key column="f_parentid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_task" not-found="exception" /> 
+        </set>
+	</class>
+</hibernate-mapping>

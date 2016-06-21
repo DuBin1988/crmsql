@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--项目-->
+	<class entity-name="t_project" table="t_project">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 项目名称 -->
+		<property name="f_name" type="string"/>
+		<!-- 项目人员个数 -->
+		<property name="f_persons" type="int"/>
+		<!--  父id -->
+		<property name="f_parentid" type="int"/>
+		<!-- 对应的子项目 -->
+		<set name="f_subproject" cascade="all-delete-orphan">
+          <key column="f_parentid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_project" not-found="exception" /> 
+        </set>
+	</class>
+</hibernate-mapping>
