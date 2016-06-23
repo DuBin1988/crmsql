@@ -16,9 +16,9 @@
 		class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-     	<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;database=restful;" />
+     	<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;database=newsellinggas;" />
  		<property name="username" value="sa" />
- 		<property name="password" value="000000" />
+ 		<property name="password" value="sqlserver" />
 	</bean>
  
 	<bean id="sessionFactory"

@@ -12,13 +12,13 @@ import org.apache.http.util.EntityUtils;
 // 测试项目查询
 public class TestProject extends TestCase {
 	public void testOne() throws Exception {
-		sql("项目查询", "{data: {condition: '1=1'}}");
+		sql("usergas", "{data:{startTime:'2016-04-01',endTime:'2016-04-10'}}");
 	}
 
 	private void sql(String name, String values) throws Exception {
 		String path = "http://localhost:8081/crmsql/rs/sql/"
 				+ URLEncoder.encode(name).replace("+", "%20");
-		// 创建POSTMethod
+		// 创建POSTMethod\
 		HttpPost postMethod = new HttpPost(path);/* 建立HTTP Post连线 */
 		StringEntity se = new StringEntity(values, "UTF-8");
 		postMethod.setEntity(se);

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
@@ -6,11 +6,14 @@
 
 	<session-factory>
 
-		<!-- JDBC connection pool (use the built-in) -->
+			<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">2</property>
 		
 		<!-- SQL dialect -->
 		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+		<!-- Enable Hibernate's automatic session context management
+		<property name="current_session_context_class">thread</property> -->
 
 		<!-- Disable the second-level cache  -->
 		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
@@ -21,13 +24,341 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property>
 		
-		<!-- 项目 -->
-        <mapping resource="hibernate/项目.hbm.xml"/>
-		<!-- 任务 -->
-        <mapping resource="hibernate/任务.hbm.xml"/>
-		<!-- 任务分派 -->
-        <mapping resource="hibernate/任务分派.hbm.xml"/>
+        <!-- 下面开始描述数据库信息 -->
+    
+        <!-- 参数信息 -->
+        <mapping resource="系统/param.hbm.xml" />
+        <!-- 系统用户表信息 -->
+        <mapping resource="系统/user.hbm.xml"/>
+        <!-- 人员角色信息 -->
+        <mapping resource="系统/role.hbm.xml"/>
+         <!--系统组织表信息 -->
+        <mapping resource="系统/organization.hbm.xml"/>
+        <!-- 编号 -->
+        <mapping resource="系统/serial.hbm.xml"/>
+        <!-- 单值管理 -->
+        <mapping resource="系统/singlevalue.hbm.xml"/>
+        <!-- 文件图片实体 -->
+        <mapping resource="系统/Blob.hbm.xml"/>
+        <!-- 气表品牌实体 -->
+        <mapping resource="系统/qibiao.hbm.xml"/>
+   	    <!--用气性质-->
+   	    <mapping resource="系统/usegas.hbm.xml" />  
+   	    <!--混合气价-->
+   	    <mapping resource="系统/hunhe.hbm.xml" />   
+   	    <!--卡编号-->
+   	    <mapping resource="系统/cardreset.hbm.xml" />
+   	    <!--民用壁挂炉采暖季参数-->
+   	    <mapping resource="系统/cainuanji.hbm.xml" />
+   	    <!--非民用限购参数-->
+   	    <mapping resource="系统/gsxiangou.hbm.xml" />
 		
+		<!-- 其他报表上传 -->
+		<mapping resource="营收/upload.hbm.xml"/>
+		
+        <!--用户档案表-->
+   	    <mapping resource="营收/userinfo.hbm.xml" />
+        <!--收费系统用户的表档案信息，一户多表-->
+   	    <mapping resource="营收/userfiles.hbm.xml" />
+   	    <!--抄表员信息表-->
+   	    <mapping resource="营收/inputtor.hbm.xml" />
+   	    <!--用气设备-->
+   	    <mapping resource="营收/devices.hbm.xml" />
+   	    <!--发卡-->
+   	    <mapping resource="营收/myfaka.hbm.xml" />
+   	    <!--补卡-->
+   	    <mapping resource="营收/renewalcard.hbm.xml" />
+   	    <!--补卡发票补打-->
+   	    <mapping resource="营收/bucardfapiao.hbm.xml" />
+   	    <!--换卡-->   	    
+   	    <mapping resource="营收/changcard.hbm.xml" />
+   	    <!--发折-->
+   	    <mapping resource="营收/fazhe.hbm.xml"  />
+   	    <!--补折-->
+   	    <mapping resource="营收/renewalpassbook.hbm.xml" />
+		<!--售气收费-->
+   	    <mapping resource="营收/sellinggas.hbm.xml"  />
+   	    <!--票证补打-->
+   	    <mapping resource="营收/repair.hbm.xml"  />
+   	    <!--读卡-->
+   	    <mapping resource="营收/reversal.hbm.xml"  />
+   	    <!--档案变更-->
+   	    <mapping resource="营收/fileschange.hbm.xml"  />
+   	    <!--变更列表明细-->
+   	    <mapping resource="营收/fileschangelist.hbm.xml"  />
+   	    <!--民用通气-->
+   	    <mapping resource="营收/aeratemanage.hbm.xml"  />
+   	    <!--非民用通气-->
+   	    <mapping resource="营收/gewerbeamt.hbm.xml"  />
+   	    <!--换表收费-->
+   	    <mapping resource="营收/managementfeesformetert.hbm.xml" />
+   	    <!--小区管理-->
+   	    <mapping resource="营收/area.hbm.xml"  />
+   	    <!--单位信息-->
+   	    <mapping resource="营收/unit.hbm.xml"  />
+   	    <!--重新发卡-->
+   	    <mapping resource="营收/returnfaka.hbm.xml"  />
+   	    <!--冲正-->
+   	    <mapping resource="营收/chongzheng.hbm.xml"  />
+   	    <!--抄表冲正-->
+   	    <mapping resource="营收/cbreversal.hbm.xml"  />
+   	     <!--修改卡费-->
+   	    <mapping resource="营收/xiugaikafei.hbm.xml"  />
+   	     <!--修改限购气量-->
+   	    <mapping resource="营收/xiangoujilui.hbm.xml"  />
+   	     <!--表灶销售费-->
+   	    <mapping resource="营收/stovefee.hbm.xml"  />
+   	     <!--维修费-->
+   	    <mapping resource="营收/repairefee.hbm.xml"  />
+   	    <!--制清零卡-->
+   	    <mapping resource="营收/clearzerocard.hbm.xml"  />
+   	     <!--制工程卡-->
+   	    <mapping resource="营收/itemcard.hbm.xml"  />
+   	    <!--制檫除卡-->
+   	    <mapping resource="营收/dropcard.hbm.xml"  />
+   	   	<!--航天卡解锁-->
+   	    <mapping resource="营收/initicard.hbm.xml"  />
+   	   	<!--掉气登记-->
+   	    <mapping resource="营收/lostgas.hbm.xml"  />
+   	    <!-- 擦除虚气量 -->
+   	    <mapping resource="营收/xuqiliang.hbm.xml" />
+   	    
+   	    <!-- 批量更新 -->
+   	    <mapping resource="营收/piliangchange.hbm.xml" />
+   	    <!-- 批量更新列表 -->
+   	    <mapping resource="营收/plchangelist.hbm.xml" />
+   	    <!-- 批量更新列表 -->
+   	    <mapping resource="营收/fileschangeslist.hbm.xml" />
+   	    
+   	      <!--机表抄表数据录入  -->
+   	     <mapping resource="营收/handplan.hbm.xml" />
+   	    <!-- 自动下账 -->
+   	    <mapping resource="营收/automaticxz.hbm.xml" />
+   	     <!-- 机表缴费 -->
+   	    <mapping resource="营收/jbpay.hbm.xml" />
+         <!-- 账号信息  -->
+   	     <mapping resource="营收/account.hbm.xml" />
+   	     <!-- 用户事物过户管理  -->
+   	     <mapping resource="营收/transfer.hbm.xml" />                                                                         
+   	     <!-- 停用  -->
+   	     <mapping resource="营收/stopgas.hbm.xml" />
+   	     <!-- 启用  -->
+   	     <mapping resource="营收/enabled.hbm.xml" />
+   	      <!--销户  -->
+   	     <mapping resource="营收/cancellation.hbm.xml" />
+   	     <!-- 换表管理  -->
+   	     <mapping resource="营收/changmeter.hbm.xml" />
+   	     <!-- 补气  -->
+   	     <mapping resource="营收/fillgas.hbm.xml" />
+   	     <!-- 清零  -->
+   	     <mapping resource="营收/clearzero.hbm.xml" />
+   	      <!-- 抄表记录  -->
+   	     <mapping resource="营收/mrinput.hbm.xml" />
+   	     <!-- 下账记录  -->
+   	     <mapping resource="营收/xiaccount.hbm.xml" />
+   	     <!-- 抄表计划  -->
+   	     <mapping resource="营收/mrplan.hbm.xml" />
+   	     <!-- 其他补气  -->
+   	     <mapping resource="营收/otherfillgas.hbm.xml" />
+   	     <!-- 发票记录  -->
+   	     <mapping resource="营收/fapiaoinfos.hbm.xml" />
+   	     <!-- 气价类型修改  -->
+   	     <mapping resource="营收/priceedit.hbm.xml" />
+   	     <!-- 抄表撤销 -->
+   	     <mapping resource="营收/recordcancel.hbm.xml"/>
+   	      <!-- 公告管理 -->
+   	     <mapping resource="营收/gonggao.hbm.xml"/>
+   
+   	      <!-- 临时地址 -->
+   	    <mapping resource="营收/gasaddresstemp.hbm.xml"/>
+   	     
+      
+   	    <!--订正气表品牌-->
+   	    <mapping resource="营收/metertypeedit.hbm.xml" />
+   	    <!--非民用抄表-->
+   	    <mapping resource="营收/feimychaobiao.hbm.xml" />
+   	    <!--稽查生成条件-->
+   	    <mapping resource="营收/inspect.hbm.xml" />
+   	    <!--稽查明细-->
+   	    <mapping resource="营收/inspectdetail.hbm.xml" />
+   	    <!--其他收费-->
+   	    <mapping resource="营收/otherfee.hbm.xml" />
+   	    <!--用气地址-->
+   	    <mapping resource="营收/gasaddress.hbm.xml" />
+   	     <!--民用抄表单条件-->
+   	    <mapping resource="营收/handpapercond.hbm.xml" />
+   	    <!--非民用抄表单添加-->
+   	    <mapping resource="营收/handpapercondfmy.hbm.xml" />
+   	    <!--滞纳金修改-->
+   	    <mapping resource="营收/zhinajinxiugai.hbm.xml" />
+   	    <!--保证金管理-->
+   	    <mapping resource="营收/fmybaozhengjin.hbm.xml" />
+   	    <!--发票领用-->
+   	    <mapping resource="营收/invoicewith.hbm.xml" />
+   	    <!--发票分配-->
+   	    <mapping resource="营收/invoicedistribution.hbm.xml" />
+   	    <!--免交气费-->
+   	    <mapping resource="营收/mianjiao.hbm.xml" />
+   	    <!--财务单独开发票功能-->
+   	    <mapping resource="营收/kaipiao.hbm.xml" />
+   	    <!--短信发送-->
+   	    <mapping resource="营收/sms.hbm.xml" />  
+   	   <!--银行反盘-->
+   	   <mapping resource="营收/bankreturn.hbm.xml" />
+   	     <!--交费方式转换-->
+   	   <mapping resource="营收/changepayment.hbm.xml" />
+   	    <!--置忙时间记录-->
+   	    <mapping resource="营收/清欠明细.hbm.xml"/>
+     
+   	     <!-- 街道 -->
+   	    <mapping resource="营收/road.hbm.xml"/>
+	<!--安检员位置-->
+   	    <mapping resource="营收/geolocation.hbm.xml" />	
+	  <!-- 安检计划-->
+        <mapping resource="安检/checkplan.hbm.xml"/>
+        <!-- 安检计划项-->
+        <mapping resource="安检/checkplanline.hbm.xml"/>
+		<!--入户安检-->
+        <mapping resource="安检/inspection.hbm.xml"/>
+		<!--入户安检详情-->
+        <mapping resource="安检/inspectionline.hbm.xml"/>
+		<!--用户档案-->
+        <mapping resource="安检/userarchive.hbm.xml"/>
+        <!--维修结果-->
+        <mapping resource="安检/repairresult.hbm.xml"/>
+        <!--物联网表消息表-->
+        <mapping resource="安检/cbinfolist.hbm.xml"/>
+       
+ <!--xz-->      
+        <!--报建申请-->
+   	    <mapping resource="报装/apply.hbm.xml" />
+ 	    <!--附件信息-->
+   	    <mapping resource="报装/applyannex.hbm.xml" />
+   	    <!--报建申请 花名册-->
+   	    <mapping resource="报装/applycustomer.hbm.xml" />
+            <!-- 图片信息 -->
+   	    <mapping resource="报装/applyimage.hbm.xml"/>
+	    <!-- 报装中六级地址 -->
+   	    <mapping resource="报装/area2.hbm.xml" />
+ 	    <!--费用减免明细-->
+   	    <mapping resource="报装/costreduction.hbm.xml" />
+   	    <!-- 不具备安装条件的客户照片 -->
+   	    <mapping resource="报装/customerimage.hbm.xml"/>
+   	    <!--报建用气设备-->
+   	    <mapping resource="报装/device.hbm.xml" />
+   	    <!-- 用气设备图片信息 -->
+   	    <mapping resource="报装/deviceimage.hbm.xml"/>
+   	    <!-- 报装中用气性质 -->
+   	    <mapping resource="报装/gasproperties.hbm.xml" />
+   	    <!--交费明细-->
+   	    <mapping resource="报装/paydetail.hbm.xml" />
+   	    <!-- 管线  -->
+   	    <mapping resource="报装/pipeline.hbm.xml"/>
+   	    <!--施工单位对照表-->
+   	    <mapping resource="报装/sgdwconvert.hbm.xml" />
+   	    <!-- 管线线路 -->
+   	    <mapping resource="报装/tunnel.hbm.xml" />
+   	    <!-- 报装中用户信息 -->
+   	    <mapping resource="报装/userbz.hbm.xml" />
+
+	  <!-- 冲正记录 -->
+   	    <mapping resource="报装/reversalmx.hbm.xml" />
+   	    <!-- 补打记录 -->
+   	    <mapping resource="报装/makemissing.hbm.xml" />
+   	     <!-- 工作日志 -->
+   	    <mapping resource="报装/worklog.hbm.xml" />
+		 <!-- 费用变更 -->
+   	    <mapping resource="报装/feechange.hbm.xml" />
+		<!-- 报验验收  -->
+   	    <mapping resource="报装/projectplan.hbm.xml"/>
+ 		<!-- 转气转费 -->
+   	    <mapping resource="营收/switchmoney.hbm.xml" />
+   	     <!-- 转气转费记录补打 -->
+   	    <mapping resource="营收/switchmoneyrepairb.hbm.xml" />
+
+ <!-- 押金 -->
+   	    <mapping resource="营收/yajin.hbm.xml" />
+
+
+
+
+
+
+   	    <!-- 卡号重复 -->
+   	    <mapping resource="系统/cardrepeat.hbm.xml" />
+   	    <!-- 交费记录维护 -->
+   	    <mapping resource="营收/upkeep.hbm.xml" />
+   	    <!-- 档案变更记录-->
+   	    <mapping resource="营收/userfileschange.hbm.xml" />
+   	    <!--修改抄表记录-->
+   	    <mapping resource="营收/updatehandplan.hbm.xml"  />
+   	    
+        <!--修改收费记录-->
+   	    <mapping resource="营收/updatesellinggas.hbm.xml"  />
+
+          <!--修改其他收费记录-->
+   	    <mapping resource="营收/updateotherfee.hbm.xml"  />
+   	       <!--补卡撤销-->
+   	    <mapping resource="营收/renewalcardcancel.hbm.xml"/>
+      
+
+         <!--修改发卡记录-->
+   	    <mapping resource="营收/updatemyfaka.hbm.xml"  />
+   	    <!-- 欠费结余信息-->
+   	    <mapping resource="营收/qianfeijieyu.hbm.xml" />
+   	    <!-- 阶梯气价信息-->
+   	    <mapping resource="营收/stairprice.hbm.xml" />
+   	    <!-- 阶梯气价变更信息-->
+   	    <mapping resource="营收/changestairprice.hbm.xml" />
+ 
+   	    <!-- 地址管理-->
+   	    <mapping resource="营收/design_address.hbm.xml" />
+   	    
+ 
+       
+       <mapping resource="系统/repairsman.hbm.xml"/>
+        <!--优先接入电话 -->
+        <mapping resource="系统/teshuhaoma.hbm.xml" /> 
+        <!--ip与语言通道设置 -->
+        <mapping resource="系统/iptongdao.hbm.xml" />
+        <mapping resource="系统/comingrecord.hbm.xml" />
+        <mapping resource="系统/screenset.hbm.xml" />  
+  
+         
+
+   	    <!--知识库-->
+   	    <mapping resource="呼叫/knowledge.hbm.xml" />
+   	    <!--停气公告-->
+   	    <mapping resource="呼叫/stopgonggao.hbm.xml" />
+   	     <!--报修系统-->
+   	    <mapping resource="呼叫/repairsys.hbm.xml" />
+   	
+   	    <!--安检表-->
+   	    <mapping resource="呼叫/safety.hbm.xml" />
+   	    <!--短信表-->
+   	    <mapping resource="呼叫/note.hbm.xml" />
+   	    <!--置忙时间记录-->
+   	    <mapping resource="呼叫/opbusyrecord.hbm.xml"/>
+   	    
+   	    <!-- 抄表记录 -->
+   	    <mapping resource="营收/cbnum.hbm.xml"/>
+   	    <!-- 接口执行记录 -->
+   	    <mapping resource="营收/cbtblog.hbm.xml"/>
+   	    <mapping resource="营收/table_tel.hbm.xml"/>
+   	    <mapping resource="营收/cbstatuslog.hbm.xml"/>       
+   	    <mapping resource="营收/cbgas.hbm.xml"/>   
+   	    <mapping resource="营收/cbmeiriduizhang.hbm.xml"/>  
+   	    <mapping resource="营收/smstemplate.hbm.xml"/>  
+   	    <mapping resource="营收/reduction.hbm.xml" />
+   	    <mapping resource="营收/refund.hbm.xml"/>  
+   	    <mapping resource="营收/zhinajindate.hbm.xml"/>  
+   	    <!--保存回收率报表-->
+   	    <mapping resource="营收/hslsave.hbm.xml"/>
+   	    <!--转费管理-->
+   	    <mapping resource="营收/zhuanfei.hbm.xml" />
+   	    <!--重发卡售气-->
+   	    <mapping resource="营收/refaka.hbm.xml" />
+       
 	</session-factory>
   
 </hibernate-configuration>

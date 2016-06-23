@@ -4,4 +4,10 @@
 
 	<!-- 给项目查询提供基础 -->
 	<sql alias='项目汇总' path='项目汇总.sql'/>
+	
+	<!-- 小区用户售气情况查询 -->
+	<sql alias='usergas' path='usergas.sql'/>
+	<!-- 日现金气量核对 -->
+	<sql alias='dailygas' path='dailygas.sql'/>
+	
 </cfg>
