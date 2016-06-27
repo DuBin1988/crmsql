@@ -1,5 +1,5 @@
 //民用日现金气量核对
-//month：月份,districtname:小区名称
+//month：月份
 //return：日期，居民气量，实际金额，户数，用户气量单价
 select 
 	SUBSTRING(CONVERT(varchar,f_deliverydate,120),1,11) as f_deliverydata,
