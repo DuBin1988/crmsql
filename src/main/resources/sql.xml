@@ -19,4 +19,11 @@
 	
 	<!-- 非民用日现金气量核对-->
 	<sql alias='nocivil' path='nocivil.sql'/>
+	
+	<!-- 小区抄表 统计表-->
+	<sql alias='districthandplan' path='districthandplan.sql'/>
+	
+	<!-- 抄表信息汇总表 -->
+	<sql alias='infohandplan' path='infohandplan.sql'/>
+	
 </cfg>
