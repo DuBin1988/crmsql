@@ -26,4 +26,7 @@
 	<!-- 抄表信息汇总表 -->
 	<sql alias='infohandplan' path='infohandplan.sql'/>
 	
+	<!-- 机表欠费报表 -->
+	<sql alias='machinetable_owe' path='machinetable_owe.sql'/>
+	
 </cfg>
