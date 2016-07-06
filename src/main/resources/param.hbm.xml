@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--参数-->
+	<class entity-name="param" table="t_parameter">
+	    <id name="id" column="id" type="string"/>   
+		<property name="name" type="string"/>
+	</class>
+	<class entity-name="paramvalue" table="t_paramvalue">
+	    <id name="id" column="id" type="string"/>   
+		<property name="name" type="string"/>
+		<property name="code" type="string"/>
+		<many-to-one name="param" column="processid" entity-name="param" />
+	</class>
+</hibernate-mapping>

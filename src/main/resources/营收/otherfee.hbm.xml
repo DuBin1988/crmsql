@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--其他收费-->
+    <class   entity-name="t_otherfee" table="t_otherfee" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--收费有效类型-->
+		<property name="f_payfeevalid" type="string"/>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--收费操作类型-->
+		<property name="f_feetype" type="string"/>
+		<!--配件数量-->
+		<property name="f_peijiannum" type="int"/>
+		<!--费用-->
+		<property name="f_fee" type="double"/>
+		
+        <!--卡号-->
+		<property name="f_cardid" type="string"/>
+		
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--门牌号-->
+		<property name="f_menpai" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+	
+		<!--备注-->
+		<property name="f_cnote" type="string" length="500"/>		
+		<!--冲正备注-->
+		<property name="f_conclenote" type="string" length="500"/>
+		<!--网点-->
+		<property name="f_parentname4" type="string"/>
+		<!--操作人-->
+		<property name="f_cmoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_cmdate" type="date"/>
+		<!--维护、销售日期-->
+		<property name="f_selldate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--申请附件信息-->
+    <class   entity-name="t_applyannex" table="t_applyannex" >	
+		<id name="id" type="string"/>
+		<!-- 附件名称 -->
+		<property name="filename" type="string"/>
+		<!-- 附件信息名称和描述 -->
+	    <property name="f_description" type="string"></property>  
+	</class> 
+</hibernate-mapping>

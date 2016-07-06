@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--补卡撤销表-->
+	<class  entity-name="t_renewalcardcancel" table="t_renewalcardcancel" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--苍南补卡次数-->
+		<property name="f_cnbukacishu" type="int"/>
+		<!--次数-->
+		<property name="f_times" type="int"/>
+		<!--0-->
+		<property name="f_ling" type="int"/>
+		<!--海力表型编码-->
+		<property name="f_watchnum" type="string"/>
+		<!--脉冲(表系数)-->
+		<property name="f_maichong" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!-- 用户/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--地址-->	
+		<property name="f_address" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--卡费-->
+		<property name="f_cardfees" type="double"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--卡 编 号-->
+		<property name="f_cardnumber" type="string"/>
+		<!--新卡编号-->
+		<property name="f_newcardnumber" type="string"/>
+		<!--补卡原因-->
+		<property name="f_rcreason" type="string"/>
+		<!--部门-->
+		<property name="f_parentname" type="string"/>
+		<!--补卡日期-->
+		<property name="f_recoverycarddate" type="date"/>
+		<!--补卡时间-->
+		<property name="f_recoverycardtime" type="time"/>
+		<!--操作人-->
+		<property name="f_rcoperator" type="string"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+
+<!--隐藏域 -->	
+		<!--补卡标记-->
+		<property name="f_buka" type="string"/>
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--气量-->
+		<property name="f_pregas" type="double"/>
+	    
+	    <!-- 撤销人 -->	
+	  	<property name="f_canceloperator" type="string"/>
+	    <!-- 撤销日期 -->
+	    <property name="f_canceldate" type="date"/>
+	    <!-- 撤销时间 -->	
+	    <property name="f_canceltime" type="time"/>
+	    <!-- 撤销原因 -->	
+		<property name="f_cancelreason" type="string"/>
+	
+			 
+</class>
+</hibernate-mapping>

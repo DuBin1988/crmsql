@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--用气性质-->
+	<class entity-name="gasproperties" table="t_gasproperties">
+	    <id name="id"  type="string"/>
+	    <!--用气性质 -->   
+		<property name="f_gasproperties" type="string"/>
+	    <set name="qijiatype" cascade="all-delete-orphan">
+          <key column="parentid" on-delete="noaction" />
+          <one-to-many entity-name="qijiatype" not-found="exception"/>        
+        </set>
+	</class>
+	<class entity-name="qijiatype" table="t_qijiatype">
+	    <id name="id" type="string"/> 
+	    <!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="string"/>
+	</class>
+</hibernate-mapping>

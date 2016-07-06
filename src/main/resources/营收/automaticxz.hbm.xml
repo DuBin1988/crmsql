@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--自动下帐-->
+    <class   entity-name="t_automaticxz" table="t_automaticxz" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+	  <!--分公司名称-->
+		<property name="f_filiale" type="string"/>
+	<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>	
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--小区-->
+		<property name="f_districtname" type="string"/>
+	    <!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--应交气量-->
+		<property name="oughtamount" type="double"/>
+		<!--应交金额-->
+		<property name="oughtfee" type="double"/>
+		 <!--上次结算余额-->
+		<property name="f_zhye" type="double"/>
+		<!--本次结算余额-->
+		<property name="f_bczhye" type="double"/>
+		<!--总金额-->
+		<property name="money" type="double"/>
+			<!--是否缴费-->
+		<property name="shifoujiaofei" type="string"/>
+			<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--操 作 员-->
+		<property name="f_operator" type="string"/>
+		<!--网点-->
+		<property name="f_network" type="string"/>
+	<!--操作时间-->
+		<property name="f_stime" type="time"/>
+		<!--日期-->
+		<property name="f_inputdate" type="date"/>
+	
+	</class>
+</hibernate-mapping>

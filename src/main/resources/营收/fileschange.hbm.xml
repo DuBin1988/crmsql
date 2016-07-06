@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--档案变更主表-->
+    <class   entity-name="t_fileschange" table="t_fileschange" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		
+	 	<!--变更明细 --> 
+	    <set name="f_changeid" cascade="all-delete-orphan">
+          <key column="changeid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_fileschangelist" not-found="exception" /> 
+        </set>
+        
+		<!--变更原因-->
+		<property name="f_changereason" type="string"/>
+		<!--分公司id-->
+		<property name="f_fengongsinum" type="string"/>
+		<!--分公司名称-->
+		<property name="f_filiale" type="string"/>
+		<!--部门-->
+		<property name="f_department" type="string"/>
+		<!--操作员-->
+		<property name="f_operator" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+		<!--时间-->
+		<property name="f_time" type="time"/>
+		<property name="f_count" type="int"/>
+	</class>
+</hibernate-mapping>

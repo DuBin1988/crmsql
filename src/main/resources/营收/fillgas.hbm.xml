@@ -1,0 +1,100 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--补气-->
+    <class   entity-name="t_fillgas" table="t_fillgas" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--备注，主要显示是否旧系统未补完气量-->
+		<property name="f_cnote" type="string"/>
+		<!--临时用1-->
+		<property name="f_yi" type="int"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户地址-->
+		<property name="f_address" type="string"/>
+		<!--身份证号-->	
+		<property name="f_idnumber" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--新表号-->
+		<property name="f_cmnewmeternumber" type="string"/>
+		<!--补气量-->
+		<property name="f_cmaddgas" type="double"/>
+		<!--上次剩余补气量-->
+		<property name="f_nextaddgasamount" type="double"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--补气单号-->
+		<property name="f_addgasnum" type="string"/>
+		
+		<!--本次补气量-->
+		<property name="f_pregas" type="double"/>
+		<!--本次剩余补气量-->
+		<property name="f_thisnextaddgasamount" type="double"/>
+		<!--补气原因-->
+		<property name="f_addgasreason" type="string"/>
+		<!--补气日期-->
+		<property name="f_addgasdate" type="date"/>
+		<!--补气类型-->
+		<property name="f_addgastype" type="string"/>
+		<!--部门-->
+		<property name="f_parentname5" type="string"/>
+		<!--操作日期-->
+		<property name="f_fdate" type="date"/>
+		<!--操作人-->
+		<property name="f_foperator" type="string"/>
+		<!-- 分公司 -->
+		<property name="f_filiale6" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum6" type="string"/>
+		<!--表型号对应类型-->
+		<property name="f_type" type="string"/>
+		
+		<property name="parentid" type="string"/>
+		<!--换表表费-->
+		<property name="f_watchfee" type="double"/>
+		<!--卡费-->
+		<property name="f_cardfees" type="double"/>
+		<!--费用合计-->
+		<property name="f_heji" type="double"/>
+		
+		<!--隐藏域 -->		
+		<!--购气次数-->
+		<property name="f_times" type="int"/>
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+
+		<!--是否有效-->
+		<property name="f_valid" type="string"/>	
+		<!--初始化卡购气标记-->
+		<property name="f_initcardsellgas" type="string"/>
+		<!--公司组织代码-->
+		<property name="f_OrgStr" type="string"/>	
+		<!--上次购气量-->
+		<property name="f_ThePreGas" type="double"/>
+		<!--上上次购气量-->
+		<property name="f_LastPreGas" type="double"/>
+		<!--上上上次购气量-->
+		<property name="f_LastLastPreGas" type="double"/>
+		<!--chaobdishu-->
+		<property name="lastinputgasnum" type="double"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--用户编号-->
+		<property name="f_userinfoid" type="string" />
+	</class>
+</hibernate-mapping>

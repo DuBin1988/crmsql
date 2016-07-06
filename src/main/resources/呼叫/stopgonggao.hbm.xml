@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--停气公告-->
+    <class   entity-name="t_stopgonggao" table="t_stopgonggao" >
+		<id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--停气编号-->
+		<property name="f_stopgasid" type="string"/>
+		<!--是否显示在报修页面-->
+		<property name="f_displayrepair" type="string"/>
+		<!--停气路段-->	
+		<property name="f_stopgasroad" type="string"/>
+		<!--停气原因-->
+		<property name="f_stopgascause" type="string"/>
+		<!--影响范围-->
+		<property name="f_influence" type="string"/>
+		<!--施工单位-->	
+		<property name="f_constructunit" type="string"/>
+		<!--停气时间-->	
+		<property name="f_stopgassj" type="time"/>
+		<!--停气日期-->	
+		<property name="f_stopgasrq" type="date"/>
+		<!--预计通气时间-->	
+		<property name="f_expectegassj" type="time"/>
+		<!--预计通气日期-->	
+		<property name="f_expectegasrq" type="date"/>
+		<!--通知人-->	
+		<property name="f_noticemai" type="string"/>
+		<!--电话-->	
+		<property name="f_rpmanphone" type="string"/>
+		<!--操作日期-->	
+		<property name="f_operatedate" type="date"/>
+		<!--操作员-->	
+		<property name="f_operateman" type="string"/>
+		<!--部门-->	
+		<property name="f_department" type="string"/>
+		
+	</class>
+</hibernate-mapping>

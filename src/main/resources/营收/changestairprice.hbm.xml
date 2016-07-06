@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--阶梯气价信息-->
+    <class   entity-name="t_changestairprice" table="t_changestairprice" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--阶梯气价类型-->
+		<property name="f_stairtype" type="string"/>
+		<!--阶段一气量-->
+		<property name="f_stair1amount" type="double"/>
+		<!--阶段一单价-->
+		<property name="f_stair1price" type="double"/>
+		<!--阶段二气量-->
+		<property name="f_stair2amount" type="double"/>
+		<!--阶段二单价-->
+		<property name="f_stair2price" type="double"/>
+		<!--阶段三气量-->
+		<property name="f_stair3amount" type="double"/>
+		<!--阶段三单价-->
+		<property name="f_stair3price" type="double"/>
+		<!--超过阶梯三单价-->
+		<property name="f_stair4price" type="double"/>
+		<!--阶段月数-->
+		<property name="f_stairmonths" type="int"/>
+		<!--操作人-->
+		<property name="f_operator" type="string"/>
+		<!--操作日期-->
+		<property name="f_operdate" type="date"/>
+		<!--操作总数-->
+		<property name="f_counts" type="int"/>
+		<!--用户类型条件-->
+		<property name="f_usertype" type="string"/>
+		<!--气表类型条件-->
+		<property name="f_gasmeterstyle" type="string"/>
+		<!--气价类型条件-->
+		<property name="f_gaspricetype" type="string"/>
+		
+	</class>
+</hibernate-mapping>

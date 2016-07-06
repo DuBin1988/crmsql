@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class entity-name="T_REPAIR_RESULT" table="T_REPAIR_RESULT">
+    	 <!--uuid-->
+        <id name="id" type="string">
+        </id>
+        <!--安检单编号-->
+        <property name="INSPECTION_ID" type="string">
+        </property>
+		<!-- 维修结果-->
+		<property name="CONTENT" type="string">
+		</property>
+    </class>
+</hibernate-mapping>

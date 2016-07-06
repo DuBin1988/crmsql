@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="T_INSPECTION_LINE" table="T_INSPECTION_LINE">
+        <id name="id" type="string">
+         <generator class="uuid.hex"></generator>
+        </id>
+        <!-- 设备 -->
+        <property name="EQUIPMENT" type="string">
+        </property>
+        <!-- progid -->
+        <property name="PARAM" type="string">
+        </property>
+        <!-- 参数值 -->
+        <property name="VALUE" type="string">
+        </property>
+        <!-- 中文名 -->
+        <property name="NAME" type="string">
+        </property>
+        <!-- 备注 -->
+        <property name="BZ" type="string">
+        </property>
+    </class>
+</hibernate-mapping>

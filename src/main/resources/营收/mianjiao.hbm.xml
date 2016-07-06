@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--免交气费-->
+	<class entity-name="t_mianjiao" table="t_mianjiao" >
+	  <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>	
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--门牌号 -->
+		<property name="f_apartment" type="string"/>
+		<!--小区-->
+		<property name="f_districtname" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--上次抄表底数-->
+		<property name="lastinputgasnum" type="double"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表编号-->
+		<property name="f_meternumber" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--气表类型-->
+		<property name="f_gasmeterstyle" type="string"/>
+		<!--分公司名称-->
+		<property name="f_filiale" type="string"/>
+				
+		<!--免交金额-->
+		<property name="f_mianfee" type="double"/>
+		<!--免交类型-->
+		<property name="f_miantype" type="string"/>
+        <!--上次账户余额-->
+		<property name="f_zhye" type="double"/>
+		<!--本次余额-->
+		<property name="f_bczhye" type="double"/>
+		<!--网点-->
+		<property name="f_network" type="string"/>
+		<!--操 作 员-->
+		<property name="f_operator" type="string"/>
+	    <!--操作时间-->
+		<property name="f_stime" type="time"/>
+		<!--日期-->
+		<property name="f_inputdate" type="date"/>
+		
+	</class>
+</hibernate-mapping>

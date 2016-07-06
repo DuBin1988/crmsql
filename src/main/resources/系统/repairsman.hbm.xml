@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--维修人及电话-->
+	<class entity-name="repairsman" table="t_repairsman">
+		<id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+	    <!--维修人姓名-->   
+	    <property name="man" type="string"/>
+	    <!--维修人电话-->   
+	    <property name="phone" type="string"/>
+	    <!--维修人状态-->   
+	    <property name="f_repairsmanstate" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--转费记录-->
+    <class   entity-name="t_switchmoney" table="t_switchmoney" >
+		 <id name="ID" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--转出编号-->
+		<property name="f_userid" type="string"/>
+		<!--转出用户/单位名称-->
+		<property name="f_username" type="string"/>
+	    <!--转出楼号-->
+		<property name="f_cusDom" type="string"/>
+		<!--转出门牌号-->
+		<property name="f_apartment" type="string"/>
+		<!--开户日期-->
+		<property name="f_dateofopening"  type="date"/>
+	
+	
+	
+		<!--转出表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--转费原因-->
+		<property name="f_outfeereason" type="string"/>
+		<!--转费日期-->
+		<property name="f_outfeetime"  type="date"/>
+		<!--转气手续费-->
+		<property name="f_movepoundage" type="string"/>
+		<!--经办人-->
+		<property name="f_byman" type="string"/>
+		<!--备注-->
+		<property name="f_remark" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--累计购气量-->
+		<property name="f_allgasnum" type="double"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		
+		
+		<!--当前用气指数-->
+		<property name="f_watchreading" type="double"/>
+		<!--余 气 量-->
+		<property name="f_remaingas" type="double"/>
+		<!--底    数-->
+		<property name="f_basenumber" type="double"/>
+		<!--转出气量-->
+		<property name="f_outgasno" type="double"/>
+		<!--转出前金额-->
+		<property name="f_yhju" type="double"/>
+		<!--转出气费金额-->
+		<property name="f_outmoney" type="double"/>
+		<!--用气押金转出-->
+		<property name="f_depositout" type="string"/>
+		<!--维修费转出-->
+		<property name="f_whfout" type="string"/>
+		<!--维修费转出后维修费日期-->
+		<property name="f_outbeginfee" type="date"/>
+	
+	
+		<!--付手续费方-->
+		<property name="f_switchin" type="string"/>
+		<!--转入编号-->
+		<property name="f_inid" type="string"/>
+		<!--转入用户/单位名称-->
+		<property name="f_inarea" type="string"/>
+		<!--转入楼号-->
+		<property name="f_incusdom" type="string"/>
+		<!--转入门牌号-->
+		<property name="f_inapartment" type="string"/>
+		
+		
+		
+		<!--转入表号-->
+		<property name="f_inwatchno" type="string"/>
+		<!--转入原累计购气量-->
+		<property name="f_oldsumgasno" type="double"/>
+			<!--转入总累计购气量-->
+		<property name="f_newcumulativepurchase" type="double"/>
+		
+	
+		
+		<!--转入现累计购气量-->
+		<property name="f_newsumgasno" type="double"/>
+		<!--用气押金转入-->
+		<property name="f_depositin" type="string"/>
+		<!--写卡类型-->
+		<property name="f_writecardtype" type="string"/>
+		<!--维修费起始月份-->
+		<property name="f_beginfee" type="date"/>
+		
+			<!--维修费可转出月数-->
+		<property name="f_canoutwxf" type="int"/>
+		 	
+		
+		
+		<!--转入后维修费起始月份-->
+		<property name="f_inbeginfee" type="date"/>
+	
+		<!--转入后维修费起始月份-->
+		<property name="f_innewbeginfee" type="date"/>
+	
+	
+	
+		<!--维修费截至月份-->
+		<property name="f_endfee" type="date"/>
+		<!--维护费交费月数-->
+		<property name="f_repairnum" type="double"/>
+		<!--维修费金额-->
+		<property name="f_amountmaintenance" type="double"/>
+		<!--转入前金额-->
+		<property name="f_zyryhjy" type="double"/>
+		<!--转入金额-->
+		<property name="f_newmoney" type="double"/>
+		<!--转入气价-->
+		<property name="f_newgasprice" type="double"/>
+		
+		<!--网　　点-->
+		<property name="f_sgnetwork" type="string"/>
+		<!--操 作 员-->
+		<property name="f_sgoperator" type="string"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!--备注-->
+		<property name="f_beizhu" type="string"/>
+		
+		<!--区域码-->
+		<property name="f_communityid" type="string"/>
+		<!--行政区域-->
+		<property name="f_region" type="string"/>
+		<!--用户管理员-->
+		<property name="f_usermaneger" type="string"/>
+		
+		<!-- 查询用 -->
+		<property name="yi" type="int"/>
+		
+			<!--转出用户用户性质-->
+		<property name="f_yhxz" type="string"/>
+	
+		<!--转人用户用户折子号-->
+		<property name="f_inuserzherownum" type="int"/>
+	
+		<!--转出用户用户折子号-->
+		<property name="f_outuserzherownum" type="int"/>
+	
+	
+		<!--卡内气量-->
+		<property name="f_kaneqiliang" type="double"/>
+	</class>
+</hibernate-mapping>

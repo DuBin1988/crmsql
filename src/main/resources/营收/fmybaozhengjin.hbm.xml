@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--用户事物过户管理-->
+    <class   entity-name="t_zhuijia" table="t_zhuijia" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--过户费-->
+		<property name="f_baozhangjin" type="double"/>
+		<!--追加费-->
+		<property name="f_zhuijia" type="double"/>
+		<!--备注-->
+		<property name="f_notnull" type="string"/>
+		
+		<!--部门-->
+		<property name="f_departments" type="string"/>
+		<!--操作人-->
+		<property name="f_toperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_tdate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+			<!-- 缴费类型-->
+		<property name="f_payfeetype" type="string"/>
+	
+		
+	</class>
+</hibernate-mapping>

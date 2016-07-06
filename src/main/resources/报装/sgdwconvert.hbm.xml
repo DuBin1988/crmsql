@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--施工单位简写对照表-->
+    <class   entity-name="t_sgdwconvert" table="t_sgdwconvert" >
+		<id name="id" type="string">
+			
+		</id>
+		<!--施工单位全称-->
+		<property name="f_quancheng" type="string"/>
+		<!--简写-->
+		<property name="f_suoxie" type="string"/>
+		
+	</class> 
+</hibernate-mapping>

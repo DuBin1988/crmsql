@@ -1,0 +1,27 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!--清零卡-->
+	<class entity-name="t_clearzerocard" table="t_clearzerocard" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>		
+		<!--部门-->
+		<property name="f_parentname" type="string"/>
+		<!--操作员-->
+        <property name="f_operator" type="string"/>
+		<!--制卡日期-->
+		<property name="f_date" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+     
+	</class>
+</hibernate-mapping>

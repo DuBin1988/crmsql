@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--抄表员信息-->
+	<class entity-name="t_inputtor" table="t_inputtor">
+	   <id name="ID" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!-- 抄表员姓名 -->
+		<property name="f_inputtor" type="string"/>
+		<!-- 抄表员电话 -->
+		<property name="f_phone" type="string"/>
+	 	<!-- 操作日期 -->
+	 	<property name="f_operatedate" type="string"/>
+		<!--操作员 -->
+		<property name="f_operator" type="string"/>
+		<!-- 分公司 -->
+		<property name="f_branch" type="string"/>
+		
+	</class>
+</hibernate-mapping>

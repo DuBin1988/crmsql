@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--公告-->
+	<class  entity-name="t_gonggao" table="t_gonggao" dynamic-update="true">
+		 <id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--标题-->
+		<property name="title" type="string"/>
+		<!--内容-->
+		<property name="comtext" type="string" length="2000"/>
+		<!--操作人-->
+		<property name="f_coperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_cdate" type="date"/>
+	
+	
+     
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--用户事物过户管理-->
+    <class   entity-name="t_transfer" table="t_transfer" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--证件类型-->
+		<property name="f_credentials" type="string"/>
+		<!--证件号码-->
+		<property name="f_idnumber" type="string"/>
+		<!--新用户姓名-->
+		<property name="f_tnewusername" type="string"/>
+		<!--新用户电话-->
+		<property name="f_tnewphone" type="string"/>
+		<!--新证件类型-->
+		<property name="f_tnewcredentials" type="string"/>
+		<!--新证件号码-->
+		<property name="f_tnewidnumber" type="string"/>
+		<!--过户费-->
+		<property name="f_transferfee" type="double"/>
+		<!--备注-->
+		<property name="f_notnull" type="string"/>
+		<!--过户日期-->
+		<property name="f_f_tdate" type="date"/>
+		<!--部门-->
+		<property name="f_departments" type="string"/>
+		<!--操作人-->
+		<property name="f_toperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_tdate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		<!--开户名称-->
+		<property name="f_nusermc" type="string"/>
+		<!--银行名-->
+		<property name="f_nbankname" type="string"/>
+		<!--银行开户账号-->
+		<property name="f_nidofcard" type="string"/>
+		<!--新开户名称-->
+		<property name="f_newnusermc" type="string"/>
+		<!--新银行名-->
+		<property name="f_newnbankname" type="string"/>
+		<!--新银行开户账号-->
+		<property name="f_newnidofcard" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--物联表抄表-->
+	<class  entity-name="t_cbnum" table="t_cbnum" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 用户ID -->
+		<property name="f_userid" type="string"/>
+		<!--抄表时间-->
+		<property name="f_gasdate" type="date"/> 
+		<!--表指数-->
+		<property name="f_gasnum" type="double"/>
+		<!--余额-->
+		<property name="jval" type="double"/>
+		<!-- 表号 -->
+		<property name="f_meternumber" type="string"/>
+		<!-- 气表品牌 -->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		<!-- 是否使用 -->
+		<property name="f_isuse" type="string"/>
+		<!--数据插入时间-->
+		<property name="f_inertdate" type="date"/>
+		
+		
+		
+</class>
+</hibernate-mapping>

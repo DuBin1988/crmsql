@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- 非民用抄表 -->
+	<class  entity-name="t_feimychaobiao" table="t_feimychaobiao" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 用户编号 -->
+	 	<property name="f_userid" type="string"/>
+	 	<!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!-- 卡号 -->
+		<property name="f_cardid" type="string"/>
+		<!-- 地址 -->
+		<property name="f_address" type="string"/>
+		<!-- 电话 -->
+		<property name="f_phone" type="string"/>
+		<!-- 联系人 -->
+		<property name="f_linkname" type="string"/>
+		<!-- 用户类型 -->
+		<property name="f_usertype" type="string"/>
+		
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--气表类型-->
+		<property name="f_gasmeterstyle" type="string"/>
+		
+		<!-- 抄表员 -->
+		<property name="f_cbren" type="string"/>
+		<!-- 抄表日期 -->
+		<property name="f_cbdate" type="date"/>
+		<!-- 上次表底数-->
+		<property name="f_uptimenum" type="double"/>
+		<!-- 本次表底数 -->
+		<property name="f_thistimenum" type="double"/>
+		<!-- 用气量 -->
+		<property name="f_usegasnum" type="double"/>
+		
+		<!--部门-->
+		<property name="f_department" type="string"/>
+		<!-- 操作人-->
+		<property name="f_operator" type="string"/>
+		<!-- 操作日期 -->
+		<property name="f_date" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"></property>
+		
+	</class>
+</hibernate-mapping>

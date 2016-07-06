@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--图片信息-->
+    <class   entity-name="t_deviceimage" table="t_deviceimage" >	
+		<id name="id" type="string"/>
+		<!-- 图片名称和描述 -->
+	    <property name="f_description" type="string"></property>  
+	</class> 
+</hibernate-mapping>

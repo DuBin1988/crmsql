@@ -1,0 +1,502 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--用户档案表-->
+	<class  entity-name="t_userfileschange" table="t_userfileschange" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--单位编号 -->
+		<property name="f_unitid" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+	<!-- 原记录 -->
+        <!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--联系人 -->
+		<property name="f_linkname" type="string"/>
+		<!--证件类型-->
+		<property name="f_credentials" type="string"/>
+		<!--证件号码-->
+		<property name="f_idnumber" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--座机-->
+		<property name="f_phone1" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--门站 -->
+		<property name="f_menzhan" type="string"/>
+		<!--市 -->
+		<property name="f_city" type="string"/>
+		<!--区 -->
+		<property name="f_area" type="string"/>
+		<!--街道 -->
+		<property name="f_road" type="string"/>
+		<!--单元号 -->
+		<property name="f_cusDy" type="string"/>
+		<!--楼号 -->
+		<property name="f_cusDom" type="string"/>
+		<!--楼层 -->
+		<property name="f_cusFloor" type="string"/>
+		<!--门牌号 -->
+		<property name="f_apartment" type="string"/>
+
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--用户性质-->
+		<property name="f_yhxz" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--气表类型-->
+		<property name="f_gasmeterstyle" type="string"/>
+		<!--气表底数-->
+		<property name="f_gasmeteraccomodations" type="double"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--表 封 号-->
+		<property name="f_metertitles" type="string"/>
+		<!--左 右 表-->
+		<property name="f_aroundmeter" type="string"/>
+		<!-- 基表品牌 -->
+		<property name="f_jbbrand" type="string"/>
+		<!-- 基表厂家 -->
+		<property name="f_jbfactory" type="string"/>
+		<!-- 基表型号 -->
+		<property name="f_jbtype" type="string"/>
+		<!--海力表型编码-->
+		<property name="f_watchnum" type="string"/>
+		<!--脉冲(表系数)-->
+		<property name="f_maichong" type="string"/>
+		<!--非民用维护费年费-->
+		<property name="f_feiweihufei" type="double"/>
+
+		
+		<!--大小卡-->
+		<property name="f_bigsmallcard" type="string"/>
+		<!--别名-->
+		<property name="f_bieming" type="string"/>
+		<!-- 表安装位置 -->
+		<property name="f_weizhi" type="string"/>
+
+
+		<!--当前表累计购气量-->
+		<property name="f_metergasnums" type="double"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--是否发卡-->
+		<property name="f_whethergivecard" type="string"/>
+
+		<!--最后购气量-->
+		<property name="f_finallybought" type="double"/>
+		<!--最后购气日期-->
+		<property name="f_finabuygasdate" type="date"/>
+		<!--最后购气时间-->
+		<property name="f_finabuygastime" type="time"/>
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date"/>
+
+		<!--营业大灶-->
+		<property name="f_businkitchen" type="boolean"/>
+		<!--营业锅炉-->
+		<property name="f_businboiler" type="boolean"/>
+		<!--福利大灶-->
+		<property name="f_welfarekitchen" type="boolean"/>
+		<!--福利锅炉-->
+		<property name="f_welfareboiler" type="boolean"/>
+		<!--工业窑炉-->
+		<property name="f_lndfurnace" type="boolean"/>
+		<!--工业加热炉-->
+		<property name="f_lndjiarelu" type="boolean"/>
+		<!--工业采暖炉-->
+		<property name="f_lndheating" type="boolean"/>
+
+
+		<!--额定流量-->
+		<property name="f_flownum" type="double"/>
+		<!--用户状态-->
+		<property name="f_userstate" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		<!--表型号对应类型-->
+		<property name="f_type" type="string"/>
+		<!-- 卡类型，写卡使用 0 民用，1工业 -->
+		<property name="klx" type="int"/>
+		<!-- 地区代码 -->
+		<property name="dqdm" type="string"/>
+      		<!-- 用户号-->
+		<property name="yhh" type="string"/>      
+      		<!-- 报警气量-->
+		<property name="bjql" type="int"/>
+		<!-- 充值上限-->
+		<property name="czsx" type="int"/>
+		<!-- 透支额度-->
+		<property name="tzed" type="int"/>
+		<!-- 卡密码-->
+		<property name="kmm" type="string"/>
+		<!--上次抄表底数-->
+		<property name="lastinputgasnum" type="double"/>
+		<!--最后抄表日期-->
+		<property name="lastinputdate" type="date"/>
+		<!-- 抄表员 -->
+		<property name="f_inputtor" type="string"/>
+		<!--付款方式 为现金、银行代扣-->
+		<property name="f_payment" type="string"/>
+		<!--档案余额-->
+		<property name="f_zhye" type="double"/>
+		
+		<!--是否低保户-->
+		<property name="f_dibaohu" type="boolean"/>
+		<!--发卡日期-->
+		<property name="f_givecarddate" type="date"/>
+		<!--壁 挂 炉-->
+		<property name="f_wallhangboiler" type="boolean"/>
+		<!--写卡次数-->
+		<property name="f_times" type="int"/>
+		<!--换表补气剩余补气量-->
+		<property name="f_surplusgas" type="double"/>
+		<!--单户限购气量，该字段有值时，限购取该字段的，统一设置的限购失效-->
+		<property name="f_xiangou" type="int"/>
+		<!--维护费起始年月-->
+		<property name="f_beginfee" type="date"/>
+		<!--营业厅建档日期-->
+		<property name="f_yytdate" type="date"/>
+	<!-- 银行信息 -->
+		<!--开户名称-->
+		<property name="f_usermc" type="string"/>
+		<!--银行名-->
+		<property name="f_bankname" type="string"/>
+		<!--银行开户账号-->
+		<property name="f_idofcard" type="string"/>		
+	<!-- 变更记录 -->
+		<!-- 用户姓名/单位名称 -->
+		<property name="f_usernamechange" type="string"/>
+		<!--联系人 -->
+		<property name="f_linknamechange" type="string"/>
+		<!--证件类型-->
+		<property name="f_credentialschange" type="string"/>
+		<!--证件号码-->
+		<property name="f_idnumberchange" type="string"/>
+		<!--电话-->
+		<property name="f_phonechange" type="string"/>
+		<!--座机-->
+		<property name="f_phone1change" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtnamechange" type="string"/>
+		<!--地址-->
+		<property name="f_addresschange" type="string"/>
+		<!--门站 -->
+		<property name="f_menzhanchange" type="string"/>
+		<!--市 -->
+		<property name="f_citychange" type="string"/>
+		<!--区 -->
+		<property name="f_areachange" type="string"/>
+		<!--街道 -->
+		<property name="f_roadchange" type="string"/>
+		<!--单元号 -->
+		<property name="f_cusDychange" type="string"/>
+		<!--楼号 -->
+		<property name="f_cusDomchange" type="string"/>
+		<!--楼层 -->
+		<property name="f_cusFloorchange" type="string"/>
+		<!--门牌号 -->
+		<property name="f_apartmentchange" type="string"/>
+
+		<!--用户类型-->
+		<property name="f_usertypechange" type="string"/>
+		<!--用气性质-->
+		<property name="f_gaspropertieschange" type="string"/>
+		<!--用户性质-->
+		<property name="f_yhxzchange" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetypechange" type="string"/>
+		<!--气价-->
+		<property name="f_gaspricechange" type="double"/>
+
+		<!--气表品牌-->
+		<property name="f_gaswatchbrandchange" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertypechange" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturerschange" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasnamechange" type="string"/>
+		<!--气表类型-->
+		<property name="f_gasmeterstylechange" type="string"/>
+		<!--气表底数-->
+		<property name="f_gasmeteraccomodationschange" type="double"/>
+		<!--表号-->
+		<property name="f_meternumberchange" type="string"/>
+		<!--表 封 号-->
+		<property name="f_metertitleschange" type="string"/>
+		<!--左 右 表-->
+		<property name="f_aroundmeterchange" type="string"/>
+		<!-- 基表品牌 -->
+		<property name="f_jbbrandchange" type="string"/>
+		<!-- 基表厂家 -->
+		<property name="f_jbfactorychange" type="string"/>
+		<!-- 基表型号 -->
+		<property name="f_jbtypechange" type="string"/>
+		<!--海力表型编码-->
+		<property name="f_watchnumchange" type="string"/>
+		<!--脉冲(表系数)-->
+		<property name="f_maichongchange" type="string"/>
+		<!--非民用维护费年费-->
+		<property name="f_feiweihufeichange" type="double"/>
+
+		
+		<!--大小卡-->
+		<property name="f_bigsmallcardchange" type="string"/>
+		<!--别名-->
+		<property name="f_biemingchange" type="string"/>
+		<!-- 表安装位置 -->
+		<property name="f_weizhichange" type="string"/>
+
+
+		<!--当前表累计购气量-->
+		<property name="f_metergasnumschange" type="double"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchasechange" type="double"/>
+		<!--是否发卡-->
+		<property name="f_whethergivecardchange" type="string"/>
+
+		<!--最后购气量-->
+		<property name="f_finallyboughtchange" type="double"/>
+		<!--最后购气日期-->
+		<property name="f_finabuygasdatechange" type="date"/>
+		<!--最后购气时间-->
+		<property name="f_finabuygastimechange" type="time"/>
+		<!--开户日期-->
+		<property name="f_dateofopeningchange" type="date"/>
+
+		<!--营业大灶-->
+		<property name="f_businkitchenchange" type="boolean"/>
+		<!--营业锅炉-->
+		<property name="f_businboilerchange" type="boolean"/>
+		<!--福利大灶-->
+		<property name="f_welfarekitchenchange" type="boolean"/>
+		<!--福利锅炉-->
+		<property name="f_welfareboilerchange" type="boolean"/>
+		<!--工业窑炉-->
+		<property name="f_lndfurnacechange" type="boolean"/>
+		<!--工业加热炉-->
+		<property name="f_lndjiareluchange" type="boolean"/>
+		<!--工业采暖炉-->
+		<property name="f_lndheatingchange" type="boolean"/>
+		<!--卡号-->
+		<property name="f_cardidchange" type="string"/>
+
+		<!--额定流量-->
+		<property name="f_flownumchange" type="double"/>
+		<!--用户状态-->
+		<property name="f_userstatechange" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinumchange" type="string"/>
+		<!--表型号对应类型-->
+		<property name="f_typechange" type="string"/>
+		<!-- 卡类型，写卡使用 0 民用，1工业 -->
+		<property name="klxchange" type="int"/>
+		<!-- 地区代码 -->
+		<property name="dqdmchange" type="string"/>
+      		<!-- 用户号-->
+		<property name="yhhchange" type="string"/>      
+      		<!-- 报警气量-->
+		<property name="bjqlchange" type="int"/>
+		<!-- 充值上限-->
+		<property name="czsxchange" type="int"/>
+		<!-- 透支额度-->
+		<property name="tzedchange" type="int"/>
+		<!-- 卡密码-->
+		<property name="kmmchange" type="string"/>
+		<!--上次抄表底数-->
+		<property name="lastinputgasnumchange" type="double"/>
+		<!--最后抄表日期-->
+		<property name="lastinputdatechange" type="date"/>
+		<!-- 抄表员 -->
+		<property name="f_inputtorchange" type="string"/>
+		<!--付款方式 为现金、银行代扣-->
+		<property name="f_paymentchange" type="string"/>
+		<!--变更的档案余额-->
+		<property name="f_zhyechange" type="double"/>
+		
+		<!--是否低保户-->
+		<property name="f_dibaohuchange" type="boolean"/>
+		<!--发卡日期-->
+		<property name="f_givecarddatechange" type="date"/>
+		<!--壁 挂 炉-->
+		<property name="f_wallhangboilerchange" type="boolean"/>
+		<!--写卡次数-->
+		<property name="f_timeschange" type="int"/>
+		<!--换表补气剩余补气量-->
+		<property name="f_surplusgaschange" type="double"/>
+		<!--单户限购气量，该字段有值时，限购取该字段的，统一设置的限购失效-->
+		<property name="f_xiangouchange" type="int"/>
+		<!--维护费起始年月-->
+		<property name="f_beginfeechange" type="date"/>
+		<!--营业厅建档日期-->
+		<property name="f_yytdatechange" type="date"/>
+		
+		<!--变更人-->
+		<property name="f_changeman" type="string"/>
+		<!--变更人所在网点-->
+		<property name="f_changemannetwork" type="string"/>
+		<!--变更人所在分公司-->
+		<property name="f_changemansubsidiary" type="string"/>
+		<!--变更原因-->
+		<property name="f_changecause" type="string"/>
+		<!--变更时间-->
+		<property name="f_changedate" type="date"/>
+		
+		
+		<!--阶梯气价类型-->
+		<property name="f_stairtype" type="string"/>
+		<!--阶段一气量-->
+		<property name="f_stair1amount" type="double"/>
+		<!--阶段一单价-->
+		<property name="f_stair1price" type="double"/>
+		<!--阶段二气量-->
+		<property name="f_stair2amount" type="double"/>
+		<!--阶段二单价-->
+		<property name="f_stair2price" type="double"/>
+		<!--阶段三气量-->
+		<property name="f_stair3amount" type="double"/>
+		<!--阶段三单价-->
+		<property name="f_stair3price" type="double"/>
+		<!--阶段四单价-->
+		<property name="f_stair4price" type="double"/>
+		<!--阶段月数-->
+		<property name="f_stairmonths" type="int"/>
+		
+		<!--阶梯气价类型-->
+		<property name="f_stairtypechange" type="string"/>
+		<!--阶段一气量-->
+		<property name="f_stair1amountchange" type="double"/>
+		<!--阶段一单价-->
+		<property name="f_stair1pricechange" type="double"/>
+		<!--阶段二气量-->
+		<property name="f_stair2amountchange" type="double"/>
+		<!--阶段二单价-->
+		<property name="f_stair2pricechange" type="double"/>
+		<!--阶段三气量-->
+		<property name="f_stair3amountchange" type="double"/>
+		<!--阶段三单价-->
+		<property name="f_stair3pricechange" type="double"/>
+		<!--阶段四单价-->
+		<property name="f_stair4pricechange" type="double"/>
+		<!--阶段月数-->
+		<property name="f_stairmonthschange" type="int"/>
+	<!-- 银行信息 -->
+		<!--开户名称-->
+		<property name="f_usermcchange" type="string"/>
+		<!--银行名-->
+		<property name="f_banknamechange" type="string"/>
+		<!--银行开户账号-->
+		<property name="f_idofcardchange" type="string"/>
+		
+<!-- 抄表系统 对接       -->
+		<!--表具状态-->
+		<property name="f_tablestatus" type="string"/>
+		<!--状态时间-->
+		<property name="f_statusdate" type="string"/>
+		<!--档案同步状态-->
+		<property name="f_danganstatus" type="string"/>
+		<!--档案同步状态-->
+		<property name="f_danganreturnvalue" type="string"/>
+		<!--用户同步状态-->
+		<property name="f_userstatus" type="string"/>
+		<!--表计电话-->
+		<property name="meter_phone" type="string"/>
+		<!--终端名称-->
+		<property name="terminal_name" type="string"/>
+		<!--单价同步 状态-->
+		<property name="f_returnvaluedj" type="string"/>
+		<!--阀门指令-->
+		<property name="f_operate_zl" type="string"/>
+		<!--阀门状态-->
+		<property name="f_operate_status" type="string"/>
+		<!--阀门操作时间-->
+		<property name="f_operate_date" type="string"/>
+		<!--阀门同步状态-->
+		<property name="f_returnvalueoperate" type="string"/>
+		<!-- 表通道类型 -->
+		<property name="f_channel_type" type="string"/>
+		<!-- 是否支持阀门操作  -->
+		<property name="switch_op" type="string"/>
+		<!-- 抄表系统刷新缓存 refreshCache-->
+		<property name="refreshCache" type="string"/>
+		<!-- 表计量类型  -->
+		<property name="f_jllx" type="string"/>
+		
+<!-- 抄表系统 对接       -->
+		<!--表具状态-->
+		<property name="f_tablestatuschange" type="string"/>
+		<!--状态时间-->
+		<property name="f_statusdatechange" type="string"/>
+		<!--档案同步状态-->
+		<property name="f_danganstatuschange" type="string"/>
+		<!--档案同步状态-->
+		<property name="f_danganreturnvaluechange" type="string"/>
+		<!--用户同步状态-->
+		<property name="f_userstatuschange" type="string"/>
+		<!--表计电话-->
+		<property name="meter_phonechange" type="string"/>
+		<!--终端名称-->
+		<property name="terminal_namechange" type="string"/>
+		<!--单价同步 状态-->
+		<property name="f_returnvaluedjchange" type="string"/>
+		<!--阀门指令-->
+		<property name="f_operate_zlchange" type="string"/>
+		<!--阀门状态-->
+		<property name="f_operate_statuschange" type="string"/>
+		<!--阀门操作时间-->
+		<property name="f_operate_datechange" type="string"/>
+		<!--阀门同步状态-->
+		<property name="f_returnvalueoperatechange" type="string"/>
+		<!-- 表通道类型 -->
+		<property name="f_channel_typechange" type="string"/>
+		<!-- 是否支持阀门操作  -->
+		<property name="switch_opchange" type="string"/>
+		<!-- 抄表系统刷新缓存 refreshCache-->
+		<property name="refreshCachechange" type="string"/>
+		<!-- 表计量类型  -->
+		<property name="f_jllxchange" type="string"/>
+		
+		<!--平价气累计购气量-->
+		<property name="f_OrdinaryNum" type="double"/>
+		<!--上次购气量-->
+		<property name="f_ThePreGas" type="double"/>
+		<!--上上次购气量-->
+		<property name="f_LastPreGas" type="double"/>
+		<!--上上上次购气量-->
+		<property name="f_LastLastPreGas" type="double"/>
+		<!--平价气累计购气量-->
+		<property name="f_OrdinaryNumchange" type="double"/>
+		<!--上次购气量-->
+		<property name="f_ThePreGaschange" type="double"/>
+		<!--上上次购气量-->
+		<property name="f_LastPreGaschange" type="double"/>
+		<!--上上上次购气量-->
+		<property name="f_LastLastPreGaschange" type="double"/>
+		
+		
+</class>
+</hibernate-mapping>

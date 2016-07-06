@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--抄表单条件管理-->
+	<class entity-name="t_handpapercond" table="t_handpapercond" >
+	  <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+
+		<!--计划抄表月份-->
+		<property name="f_handdate" type="date"/>
+		<!--生成日期-->
+		<property name="f_querydate" type="date"/>
+		<!--操作员-->
+		<property name="f_operator" type="string"/>
+		<!--抄表单状态-->
+		<property name="f_state" type="string"/>
+		
+		
+	</class>
+</hibernate-mapping>

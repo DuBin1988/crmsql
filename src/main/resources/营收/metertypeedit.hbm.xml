@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--订正气表品牌-->
+    <class   entity-name="t_metertypeedity" table="t_metertypeedity" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--类型-->
+		<property name="f_type" type="string"/>
+		<!--气表类型-->
+		<property name="f_gasmeterstyle" type="string"/>
+		<!--额定流量-->
+		<property name="f_flownum" type="double"/>
+		<!--海力表型编码-->
+		<property name="f_watchnum" type="string"/>
+		<!--脉冲/表系数-->
+		<property name="f_maichong" type="string"/>
+	  
+		<!--订正气表品牌-->
+		<property name="f_gaswatchbrandedit" type="string"/>
+		<!--订正气表型号-->
+		<property name="f_metertypeedit" type="string"/>
+		<!--厂家别名-->
+		<property name="f_aliasnameedit" type="string"/>
+		<!--订正气表厂家-->
+		<property name="f_gasmetermanufacturersedit" type="string"/>
+		<!--订正类型-->
+		<property name="f_typeedit" type="string"/>
+		<!--订正气表类型-->
+		<property name="f_gasmeterstyleedit" type="string"/>
+		<!--订正额定流量-->
+		<property name="f_flownumedit" type="double"/>
+		<!--订正海力表型编码-->
+		<property name="f_watchnumedit" type="string"/>
+		<!--订正脉冲/表系数-->
+		<property name="f_maichongedit" type="string"/>
+		
+		<!--操作人-->
+		<property name="f_soperator" type="string"/>
+		<!--部门-->
+		<property name="f_parentname" type="string"/>
+		<!--操作日期-->
+		<property name="f_sdate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+	
+	</class>
+</hibernate-mapping>

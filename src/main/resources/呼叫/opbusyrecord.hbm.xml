@@ -1,0 +1,21 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+<!--操作员置忙记录-->
+	<class entity-name="t_opbusyrecord" table="t_opbusyrecord">
+		<id name="id" type="string"/>
+		<!--登陆时间-->
+		<property name="logintime"  type="string"/>
+		<!--退出时间-->
+		<property name="exittime"  type="string" />
+		<!--置忙时长-->
+		<property name="busytime" type="double" />
+		<!--工号-->
+		<property name="gonghao" type="string" />
+		<!--记录时间-->
+		<property name="recordtime" type="string"/>
+		
+	</class>
+</hibernate-mapping>

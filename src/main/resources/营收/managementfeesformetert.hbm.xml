@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--换表收费-->
+    <class   entity-name="t_managementfeesformeter" table="t_managementfeesformeter" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--原气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--原气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表品牌-->
+		<property name="f_mffmmeterbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_mffmmetertype" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		
+		<!--换表费-->
+		<property name="f_huanbiaofei" type="double"/>
+		<!--换表编号-->
+		<property name="f_changemeternum" type="string"/>
+		<!--换表类型-->
+		<property name="f_values" type="boolean"/>
+		<!--选择类型-->
+		<property name="f_valuestype" type="boolean"/>
+		<!--描述情况-->
+		<property name="f_descriptionone" type="string"/>
+		<!--换表日期-->
+		<property name="f_mffmchangemeterdate" type="date"/>
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date"/>
+		<!--使用月数-->
+		<property name="f_month" type="string"/>
+		<!--部门-->
+		<property name="f_darentname" type="string"/>
+		<!--操作人-->
+		<property name="f_mffmoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_tdate" type="date"/>
+	</class>
+</hibernate-mapping>

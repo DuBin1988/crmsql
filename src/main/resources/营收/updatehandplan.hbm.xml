@@ -1,0 +1,61 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--地址管理-->
+    <class   entity-name="t_updatehandplan" table="t_updatehandplan" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		 
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--抄表员-->
+		<property name="f_inputtor" type="string"/>
+		<!--旧上期指数-->
+		<property name="lastinputgasnum" type="double"/>
+		
+		<!--新上期指数-->
+		<property name="newlastinputgasnum" type="double"/>
+	
+		
+		
+		<!--旧本期指数-->
+		<property name="lastrecord" type="double"/>
+		<!--旧用气量-->
+		<property name="oughtamount" type="double"/>
+		<!--修改后用气量-->
+		<property name="newoughtamount" type="double"/>
+		<!--旧用气金额-->
+		<property name="oughtfee" type="double"/>
+		<!--修改后用气金额-->
+		<property name="newoughtfee" type="double"/>				
+		<!--旧录入日期-->
+		<property name="lastinputdate" type="date"/>		
+		<!--修改后本期指数-->
+		<property name="newlastrecord" type="double"/>
+		<!--新录入日期-->
+		<property name="newlastinputdate" type="date"/>
+		<!--抄表员-->
+		<property name="f_newinputtor" type="string"/>
+		<!--新滞纳金开始日期-->
+		<property name="f_newzhinajindate" type="date"/>
+		<!--滞纳金开始日期-->
+		<property name="f_zhinajindate" type="date"/>
+		<!--是否交费-->
+		<property name="shifoujiaofei" type="string"/>
+		<!--修改后是否交费-->
+		<property name="newshifoujiaofei" type="string"/>
+		<!--修改原因-->
+		<property name="f_updatenote" type="string"/>	
+		<!--操作人-->
+		<property name="f_handplanoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_handplandate" type="date"/>		
+	</class>
+</hibernate-mapping>

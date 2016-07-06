@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--账号信息-->
+    <class   entity-name="t_zhuanfei" table="t_zhuanfei" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<property name="f_userid" type="string"/>
+		<property name="f_username" type="string"/>
+		<property name="f_address" type="string"/>
+		<property name="f_districtname" type="string"/>
+		<property name="f_zhye" type="double"/>
+		<property name="f_benqizhye" type="double"/>
+		
+		
+		<property name="f_touserid" type="string"/>
+		<property name="f_tousername" type="string"/>
+		<property name="f_qianjieyu" type="double"/>
+		<property name="f_houjieyu" type="double"/>
+		<property name="f_zhuan" type="double"/>
+		<property name="f_beizhu" type="string"/>
+		<property name="f_network" type="string"/>
+		<property name="f_filiale" type="string"/>
+		<!--操作人-->
+		<property name="f_operator" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+		<property name="f_time" type="time"/>
+	</class>
+</hibernate-mapping>

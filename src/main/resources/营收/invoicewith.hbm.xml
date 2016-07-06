@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--发票领用-->
+    <class   entity-name="t_invoicewith" table="t_invoicewith" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--发票代码-->
+		<property name="f_invoiceid" type="string"/>
+		<!--起始发票号-->
+		<property name="f_startinvoices" type="string"/>
+		<!--终止发票号 -->
+		<property name="f_endinvoices" type="string"/>
+		<!--领用人-->
+		<property name="f_collarer" type="string"/>
+		<!--备注-->
+		<property name="remarks" type="string"  length="500"/>
+
+	    <!--操作人-->
+		<property name="f_operator" type="string"/>
+		<!--所属分公司-->
+		<property name="f_filiale" type="string"/>
+		<!--分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+	    <!--部门-->
+		<property name="f_parentname" type="string"/>	
+		<!--领用日期-->
+		<property name="f_collardate" type="date"/>
+	</class>
+</hibernate-mapping>

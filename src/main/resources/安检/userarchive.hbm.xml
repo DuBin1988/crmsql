@@ -1,0 +1,38 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="T_IC_USERFILE" table="T_IC_USERFILE">
+        <id name="CARD_ID" type="string">
+        </id>
+        <!-- 用户名 -->
+        <property name="USER_NAME" type="string">
+        </property>
+		<!-- 电话 -->
+        <property name="USER_LINK" type="string">
+        </property>
+		<!-- 街道 -->
+        <property name="ROAD" type="string">
+        </property>
+        <!-- 小区 -->
+        <property name="UNIT_NAME" type="string">
+        </property>
+        <!-- 楼号 -->
+        <property name="CUS_DOM" type="string">
+        </property>
+        <!-- 单元 -->
+        <property name="CUS_DY" type="string">
+        </property>
+        <!-- 楼层 -->
+        <property name="CUS_FLOOR" type="string">
+        </property>
+        <!-- 房号 -->
+        <property name="CUS_ROOM" type="string" />
+        <!-- 现系统升级前老地址 -->
+        <property name="OLD_USERADDRESS" type="string">
+        </property>
+        <!-- IC卡表厂家型号 -->
+		<property name="METER_TYPES_NAME" type="string" />	
+    </class>
+</hibernate-mapping>

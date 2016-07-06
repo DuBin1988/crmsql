@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--滞纳金日期设置-->
+    <class   entity-name="t_zhinajindate" table="t_zhinajindate" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--类型-->
+		<property name="f_type" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--滞纳金比率-->
+		<property name="f_ratio" type="double"/>
+		<!--推后天数-->
+		<property name="f_day" type="int"/>
+		<!--推后月-->
+		<property name="f_month" type="int"/>
+		<!--开始滞纳气量-->
+		<property name="f_zhinagas" type="int"/>
+		<!--当月几号-->
+		<property name="f_monthday" type="int"/>
+		<!--部门-->
+		<property name="f_sgnetwork" type="string"/>
+		<property name="f_filiale" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+		<property name="f_time" type="time"/>
+	</class>
+</hibernate-mapping>

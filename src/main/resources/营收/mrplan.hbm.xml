@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--抄表本-->
+	<class  entity-name="t_mrplan" table="t_mrplan" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 抄表本编号 -->
+	 	<property name="f_cbbid" type="string"/>
+	 	<!-- 抄表记录 -->
+		<set name="f_mrinput"  cascade="delete-orphan" >
+      	    <key column="parentid" />
+      		<one-to-many entity-name="t_mrinput" />
+		</set>
+		<!--下账记录 -->
+		<set name="f_xiaccount"  cascade="delete-orphan" >
+      	    <key column="parentid" />
+      		<one-to-many entity-name="t_xiaccount" />
+		</set>     	
+	</class>
+</hibernate-mapping>

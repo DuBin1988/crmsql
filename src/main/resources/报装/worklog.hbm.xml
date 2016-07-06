@@ -1,0 +1,57 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--工程进度表-->
+    <class   entity-name="t_worklog" table="t_worklog"  dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		
+		<!-- 关联id，对应apply -->
+        <property name="applyid" type="int" />
+		<!-- 基本信息 -->
+		<property name="f_username" type="string" length="5000"/>
+		<property name="f_code" type="string"/>
+		<property name="f_address" type="string"/>
+		<property name="f_phone" type="string"/>
+		<property name="f_usertype" type="string"/>
+		<!-- 工程名称 -->
+		<property name="f_projectname" type="string"/>
+		<!-- 施工日期 -->
+		<property name="f_workdate" type="date"/>
+		<!-- 星期 -->
+		<property name="f_week" type="string"/>
+		<!-- 上午天气 -->
+		<property name="f_morweather" type="string"/>
+		<!-- 下午天气 -->
+		<property name="f_noonweather" type="string"/>
+		<!-- 施工地点 -->
+		<property name="f_wordplace" type="string"/>
+		<!--温度 -->
+		<property name="f_temperature" type="string"/>
+		<!--突发事件 -->
+		<property name="f_emergency" type="string"/>
+		<!--生产记录 -->
+		<property name="f_workinfo" type="string"/>
+		<!--安全记录 -->
+		<property name="f_safeinfo" type="string"/>
+		<!--隐蔽工程-->
+		<property name="f_concealinfo" type="string"/>
+		<!-- 备注 -->
+		<property name="f_remark" type="string"/>
+		<!-- 工程情况记录 -->
+		<property name="f_projectinfo" type="string"/>
+		<!-- 记录人 -->
+		<property name="f_recorder" type="string"/>
+		<!-- 部门 -->
+		<property name="f_recorderdepar" type="string"/>
+		<!-- 记录日期 -->
+		<property name="f_recorderdate" type="date"/>
+		
+		
+		
+	</class> 
+</hibernate-mapping>

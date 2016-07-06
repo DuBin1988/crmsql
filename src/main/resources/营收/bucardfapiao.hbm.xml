@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--补卡发票补打表-->
+	<class  entity-name="t_bucardfapiao" table="t_bucardfapiao" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!-- 用户/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--卡费-->
+		<property name="f_cardfees" type="double"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--卡 编 号-->
+		<property name="f_cardnumber" type="string"/>
+		<!--新卡编号-->
+		<property name="f_newcardnumber" type="string"/>
+		
+		<!--补卡原因-->
+		<property name="f_rcreason" type="string"/>
+		<!--部门-->
+		<property name="f_parentname" type="string"/>
+		<!--操作人-->
+		<property name="f_rcoperator" type="string"/>
+		<!--补卡日期-->
+		<property name="f_recoverycarddate" type="date"/>
+		<!--补卡时间-->
+		<property name="f_recoverycardtime" type="time"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		
+		<!--补打原因-->
+		<property name="f_budason" type="string"/>
+		<!--部门-->
+		<property name="f_parentname1" type="string"/>
+		<!--操作人-->
+		<property name="f_rcoperator1" type="string"/>
+		<!--补打日期-->
+		<property name="f_reversaldate" type="date"/>
+		<!--补打时间-->
+		<property name="f_reversaltime" type="time"/>
+		<!-- 分公司 -->
+		<property name="f_filiale1" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum1" type="string"/>
+
+
+</class>
+</hibernate-mapping>

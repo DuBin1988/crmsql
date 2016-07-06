@@ -1,0 +1,103 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--受理信息-->
+	<class  entity-name="t_shoulilist" table="t_shoulilist" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		<!--受理日期-->
+		<property name="f_shoulidate" type="date"/>
+	 	<!--受理编号 -->
+		<property name="f_shoulicode" type="string"/>
+		<!--受理凭证 -->
+		<property name="f_pingzheng" type="string"/>
+		<!--合同编号 -->
+		<property name="f_hetongnum" type="string"/>
+		<!--受理人 -->
+		<property name="f_shouliren" type="string"/>
+		<!--安装人 -->
+		<property name="f_installer" type="string"/>
+		<!--装表日期-->
+		<property name="f_zhuangbiaodate" type="date"/>
+		<!--是否 装通-->
+		<property name="f_zhuangtong" type="string"/>
+		<!--其他事项 -->
+		<property name="f_shoulibeizhu" type="string"/>
+		<!--申请理由 -->
+		<property name="f_shenqinglu" type="string"/>
+		<!--气初读数-->
+		<property name="f_watchreadnum" type="double"/>
+		
+		<!--壁 挂 炉数量-->
+		<property name="f_wallhangboilernum" type="int"/>
+		<!--灶具数量-->
+		<property name="f_kitchennum" type="int"/>
+		<!--热 水 器数量-->
+		<property name="f_waterheaternum" type="int"/>
+		
+		<!--表前阀数量-->
+		<property name="f_biaoqianfanum" type="int"/>
+		<!--表后阀数量-->
+		<property name="f_biaohoufanum" type="int"/>
+		<!--铁弯头数量-->
+		<property name="f_tiewantounum" type="int"/>
+		<!--铜弯头数量-->
+		<property name="f_tongwantounum" type="int"/>
+		<!--三通数量-->
+		<property name="f_santongnum" type="int"/>
+		<!--外丝数量-->
+		<property name="f_waisinum" type="int"/>
+		<!--表接头数量-->
+		<property name="f_biaojietounum" type="int"/>
+		<!--等径直通数量-->
+		<property name="f_zhitongnum" type="int"/>
+		<!--短管尺寸-->
+		<property name="f_duanguannum" type="double"/>
+		<!--其他数量-->
+		<property name="f_qitanum" type="string"/>
+		<!--邑龙表锁号-->
+		<property name="f_yilongnum" type="string"/>
+		<!--是否发放用气须知-->
+		<property name="f_xuzhi" type="string"/>
+		<!--用户对安装人员评价-->
+		<property name="f_pingjia" type="string"/>
+		
+		<property name="f_username" type="string"/>
+		<property name="f_phone" type="string"/>
+		<property name="f_credentials" type="string"/>
+		<property name="f_usertype" type="string"/>
+		<property name="f_gasmeterstyle" type="string"/>
+		<property name="f_idnumber" type="string"/>
+		<property name="f_whethergivecard" type="string"/>
+		<property name="f_districtname" type="string"/>
+		<property name="f_address" type="string"/>
+		<property name="f_cusDom" type="string"/>
+		<property name="f_cusDy" type="string"/>
+		<property name="f_cusFloor" type="string"/>
+		<property name="f_apartment" type="string"/>
+		<property name="f_yytdepa" type="string"/>
+		<property name="f_filiale" type="string"/>	
+		<property name="f_jdok" type="string"/>	
+		<property name="oldid" type="string"/>
+		<property name="oldidnull" type="string"></property>	
+		
+		<property name="f_gasproperties" type="string"/>
+		<property name="f_gaspricetype" type="string"/>	
+		<property name="f_gasprice" type="double"/>	
+		<property name="f_gaswatchbrand" type="string"/>
+		<property name="f_metertype" type="string"/>
+		<property name="f_changjia" type="string"/>
+		<property name="f_aliasname" type="string"/>
+		<property name="f_flownum" type="double"/>
+		<property name="f_maichong" type="string"/>
+		<property name="f_watchnum" type="string"/>		
+		
+	
+
+		
+	</class>
+</hibernate-mapping>		

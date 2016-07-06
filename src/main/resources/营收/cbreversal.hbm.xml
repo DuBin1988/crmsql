@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--抄表冲正-->
+	<class entity-name="t_cbreversal" table="t_cbreversal">
+	    <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>   
+		<!-- 用户编号 -->
+	 	<property name="f_userid" type="string"/>
+	 	<!-- 用户/单位名称 -->
+	 	<property name="f_username" type="string"/>
+	 	<!-- 地址 -->
+		<property name="f_address" type="string"/>
+		<!-- 用户电话-->
+		<property name="f_phone" type="string"/>
+		<!-- 用户类型 -->
+		<property name="f_usertype" type="string"/>
+		<!-- 气表品牌 -->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!-- 气价 -->
+		<property name="f_gasprice" type="double"/>
+		<!--气表编号-->
+		<property name="f_meternumber" type="string"/>
+		<!-- 本次抄表底数 -->
+		<property name="lastrecord" type="double"/>
+		<!-- 上次抄表底数 -->
+		<property name="lastinputgasnum" type="double"/>
+		<!--用气量  -->
+		<property name="oughtamount" type="double"/>
+		<!-- 用气金额 -->
+		<property name="oughtfee" type="double"/>
+		<!-- 抄表员 -->
+		<property name="f_inputtor" type="string"/>
+		<!-- 抄表日期 -->
+		<property name="lastinputdate" type="date"/>
+		<!-- 冲正原因 -->
+		<property name="f_reversalcause" type="string"/>
+		<!-- 部门 -->
+		<property name="f_departments" type="string"/>		
+		<!-- 操作员-->
+		<property name="f_operator" type="string"/>
+		<!-- 操作日期 -->
+		<property name="f_date" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+
+	</class>
+</hibernate-mapping>

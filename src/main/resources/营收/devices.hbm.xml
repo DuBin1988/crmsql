@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--工商户用气设备-->
+    <class   entity-name="t_devices" table="t_devices" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--设备名称-->
+		<property name="f_name" type="string"/>
+		<!--功率-->
+		<property name="f_heatingboiler_gonglu" type="double"/>		
+		<!--吨位/个数-->
+		<property name="f_heatingboiler_tonnage" type="double"/>
+		<!--台数-->
+		<property name="f_heatingboiler_quantity" type="double"/>		
+		<!--品牌-->
+		<property name="f_heatingboiler_brand" type="string"/>
+		<!--型号-->
+	    <property name="f_heatingboiler_model" type="string"/>
+	    <!--安装日期-->
+	    <property name="f_devicedate" type="date"/>
+	    <!--验收人-->
+	    <property name="f_inspector" type="string"/>
+	    <!--经销商-->
+	    <property name="f_seller" type="string"/>
+	    <!--登记日期
+	    <property name="f_inputdate" type="date"/>-->
+	    <!--登记时间
+	    <property name="f_inputtime" type="time"/>-->
+	    <!--所属单位
+	    <property name="f_department" type="string"/>-->
+	    <!--操作员
+	    <property name="f_opter" type="string"/>-->
+	    
+	    
+	</class> 
+</hibernate-mapping>

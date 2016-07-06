@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--银行反盘-->
+    <class   entity-name="t_bankreturn" table="t_bankreturn" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--指令序号-->
+		<property name="f_xuhao" type="string"/>
+		<!--用户编号(交费编号）-->
+		<property name="f_userid" type="string"/>
+		<!--交费类型(交费编号）-->
+		<property name="f_payfeetype" type="string"/>
+		
+		
+		 <!--银行账号-->
+		<property name="f_idofcard" type="string"/>
+	
+	    <!--银行开户名 -->
+		<property name="f_usermc" type="string"/>
+		<!--银行名-->
+		<property name="f_bankname" type="string"/>
+		<!--应交金额-->
+		<property name="oughtfee" type="double"/>
+		<!--实交金额-->
+		<property name="dealfee" type="double"/>
+		<!-- 是否缴费成功 -->
+		<property name="paymenstate" type="string"/>
+		<!-- 处理结果：成功、无此账户、金额错误 -->		
+		<property name="f_result" type="string"/>
+		<!--返盘时间-->
+		<property name="f_fanpandate" type="string"/>
+	</class>
+</hibernate-mapping>

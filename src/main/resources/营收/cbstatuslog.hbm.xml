@@ -1,0 +1,38 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--物联表抄表-->
+	<class  entity-name="t_cbstatuslog" table="t_cbstatuslog" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>		
+		<!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--表计电话-->
+		<property name="meter_phone" type="string"/>
+		<!-- 同步是否请求 -->
+		<property name="f_tablesmessage" type="string"/>
+		<!-- 同步请求正常 -->
+		<property name="f_tablestatus" type="string"/>
+		<!--状态时间-->
+		<property name="f_statusdate" type="string"/>
+		<!-- 气表品牌 -->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--数据插入时间-->
+		<property name="f_inertdate" type="date"/>
+		
+		
+		
+		
+</class>
+</hibernate-mapping>

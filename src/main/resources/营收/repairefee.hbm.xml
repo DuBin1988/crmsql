@@ -1,0 +1,50 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!--维修费-->
+	<class entity-name="t_repairefee" table="t_repairefee" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		<!--数量-->
+		<property name="f_state" type="double"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--证件类型-->
+		<property name="f_credentials" type="string"/>
+		<!--证件号码-->
+		<property name="f_idnumber" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date"/>
+		<!--配件名称-->
+		<property name="f_peijianname" type="string"/>
+		<!--单价-->
+		<property name="f_price" type="double"/>
+		<!--数量-->
+		<property name="quantity" type="double"/>
+		<!--总价-->
+		<property name="f_totalcost" type="double"/>
+		<!--网点-->
+		<property name="f_sgnetwork" type="string"/>
+		<!--操作员-->
+        <property name="f_operator" type="string"/>
+		<!--操作日期-->
+		<property name="f_date" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+     
+	</class>
+</hibernate-mapping>

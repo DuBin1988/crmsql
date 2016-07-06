@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--账号信息-->
+    <class   entity-name="t_account" table="t_account" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--账户名称-->
+		<property name="f_district" type="string"/>
+		<!--账户类型-->
+		<property name="f_nametype" type="string"/>
+		<!--单位地址-->
+		<property name="f_address" type="string"/>
+		<!--联系人-->
+		<property name="f_linker" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--账户号码-->
+		<property name="f_accountnumber" type="string"/>
+		<!--账户余额-->
+		<property name="f_fee" type="double"/>
+		<!--部门-->
+		<property name="f_department" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+	</class>
+</hibernate-mapping>

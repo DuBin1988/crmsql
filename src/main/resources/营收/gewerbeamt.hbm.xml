@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--非民用通气-->
+    <class   entity-name="t_gewerbeamt" table="t_gewerbeamt" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--联系人-->
+		<property name="f_linkman" type="string"/>
+		<!--单位名称-->
+		<property name="f_unitname" type="string"/>
+		<!--单位地址-->	
+		<property name="f_address" type="string"/>
+		<!--电话-->	
+		<property name="f_phone" type="string"/>
+		<!--是否通气-->
+		<property name="f_aerate" type="boolean"/>
+		<!--是否有自闭阀-->
+		<property name="f_closing" type="boolean"/>
+		<!--通气人-->
+		<property name="f_aerateman" type="string"/>
+		<!--通气日期-->
+		<property name="f_aeratedate" type="date"/>
+		<!--部门-->
+		<property name="f_departments3" type="string"/>
+		<!--操 作 人-->
+		<property name="f_eoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_edate" type="date"/>
+		
+		<!--下面是用气设备 --> 
+	    <set name="f_device" cascade="all-delete-orphan">
+          <key column="userfileid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_devices" not-found="exception"   /> 
+        </set> 
+	</class>
+</hibernate-mapping>

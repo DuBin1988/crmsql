@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--地址管理-->
+    <class   entity-name="t_updateotherfee" table="t_updateotherfee" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		 
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--收费记录编号-->
+		<property name="f_sellid" type="string"/>
+		<!--修改前收费类型-->	
+		<property name="f_feetype" type="string"/>
+		<!--修改后滞纳金-->
+		<property name="f_newfeetype" type="string"/>
+		<!--修改前维护费-->
+		<property name="f_fee" type="double"/>
+		<!--修改后维护费-->
+		<property name="f_newfee" type="double"/>
+		<!--修改前收费有效类型-->	
+		<property name="f_payfeevalid" type="string"/>
+		<!--修改后收费有效类型-->
+		<property name="f_newpayfeevalid" type="string"/>
+			
+		<!--修改原因-->
+		<property name="f_updatenote" type="string"/>	
+		<!--操作人-->
+		<property name="f_sellinggasoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_sellinggasdate" type="date"/>		
+	</class>
+</hibernate-mapping>

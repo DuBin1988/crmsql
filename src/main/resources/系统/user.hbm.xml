@@ -1,0 +1,26 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--系统用户信息-->
+	<class entity-name="t_user" table="t_user" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<property name="parentid" type="string"/>
+		<property name="name" type="string"/>
+		<!--网点,上级组织名称-->
+		<property name="f_parentname" type="string"/>
+		<!--分公司-->
+     	<property name="f_fengongsi" type="string"/>
+     	<!--分公司编号-->
+     	<property name="f_fengongsinum" type="string"/>
+     	<!--组织机构字符串拼接-->
+     	<property name="orgpathstr" type="string"/>
+     	<!--角色等级-->
+     	<property name="character" type="int"/>
+     	 
+	
+	</class>
+</hibernate-mapping>

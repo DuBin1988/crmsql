@@ -1,0 +1,80 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--重新发卡-->
+	<class entity-name="t_returnfaka" table="t_returnfaka">
+	    <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>   
+		<!-- 用户名称/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--身份证-->
+		<property name="f_idnumber" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>		
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>				
+        <!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--卡 编 号-->
+		<property name="f_cardnumber" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--单次最大购气量-->
+		<property name="f_singlegasnum" type="double"/>	
+		<!--预购气量-->
+		<property name="f_pregas" type="double"/>
+		<!--预购金额-->
+		<property name="f_preamount" type="double"/>
+		<!--重发原因-->
+		<property name="f_returncontent" type="string"/>				
+		<!--限购气量-->
+		<property name="f_limitbuygas" type="double"/>	
+		<!--收      款-->
+		<property name="f_grossproceeds" type="double"/>
+		<!--应交金额-->
+		<property name="f_totalcost" type="double"/>
+		<!--找零-->
+		<property name="f_givechange" type="double"/>
+		
+		<!--网点-->
+		<property name="f_network" type="string"/>		
+		<!--操作员-->
+		<property name="f_sgoperator" type="string"/>
+		<!--交费日期-->
+		<property name="f_deliverydate" type="date"/>
+		
+		<!--付款方式-->
+		<property name="f_payment" type="string"/>
+		
+		
+<!--隐藏域 -->
+		<!--用户上次累计购气量-->
+		<property name="f_zongleiji" type="double"/>
+		<!--当前表累计购气量-->
+		<property name="f_biaoleiji" type="double"/>
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>
+		
+	</class>
+	
+
+</hibernate-mapping>

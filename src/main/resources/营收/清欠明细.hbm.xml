@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--账号信息-->
+    <class   entity-name="t_financedetail" table="t_financedetail" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+	   <!--应收金额-->
+	 	 <property name="f_oughtfee" type="double"/>
+	 	<!--实收金额-->
+	  	  <property name="f_realmoney" type="double"/>
+ 		<!--欠费金额-->
+	  	 <property name="f_debtmoney" type="double"/>
+	   	<!--欠款日期,(交费时含义为收回的欠款的日期)-->
+		<property name="f_debtdate" type="date"/>
+	   <!--单价-->
+	   <property name="f_gasprice" type="double"/>
+	   
+	   
+	   	<!--上次账户余额(未扣除前)-->
+		<property name="f_prevaccountzhye" type="double"/>
+	  	<!--账户余额(有结余就扣除)-->
+		<property name="f_accountzhye" type="double"/>
+	 
+		
+		
+		
+	  <!--是否有效(有效/无效)-->
+	   <property name="f_payfeevalid" type="string"/>
+	    <!--数据类型(抄表扣除/交费扣除)-->
+	   <property name="f_payfeetype" type="string"/>
+	
+	   
+		<!--部门-->
+		<property name="f_sgnetwork" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--日期-->
+		<property name="f_deliverydate" type="date"/>
+		<!--交费时间-->
+		<property name="f_deliverytime" type="time"/>
+	
+	  	<!--抄表id-->
+		<property name="f_handid" type="int"/>
+	  	<!--交费id-->
+		<property name="f_sellid" type="int"/>
+	
+		
+	</class>
+</hibernate-mapping>

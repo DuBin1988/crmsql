@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 大屏设置表  -->
+<hibernate-mapping package="test">
+	<class entity-name="t_screenset" table="t_screenset">
+		<id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--运行开始日期 -->
+		<property name="begindate" type="date"/>
+		<!--省末站 -->
+		<property name="shengml" type="double"/>
+		<!--门站 -->
+		<property name="menz" type="double"/>
+		<!--彩虹 -->
+		<property name="caih" type="double"/>
+		<!--底张 -->
+		<property name="diz" type="double"/>
+		<!--七0四 -->
+		<property name="qils" type="double"/>
+		<!--机场 -->
+		<property name="jic" type="double"/>
+		<!--金旭路 -->
+		<property name="jinxl" type="double"/>
+		<!--文林路 -->
+		<property name="wenll" type="double"/>
+		<!--世纪大道 -->
+		<property name="shijdd" type="double"/>
+		<!--宝泉路 -->
+		<property name="baoql" type="double"/>
+		<!--操作人 -->
+		<property name="czr" type="string"/>
+		<!--操作日期 -->
+		<property name="czrq" type="date"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--抄表录入-->
+	<class  entity-name="t_xiaccount" table="t_xiaccount" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 用户编号 -->
+	 	<property name="f_userid" type="string"/>
+	 	<!-- 用户姓名 -->
+	 	<property name="f_username" type="string"/>
+	 	<!--本次下账金额-->
+		<property name="f_bcxzje" type="double"/>
+		<!--本次结余金额-->
+		<property name="f_bcjyje" type="double"/>
+		<!-- 下账日期 -->
+		<property name="f_xzdate" type="date"/>
+		<!-- 操作人-->
+		<property name="f_coperator" type="string"/>
+		<!-- 操作日期 -->
+		<property name="f_cdate" type="date"/>
+		
+  
+	</class>
+</hibernate-mapping>

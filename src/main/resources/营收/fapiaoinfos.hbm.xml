@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--发票记录-->
+    <class   entity-name="t_fapiaoinfos" table="t_fapiaoinfos" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--发票代码 -->
+		<property name="f_invoiceid" type="string"/>
+		<!--发票号 -->
+		<property name="f_invoicenum" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--用户/单位名称-->
+		<property name="f_username" type="string"/>
+		<!--发票使用类型-->	
+		<property name="f_fapiaotype" type="string"/>
+		<!--气量-->	
+		<property name="f_gas" type="double"/>
+		<!--气价-->	
+		<property name="f_gasprice" type="double"/>
+		<!--金额-->
+		<property name="f_money" type="double"/>
+		<!--维护费-->
+		<property name="f_repairfee" type="double"/>
+		<!--合计-->
+		<property name="f_totalfee" type="double"/>
+		<!--收款-->
+		<property name="f_grossproceeds" type="double"/>
+		<!--发票使用状态-->
+		<property name="f_fapiaostatue" type="string"/>
+		<!--网　　点-->
+		<property name="f_sgnetwork" type="string"/>
+		<!--操 作 员-->
+		<property name="f_sgoperator" type="string"/>
+		<!--时间-->
+		<property name="f_fapiaotime" type="time"/>
+		<!--日期-->
+		<property name="f_fapiaodate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!--分配人-->
+		<property name="f_operator" type="string"/>
+		<!--分配日期-->
+		<property name="f_date" type="date"/>
+		
+		<!-- -->
+		<property name="f_yi" type="int"/>
+		<!--组织代码-->
+		<property name="f_orgstr" type="string"/>
+	
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--档案变更明细-->
+    <class   entity-name="t_plchangelist" table="t_plchangelist" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--与变更主表关联id-->
+		<property name="filelistid" type="int"/>
+		<property name="code1" type="string"/>
+		
+
+	</class>
+</hibernate-mapping>

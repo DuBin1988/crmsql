@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--补折-->
+    <class   entity-name="t_renewalpassbook" table="t_renewalpassbook" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!-- 用户/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--补折费-->
+		<property name="f_rcrenewalpassbookfees" type="double"/>
+		<!--购气折编号-->
+		<property name="f_passbookid" type="string"/>
+		<!--新购气折编号-->
+		<property name="f_ccnewpassbookid" type="string"/>
+		<!--补折原因-->
+		<property name="f_ccreason" type="string"/>
+		<!--部门-->
+		<property name="f_parentname" type="string"/>	
+		<!--操作人-->
+		<property name="f_rcoperator" type="string"/>
+		<!--补折日期-->
+		<property name="f_recoverypassbookdate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--掉气登记-->
+    <class   entity-name="t_lostgas" table="t_lostgas" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--根据是否累计气量到用户档案临时计算值-->
+		<property name="f_zhi" type="double"/>
+		<!--是否累计掉气补气到用户档案-->
+		<property name="f_shifouleiji" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--掉气登记状态-->
+		<property name="f_dengjistate" type="string"/>
+		<!--流转状态-->
+		<property name="f_state" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--门牌号-->
+		<property name="f_apartment" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--表底数-->
+		<property name="f_currentbase" type="double"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--表累计购气量-->
+		<property name="f_metergasnums" type="double"/>
+		<!--码盘数-->
+		<property name="f_oldcurrentbase" type="double"/>
+
+		<!--新表底数-->
+		<property name="f_newgasmeteraccomodations" type="double"/>
+		<!--补气量-->
+		<property name="f_cmaddgas" type="int"/>
+		
+		<!--剩余补气量-->
+		<property name="f_nextaddgasamount" type="double"/>
+		<!--本次补气量-->
+		<property name="f_thispregas" type="double"/>
+		<!--故障原因-->
+		<property name="f_yuanyin" type="string" length="500"/>
+		<!--处理结果-->
+		<property name="f_jieguo" type="string" length="500"/>
+		<!--备注-->
+		<property name="f_cnote" type="string" length="500"/>
+		<!--网点-->
+		<property name="f_parentname4" type="string"/>
+		<!--维修人-->
+		<property name="f_cmoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_cmdate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+
+		<!--补气类型-->
+		<property name="f_addgastype" type="string"/>
+		<!--卡内气量-->
+		<property name="f_gas" type="double"/>
+		<!--购气次数-->
+		<property name="f_times" type="int"/>
+
+		<!--气量核对网点-->
+		<property name="f_hdparentname" type="string"/>
+		<!--核对人-->
+		<property name="f_hdoperator" type="string"/>
+		<!--核对日期-->
+		<property name="f_hddate" type="date"/>
+		<!-- 核对分公司 -->
+		<property name="f_hdfiliale" type="string"/>
+			
+		
+		<!--补气记录--> 
+	    <set name="f_buqi" cascade="all-delete-orphan">
+          <key column="parentid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_fillgas" not-found="exception" /> 
+        </set> 	
+		
+	</class>
+</hibernate-mapping>

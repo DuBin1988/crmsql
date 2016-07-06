@@ -1,0 +1,27 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--物联表抄表-->
+	<class  entity-name="t_table_tel" table="t_table_tel" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/> 
+		<!--表计电话-->
+		<property name="meter_phone" type="string"/>
+		<!--是否-->
+		<property name="isuse" type="string"/>
+		<!--终端名称-->
+		<property name="terminal_name" type="string"/>
+		<!--小区-->
+		<property name="f_districtname" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		
+</class>
+</hibernate-mapping>

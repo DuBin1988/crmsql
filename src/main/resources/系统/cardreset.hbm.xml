@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--卡号设置规则-->
+	<class entity-name="t_cardreset" table="t_cardreset">
+	    <id name="id"  type="string"/>
+	    <!--起始卡号-->  
+	    <property name="f_qishicard" type="string"/> 
+	    <!--备注-->  
+		<property name="f_remarks" type="string"/>
+		<set name="cardresetwatch" cascade="all-delete-orphan">
+          <key column="parentid" on-delete="noaction" />
+          <one-to-many entity-name="cardresetwatch" not-found="exception"/>        
+        </set>
+	</class>
+	
+	<class entity-name="cardresetwatch" table="t_cardresetwatch">
+	    <id name="id" type="string"/>
+	    <!--气表品牌-->   
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--父id--> 
+		<property name="parentid" type="string"/>
+	</class>
+</hibernate-mapping>

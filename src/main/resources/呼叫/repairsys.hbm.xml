@@ -1,0 +1,133 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--报修系统-->
+    <class   entity-name="t_repairsys" table="t_repairsys" >
+		<id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--是否维修-->
+		<property name="f_sfwx" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--联系方式-->	
+		<property name="f_linktype" type="string"/>
+		<!--单位-->
+		<property name="f_unitname" type="string"/>
+		<!--用户地址-->
+		<property name="f_address" type="string"/>
+		<!--楼号-->	
+		<property name="f_cusDom" type="string"/>
+		<!--来电电话-->	
+		<property name="f_phone" type="string"/>
+		<!--报修时间-->	
+		<property name="f_recorddate" type="time"/>
+		<!--报修日期-->	
+		<property name="f_reporttime" type="date"/>
+		<!--表底数-->
+		<property name="f_gasmeteraccomodations" type="double"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--表读数-->
+		<property name="f_lastrecord" type="double"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--左右表-->
+		<property name="f_aroundmeter" type="string"/>
+		<!--累计购气量-->	
+		<property name="f_metergasnums" type="double"/>
+		<!--限购气量余气量-->	
+		<property name="f_restrictsparenum" type="double"/>
+		<!--用户类别-->	
+		<property name="f_usertype" type="string"/>
+		<!--通气日期-->	
+		<property name="f_fireopening" type="string"/>
+		<!--维修费起始日期-->	
+		<property name="f_beginfee" type="string"/>
+		<!--上次换表日期-->	
+		<property name="f_switchdate" type="string"/>
+		<!--备注-->	
+		<property name="f_stopremark" type="string"/>
+		<!--上次购气量-->	
+		<property name="f_finallybought" type="string"/>
+		<!--来电类型-->	
+		<property name="f_teltype" type="string"/>
+		<!--报修类型-->	
+		<property name="f_repairtype" type="string"/>
+		<!--值班员-->
+		<property name="f_operator" type="string"/>
+		<!--值班员部门-->
+		<property name="f_department" type="string"/>
+		<!--来电内容-->
+		<property name="f_repairreason" type="string"/>
+		<!--报修编号-->
+		<property name="f_cucode" type="string"/>
+		<!--录音文件号-->
+		<property name="recordfile" type="string"/>
+		
+
+		<!--处理方式-->
+		<property name="f_dealtype" type="string"/>
+		<!--是否处理-->
+		<property name="f_havadeal" type="string"/>
+		<!--处理记录-->	
+		<property name="f_dealonline" type="string"/>
+		<!--派单人-->
+		<property name="f_sender" type="string"/>
+		<!--派单日期-->
+		<property name="f_senddate" type="date"/>
+		<!--派单时间-->	
+		<property name="f_sendtime" type="time"/>
+		<!--接单部门-->	
+		<property name="f_meetunit" type="string"/>
+		<!--接单人-->	
+		<property name="f_accepter" type="string"/>
+		<!--接单人电话-->	
+		<property name="f_acceptertel" type="string"/>
+		<!--接单时间-->	
+		<property name="f_accepttime" type="time"/>
+		<!--上门维修记录-->
+		<property name="f_smwxjl" type="string"/>
+		<!--完成情况-->
+		<property name="f_havacomplete" type="string"/>
+		<!--维修人员-->
+		<property name="f_repairer2" type="string"/>
+		<!--完成日期-->
+		<property name="f_completedate2" type="date"/>
+		<!--完成时间-->	
+		<property name="f_completetime" type="time"/>
+
+		<!--是否回访-->	
+		<property name="f_ifvisit" type="string"/>
+		<!--回访员-->	
+		<property name="f_visitren" type="string"/>
+		<!--回访日期-->	
+		<property name="f_visitrq" type="date"/>
+		<!--服务态度满意情况-->	
+		<property name="f_fwtdmiqk" type="string"/>
+		<!--质量满意情况-->	
+		<property name="f_zlmiqk" type="string"/>
+		<!--回访时间-->
+		<property name="f_visitsj" type="time"/>
+		<!--用户意见-->
+		<property name="f_consumeroption" type="string"/>
+		<!--短信是否发送成功-->
+		<property name="sendresult" type="string" />
+	    <!--是否查看-->
+		<property name="f_issee" type="string"/>
+		
+		
+		
+		<!--业务状态-->
+		<property name="f_state" type="string"/>
+		<!--派发子状态-->
+		<property name="f_substate" type="string"/>
+
+		<!--安检传的-->
+		<property name="anjianid" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!-- 消息表 -->
+	<class  entity-name="t_infolist" table="t_infolist" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- uuid -->
+		<property name="uuid" type="string"/>
+		<!-- 气表别名 -->
+		<property name="f_aliasname" type="string"/>
+		<!-- 用户id-->
+		<property name="f_userid" type="string"/>
+		<!-- 表号-->
+		<property name="f_meternumber" type="string"/> 
+		<!-- 操作类型-->
+		<property name="f_type" type="string"/>
+		<!-- 指令类型 -->
+		<property name="f_typesun" type="string"/>
+		<!-- json指令  -->
+		<property name="f_json" type="string" length="8000" />
+		<!-- 插入指令时间  -->
+		<property name="f_datetime" type="date"/>
+		<property name="f_datetimetime" type="time"/>
+		<!-- 分发状态  -->
+		<property name="f_status" type="string"/>
+		<!-- 分发时间  -->
+		<property name="f_ffdatetime" type="date"/>
+		<property name="f_ffdatetimetime" type="time"/>
+		<!-- 子接口处理状态 -->
+		<property name="f_statussub" type="string"/>
+		<!-- 子接口处理结果 -->
+		<property name="f_jieguo" type="string"/>		
+		<!-- 子接口处理结果信息  -->
+		<property name="f_jieguoinfo" type="string" length="8000" />
+		<!-- 子接口处理时间 -->
+		<property name="f_datetimesub" type="date"/>
+		<property name="f_datetimesubtime" type="time"/>
+		<!-- 版本  -->
+		<property name="f_version" type="string"/>
+		
+</class>
+</hibernate-mapping>

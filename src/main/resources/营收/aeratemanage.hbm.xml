@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--民用通气-->
+    <class   entity-name="t_aeratemanage" table="t_aeratemanage" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--联系人-->
+		<property name="f_linkman" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--电话-->	
+		<property name="f_phone" type="string"/>
+		<!--户数-->
+		<property name="f_number" type="string"/>
+		<!--是否通气-->
+		<property name="f_aerate" type="boolean"/>
+		<!--是否有自闭阀-->
+		<property name="f_closing" type="boolean"/>
+		<!--已通户数-->
+		<property name="f_givennumber" type="string"/>
+		<!--未通户数-->
+		<property name="f_unknownnum" type="string"/>
+		<!--通气人-->
+		<property name="f_aerateman" type="string"/>
+		<!--通气日期-->
+		<property name="f_aeratedate" type="date"/>
+		<!--部门-->
+		<property name="f_departments3" type="string"/>
+		<!--操 作 人-->
+		<property name="f_eoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_edate" type="date"/>
+		
+		
+	</class>
+</hibernate-mapping>

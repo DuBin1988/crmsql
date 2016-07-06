@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--地址管理-->
+    <class   entity-name="t_updatemyfaka" table="t_updatemyfaka" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		 
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用户地址-->
+		<property name="f_address" type="string"/>
+
+		<!--气表厂家-->
+		<property name="f_qibiaochangjia" type="string"/>
+
+		<!--气表品牌-->
+		<property name="f_qibiaopinpai" type="string"/>
+
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+
+		<!--发卡气量-->
+		<property name="f_pregas" type="double"/>
+		<!--修改后发卡气量-->
+		<property name="f_newpregas" type="double"/>
+		<!--发卡卡费-->
+		<property name="f_cardfees" type="double"/>
+		<!--修改后发卡卡费-->
+		<property name="f_newcardfees" type="double"/>
+	
+		<!--发卡气量金额-->
+		<property name="f_preamount" type="double"/>
+		<!--修改后发卡气量金额-->
+		<property name="f_newpreamount" type="double"/>
+		<!--修改后总收费-->
+		<property name="f_newtotalcost" type="double"/>	
+
+		<!--总收费-->
+		<property name="f_totalcost" type="double"/>
+		<!--是否发卡-->
+		<property name="f_whethergivecard" type="string"/>
+		<!--修改后是否发卡-->
+		<property name="f_newwhethergivecard" type="string"/>		
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+	
+		<!--修改原因-->
+		<property name="f_updatenote" type="string"/>	
+		<!--操作人-->
+		<property name="f_handplanoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_handplandate" type="date"/>		
+	</class>
+</hibernate-mapping>

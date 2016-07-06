@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--知识库-->
+    <class  entity-name="t_knowledge" table="t_knowledge" >
+		<id name="id" column="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--信息标题-->
+		<property name="f_infotitle" type="string"/>
+		<!--信息内容-->
+		<property name="f_infocontent" type="string"/>
+		<!--部门-->	
+		<property name="f_department" type="string"/>
+		<!--操作员-->
+		<property name="f_operation" type="string"/>
+		<!--操作日期-->
+		<property name="f_operationdate" type="date"/>
+	</class>
+</hibernate-mapping>

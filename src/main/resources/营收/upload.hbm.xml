@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--工程图纸信息--> 
+    <class   entity-name="t_upload" table="t_upload" >	
+	    <id name="id" type="string"/>
+	    <!-- 文件名称 -->
+		<property name="filename" type="string"/>
+	    <!-- 上传人 -->
+	    <property name="f_uploader" type="string" />
+	    <!-- 文件类型-->
+	    <property name="f_filetypes" type="string" />   
+	    <!-- 上传日期-->
+	    <property name="f_date" type="string" />
+	    <!-- 文件大小-->
+	    <property name="f_size" type="double" />
+	</class>        
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--修改卡费-->
+	<class entity-name="t_xiugaikafei" table="t_xiugaikafei">
+	    <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>   
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<property name="f_cardfees" type="double"/>
+		<property name="f_mnate" type="string"/>
+		<property name="f_date" type="date"/>
+		<property name="f_operator" type="string"/>
+		
+		<property name="f_department" type="string"/>
+		<property name="f_fengongsinum" type="string"/>
+		<property name="f_filiale" type="string"/>
+		
+	</class>
+</hibernate-mapping>

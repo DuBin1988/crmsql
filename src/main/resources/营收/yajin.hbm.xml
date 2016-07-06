@@ -1,0 +1,67 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--发折-->
+    <class   entity-name="t_yajin" table="t_yajin" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!-- 用户/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+<!--气价-->
+		<property name="f_gasprice" type="double"/>
+<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+<!--卡号-->
+		<property name="f_cardid" type="string"/>	
+<!--机表用户账户结余-->
+		<property name="f_zhye" type="double"/>
+<!--现有结余-->
+		<property name="f_xyzhye" type="double"/>
+<!--退押金-->
+		<property name="f_tuiyajin" type="double"/>
+<!--备注-->
+<property name="f_beizhu" type="string"  length="1500"/>
+		<!--上次总累计购气-->
+		<property name="f_upbuynum" type="double"/>
+		<!--表上次累计购气量-->
+		<property name="f_premetergasnums" type="double"/>
+<!--维修费起始月份-->
+		<property name="f_beginfee" type="date"/>
+		<!--维修费截至月份-->
+		<property name="f_endfee" type="date"/>
+		<!--维护费交费月数-->
+		<property name="f_repairnum" type="double"/>	
+<!--维修费金额-->
+		<property name="f_amountmaintenance" type="double"/>
+	<!--机表上次交费指数-->
+		<property name="f_sczhishu" type="double"/>
+		<!--机表本次交费指数-->
+		<property name="f_bczhishu" type="double"/>
+
+		<!--部门-->
+		<property name="f_sgnetwork" type="string"/>	
+		<!--操作人-->
+		<property name="f_sgoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_deliverydate" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+	</class>
+</hibernate-mapping>

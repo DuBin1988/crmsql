@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--报建申请 花名册-->
+    <class   entity-name="t_applycustomer" table="t_applycustomer" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		
+		<!--小区名称 -->
+		<property name="f_district" type="string"/>
+		<!--门牌号-->
+		<property name="f_doorplate" type="string"/>
+		<!--楼号-->
+		<property name="f_cusDy" type="string"/>
+		<!--单元-->
+		<property name="f_cusDom" type="string"/>
+		<!--楼层-->
+		<property name="f_cusFloor" type="string"/>
+		
+		
+		
+		
+		
+		
+		
+                <!-- 是否壁挂锅炉用户-->
+		<property name="f_isbgglyh" type="boolean"/>
+		<!-- 是否热水器用户 -->
+		<property name="f_isrsqyh" type="boolean"/>
+		<!-- 是否费用已结清 -->
+		<property name="f_isfysfyjq" type="boolean"/>
+		<!--用户姓名 -->
+		<property name="f_username" type="string"/>
+		<!--地址 -->
+		<property name="f_address" type="string"/>
+		
+		<!--电话 -->
+		<property name="f_phone" type="string"/>
+		<!--民用-->
+		<property name="f_isnullmin" type="boolean"></property>
+		<!--身份证 -->
+		<property name="f_code" type="string"/>
+		<!--表号 -->
+		<property name="f_meternumber" type="string"/>
+		<!--表封 -->
+		<property name="f_metertitles" type="string"/>
+		<!--表底数 -->
+		<property name="f_gasmeteraccomodations" type="int"/>
+		<!--左右表 -->
+		<property name="f_aroundmeter" type="string"/>
+		<!-- 备注 -->
+		<property name="f_descript" type="string"/>
+		<!-- 是否核对 -->
+		<property name="f_isok" type="boolean"/>
+		<!-- 是否导入，导入收费后不显示 -->
+		<property name="f_isimport"  type="boolean"/>
+		<!-- 关联id，对应apply -->
+        <property name="applyid" type="int" />
+		<!-- 气表品牌 -->
+		<property name="f_gaswatchbrand" type="string"/>
+        <!--是否通气-->
+		<property name="f_istongqi" type="boolean"/>
+		<!-- 图片信息 -->
+        <set name="f_customerimage">
+          <key column="customerid" on-delete="noaction" />
+          <one-to-many entity-name="t_customerimage" not-found="exception"/>        
+        </set> 
+	</class> 
+</hibernate-mapping>

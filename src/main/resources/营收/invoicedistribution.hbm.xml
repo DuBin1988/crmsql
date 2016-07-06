@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--发票分配-->
+    <class   entity-name="t_invoicedistribution" table="t_invoicedistribution" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--发票代码-->
+		<property name="f_invoiceid" type="string"/>
+		<!--起始发票号-->
+		<property name="f_startinvoices" type="string"/>
+		<!--终止发票号 -->
+		<property name="f_endinvoices" type="string"/>
+		<!--发票使用人-->
+		<property name="f_sgoperator" type="string"/>
+		<!--发票数量-->
+		<property name="f_nums" type="int"/>
+		<!--初始字段-->
+		<property name="f_chushi" type="int"/>
+		<!--备注-->
+		<property name="remarks" type="string"  length="500"/>
+		
+
+		<!--部门-->
+		<property name="f_parentname" type="string"/>	
+		<!--分配人-->
+		<property name="f_operator" type="string"/>
+		<!--分配日期-->
+		<property name="f_date" type="date"/>
+		<!--分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!--分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		<!--组织代码-->
+		<property name="f_orgstr" type="string"/>
+
+       <!--发票分配明细发票记录-->
+	    <set name="invoicelist" cascade="all-delete-orphan">
+          <key column="parentid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_fapiaoinfos" not-found="exception" /> 
+        </set>	
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--工商户用气设备-->
+    <class   entity-name="t_device" table="t_device" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--第几处-->
+		<property name="f_dijichu" type="string"/>
+		<!--设备名称-->
+		<property name="f_name" type="string"/>
+		<!--功率或用气量-->
+		<property name="f_usegasnum" type="double"/>
+		<!--非民用大锅炉功率换算成吨-->
+		<property name="f_dunwei" type="double"/>
+		<!--吨位小计-->
+		<property name="f_dunweixiaoji" type="double"/>
+		<!--单位-->
+		<property name="f_unit" type="string"/>
+		<!--数量-->
+		<property name="f_count" type="int"/>
+		<!--单价-->
+		<property name="f_price" type="double"/>
+		<!--金额-->
+		<property name="f_money" type="double"/>
+		
+		<!--用气设备品牌-->
+		<property name="f_brand" type="string"/>
+		<!--用气设备型号-->
+		<property name="f_shebeitype" type="string"/>
+		<!--身份证 -->
+		<property name="f_code" type="string"/>
+		<!-- 不能安装原因 -->
+		<property name="f_noanzhuang" type="string"/>
+		<!--定表型/气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--定表型/气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--定表型/操作部门-->
+		<property name="f_watchdepartment" type="string"/>
+		<!--定表型/操作人-->
+		<property name="f_watchopertor" type="string"/> 
+		<!--定表型/操作日期-->
+		<property name="f_watchdate" type="date"/>	
+		<!--现场看勘查意见 -->
+		<property name="f_descript" type="string" length="1000"/>
+		<!--设计意见 -->
+		<property name="f_descript1" type="string" length="1000"/>
+		<!-- 设计人 -->
+		<property name="f_descriptopt" type="string"/>
+		<!-- 设计人填写意见日期 -->
+		<property name="f_descriptdate" type="date" />
+		<!-- 表号 -->
+		<property name="f_deviceno" type="string"/>
+		<!-- 表封 -->
+		<property name="f_devicetitle" type="string"/>
+		<!-- 表底数 -->
+		<property name="f_gasmeteraccomodations" type="int"/>
+		<!-- 是否通气 -->
+		<property name="f_isok" type="boolean"></property>
+		<!--非民用-->
+		<property name="f_isnullfei" type="boolean"></property>
+		<!-- 是否导入，导入收费后不显示 -->
+		<property name="f_isimport"  type="boolean"/>
+		<!-- 关联id，对应apply -->
+        <property name="applyid" type="int" />
+		 <!--额定流量-->
+		<property name="f_flownum" type="string"/>
+		<!--气表厂家 -->
+		<property name="f_changjia" type="string"/>
+		<!--气表类型-->
+		<property name="f_type" type="string"/>
+		<!--气表别名-->
+		<property name="f_aliasname" type="string"/>
+        <!--是否通气-->
+		<property name="f_istongqi" type="boolean"/>
+		<!--申请单位-->
+		<property name="f_applydept" type="string"/>
+		
+		<!--设备添加/操作人部门-->
+		<property name="f_department" type="string"/>
+		<!--设备添加/操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--设备添加/日期-->
+		<property name="f_date" type="date"/>
+		<!-- 图片信息 -->
+        <set name="f_image">
+          <key column="deviceid" on-delete="noaction" />
+          <one-to-many entity-name="t_deviceimage" not-found="exception"/>        
+        </set> 
+	</class> 
+</hibernate-mapping>

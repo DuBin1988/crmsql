@@ -1,0 +1,26 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--费用减免明细-->
+    <class   entity-name="t_costreduction" table="t_costreduction" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--减免科目-->
+		<property name="f_subject" type="string"/>
+		<!--减免费用-->
+		<property name="f_fee" type="double"/>
+		<!--审批领导-->
+		<property name="f_leader" type="string"/>
+		<!--审批内容-->
+		<property name="f_content" type="string"/>
+		<!--操作人部门-->
+		<property name="f_department" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+	</class>
+</hibernate-mapping>

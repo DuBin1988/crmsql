@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--稽查生成条件管理-->
+    <class   entity-name="t_inspect" table="t_inspect" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名单位名称-->
+		<property name="f_username" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--最后购气日期 从-->
+		<property name="f_finabuygasdatefrom" type="date"/>
+		<!--最后购气日期 到-->
+		<property name="f_finabuygasdateto" type="date"/>
+		<!--开户日期 从-->
+		<property name="f_dateofopeningfrom" type="date"/>
+		<!--开户日期 到-->
+		<property name="f_dateofopeningto" type="date"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--没购气月数-->
+		<property name="f_nosellgastime" type="int"/>
+        <!--比较日期-->
+		<property name="f_bijiaodate" type="date"/>
+        <!--平均用气量小于-->
+		<property name="f_average" type="int"/>
+        <!--小于最后购气日期-->
+		<property name="f_zuihoudate" type="date"/>
+        
+        
+        <!--稽查生成日期-->
+		<property name="f_inspectdate" type="date"/>
+		<!--操 作 员-->
+		<property name="f_operator" type="string"/>
+
+		
+		
+	</class>
+</hibernate-mapping>

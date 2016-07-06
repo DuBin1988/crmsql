@@ -1,0 +1,65 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--气表品牌已经其型号-->
+	<class entity-name="qibiao" table="t_qibiao">
+	    <id name="id"  type="string"/> 
+	      <!--气表品牌 -->
+		<property name="f_pinpai" type="string"/>
+		<!--气表厂家 -->
+		<property name="f_changjia" type="string"/>
+		<!--气表类型 -->
+		<property name="f_type" type="string"/>
+		<!-- 表通道类型 -->
+		<property name="channel_type" type="string"/>
+		<!-- 是否支持阀门操作  -->
+		<property name="switch_op" type="string"/>
+		<!-- 表计量类型  -->
+		<property name="jllx" type="string"/>
+		<!-- 是否发送指令  -->
+		<property name="send" type="string"/>
+		<!--别名 -->
+		<property name="f_aliasname" type="string"/>
+		<set name="qbnumber" cascade="all-delete-orphan">
+          <key column="parentid" on-delete="noaction" />
+          <one-to-many entity-name="qbnumber" not-found="exception"/>        
+        </set>
+        
+         <!-- 卡类型，写卡使用 0 民用，1工业 -->
+         <property name="klx" type="string"/>
+         <!-- 地区代码 -->
+         <property name="dqdm" type="string"/>
+      	 <!-- 用户号-->
+         <property name="yhh" type="string"/>      
+      	 <!-- 报警气量-->
+         <property name="bjql" type="string"/>
+         <!-- 充值上限-->
+         <property name="czsx" type="string"/>
+          <!-- 透支额度-->
+         <property name="tzed" type="string"/>
+            <!-- 卡密码-->
+         <property name="kmm" type="string"/>
+        
+	</class>
+	<class entity-name="qbnumber" table="t_qbnumber">
+	    <id name="id" type="string"/>
+	    <!--气表型号 -->   
+		<property name="f_qbnumber" type="string"/>
+		<!--大小卡 -->
+		<property name="f_bigsmallcard" type="string"/>
+		<!--额定流量-->
+		<property name="f_flownum" type="string"/>
+		<!--表型号对应类型-->
+		<property name="f_type" type="string"/>
+		<!--海力表型编码-->
+		<property name="f_watchnum" type="string"/>
+		<!--脉冲(表系数)-->
+		<property name="f_maichong" type="string"/>
+	</class>
+	
+	 
+	
+
+</hibernate-mapping>

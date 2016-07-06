@@ -1,0 +1,20 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.aote">
+	<!--大字段表-->
+	<class table="t_blob" entity-name="t_blob">
+		<id name="id" type="string"/>
+		<property name="filename" type="string"/>
+		<property name="blob" type="blob"/>
+		<!-- 不以数据库存储的，保存全文件路径名-->
+		<property name="filefullpath" type="string"/>
+		<!-- 业务类型-->
+		<property name="businesstype" type="string"/>
+		<!-- 上传类型-->
+		<property name="saveMode" type="string"/>
+		 
+		
+	</class>
+</hibernate-mapping>

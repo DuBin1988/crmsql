@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--档案变更明细-->
+    <class   entity-name="t_fileschangelist" table="t_fileschangelist" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+
+		<!--变更字段名称-->
+		<property name="f_filename" type="string"/>
+		<!--变更前内容-->
+		<property name="f_changeqian" type="string"/>
+		<!--变更后内容-->
+		<property name="f_changehou" type="string"/>
+		<!--与变更主表关联id-->
+		<property name="changeid" type="int"/>
+		<property name="code" type="string"/>
+		
+
+	</class>
+</hibernate-mapping>

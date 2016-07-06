@@ -1,0 +1,80 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--其它补气-->
+    <class   entity-name="t_otherfillgas" table="t_otherfillgas" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--表上次累计购气量-->
+		<property name="f_premetergasnums" type="double"/>
+		<!--上次总累计购气量-->
+		<property name="f_upbuynum" type="double"/>
+		<!--表本次累计购气量-->
+		<property name="f_metergasnums" type="double"/>	
+		<!--本次总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--海力表型编码-->
+		<property name="f_watchnum" type="string"/>
+		<!--脉冲(表系数)-->
+		<property name="f_maichong" type="string"/>
+		<!--补气类型-->
+		<property name="f_addgastype" type="string"/>
+		<!--交费时间-->
+		<property name="f_deliverytime" type="time"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户地址-->
+		<property name="f_address" type="string"/>
+		<!--身份证号-->	
+		<property name="f_idnumber" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--补气量-->
+		<property name="f_cmaddgas" type="double"/>
+		<!--上次剩余补气量-->
+		<property name="f_nextaddgasamount" type="double"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--补气单号-->
+		<property name="f_addgasnum" type="string"/>
+		
+		<!--本次补气量-->
+		<property name="f_pregas" type="double"/>
+		<!--本次剩余补气量-->
+		<property name="f_thisnextaddgasamount" type="double"/>
+		<!--补气原因-->
+		<property name="f_addgasreason" type="string"/>
+		<!--补气日期-->
+		<property name="f_addgasdate" type="date"/>
+		<!--部门-->
+		<property name="f_parentname5" type="string"/>
+		<!--操作日期-->
+		<property name="f_date" type="date"/>
+		<!--操作人-->
+		<property name="f_operator" type="string"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+
+<!--隐藏域-->		
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--购气次数-->
+		<property name="f_times" type="int"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+
+	</class>
+</hibernate-mapping>

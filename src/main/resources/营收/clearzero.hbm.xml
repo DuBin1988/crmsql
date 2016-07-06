@@ -1,0 +1,87 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--清零管理-->
+    <class   entity-name="t_clearzero" table="t_clearzero" >
+	    <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--门牌号-->
+		<property name="f_apartment" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--表封号-->
+		<property name="f_metertitles" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--旧卡号-->
+		<property name="f_cardidold" type="string"/>
+		<!--卡编号-->
+		<property name="f_cardnumber" type="string"/>
+		<!--表底数-->
+		<property name="f_currentbase" type="double"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--表累计购气量-->
+		<property name="f_metergasnums" type="double"/>
+		<!--旧表底数-->
+		<property name="f_oldcurrentbase" type="double"/>
+		<!--新气表品牌-->
+		<property name="f_cmnewgaswatchbrand" type="string"/>
+		<!--新气表型号-->
+		<property name="f_cmnewmetertype" type="string"/>
+		<!--换表日期-->
+		<property name="f_cmchangemeterdate" type="date"/>
+		<!--新气表厂家-->
+		<property name="f_newgasmetermanufacturers" type="string"/>
+		<!--新气表类型-->
+		<property name="f_newgasmeterstyle" type="string"/>
+		<!--新卡号-->
+		<property name="f_cmnewcardid" type="string"/>
+		<!--新表号-->
+		<property name="f_cmnewmeternumber" type="string"/>
+		<!--新表封号-->
+		<property name="f_cmnewmetertitles" type="string"/>
+		<!--新表底数-->
+		<property name="f_newgasmeteraccomodations" type="double"/>
+		<!--新卡编号-->
+		<property name="f_cmnewcardnumber" type="string"/>
+		<!--补气量-->
+		<property name="f_cmaddgas" type="double"/>
+		<!--剩余补气量-->
+		<property name="f_nextaddgasamount" type="double"/>
+		<!--备注-->
+		<property name="f_cnote" type="string"/>
+		<!--网点-->
+		<property name="f_parentname4" type="string"/>
+		<!--操作人-->
+		<property name="f_cmoperator" type="string"/>
+		<!--分公司-->
+		<property name="f_filiale" type="string"/>
+		<!--操作日期-->
+		<property name="f_cmdate" type="date"/>
+		
+	</class>
+</hibernate-mapping>

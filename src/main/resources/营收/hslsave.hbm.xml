@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--回收率报表保存-->
+    <class   entity-name="t_hslsave" table="t_hslsave" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--抄表开始日期-->
+		<property name="lastinputdate" type="date"/>
+		<!--抄表截止日期-->
+		<property name="lastinputdate2" type="date"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--操作日期-->
+		<property name="f_date" type="date"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--报表内容-->
+		<property name="json" type="string" >
+			<column name="json" length="5000" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--线路-->
+    <class   entity-name="t_tunnel" table="t_tunnel" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--支干线-->
+		<property name="f_branchline" type="string"/>
+		<!--管径-->
+		<property name="f_gj" type="string"/>
+		<!--管材料-->
+		<property name="f_gc" type="string"/>
+		<!--长度-->
+		<property name="f_long" type="string"/>
+		<!--实际完成长度-->
+		<property name="f_sjlong" type="string"/>
+			<!--起点-->
+		<property name="f_startearea" type="string"/>
+		<!--终点-->
+		<property name="f_endarea" type="string"/>
+	
+		
+	</class> 
+</hibernate-mapping>

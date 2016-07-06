@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--报建材料核查-->
+    <class   entity-name="t_materialexam" table="t_materialexam" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		
+	<!-- 材料名称 -->
+		<property name="f_materialname" type="string"/>
+		<!--规格型号-->
+		<property name="f_specificationmodel" type="string"/>
+		<!-- 单位 -->
+	    <property name="f_unit" type="string"/>  
+	    <!-- 计划数量 -->
+	    <property name="f_number" type="string"/>  
+	    <!-- 变更1数量 -->
+	    <property name="f_modifyone" type="string"/>  
+	    <!-- 变更2数量 -->
+	    <property name="f_modifytwo" type="string"/>  
+	    <!-- 变更3数量 -->
+	    <property name="f_modifythree" type="string"/>  
+	    <!--变更4数量 -->
+	    <property name="f_modifyfour" type="string"/>  
+	    <!--变更5数量-->
+	    <property name="f_modifyfive" type="string"/>  
+	    <!--变更6数量-->
+	    <property name="f_modifysix" type="string"/>  
+	    <!--备注 -->
+	    <property name="f_remarks" type="string" length="1000"/>  
+	    <!-- 关联id，对应apply -->
+        <property name="applyid" type="int" />
+	</class> 
+</hibernate-mapping>

@@ -210,6 +210,7 @@
    	    <!--置忙时间记录-->
    	    <mapping resource="营收/清欠明细.hbm.xml"/>
      
+     
    	     <!-- 街道 -->
    	    <mapping resource="营收/road.hbm.xml"/>
 	<!--安检员位置-->

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--安检表-->
+    <class   entity-name="safety" table="safety" >
+		<id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--单位-->
+		<property name="f_username" type="string"/>
+	
+		<!--楼号-->	
+		<property name="f_cusDom" type="string"/>
+		<!--住址-->	
+		<property name="f_address" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--表余气量-->
+		<property name="factremaingascount" type="string"/>
+		<!--安检员姓名-->
+		<property name="examine" type="string"/>
+		<!--安检日期-->	
+		<property name="safetydate" type="string"/>
+	</class>
+</hibernate-mapping>

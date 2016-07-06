@@ -1,0 +1,43 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--抄表记录-->
+	<class  entity-name="t_mrinput" table="t_mrinput" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 抄表本编号 -->
+	 	<property name="f_cbbid" type="string"/>
+		<!-- 用户编号 -->
+	 	<property name="f_userid" type="string"/>
+	 	<!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+	 	<!-- 上次抄表底数 -->
+	 	<property name="f_gasmeteraccomodations" type="double"/>
+	 	<!-- 本次抄表底数 -->
+		<property name="lastrecord" type="double"/>
+		<!--应交气量-->
+		<property name="oughtamount" type="double"/>
+		<!-- 应交金额 -->
+		<property name="oughtfee" type="double"/>
+		<!--抄表员 -->
+		<property name="f_mrperson" type="string"/>
+		<!--抄表日期 -->
+		<property name="lastinputdate" type="date"/>
+		<!--部门-->
+		<property name="f_department" type="string"/>
+		<!-- 操作人-->
+		<property name="f_opertor" type="string"/>
+		<!-- 操作日期 -->
+		<property name="f_date" type="date"/>
+		
+		<!--下账记录 -->
+		<set name="f_xiaccount"  cascade="delete-orphan" >
+      	    <key column="parentid" />
+      		<one-to-many entity-name="t_xiaccount" />
+		</set>
+  
+	</class>
+</hibernate-mapping>

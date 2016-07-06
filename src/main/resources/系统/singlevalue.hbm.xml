@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--单值-->
+	<class entity-name="t_singlevalue" table="t_singlevalue" dynamic-update="true">
+	    <id name="id" column="id" type="string"/>   
+	    <property name="value" type="string"/>
+	    <property name="name" type="string"/>
+	</class>
+</hibernate-mapping>

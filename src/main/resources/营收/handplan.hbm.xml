@@ -1,0 +1,223 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--抄表录入-->
+	<class entity-name="t_handplan" table="t_handplan" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 本次缴费对应的交费记录id -->
+		<property name="f_sellid" type="string"/>
+		<!--滞纳金-->
+		<property name="f_zhinajin" type="double"/>
+		<!--滞纳金减免金额-->
+		<property name="f_jmzhinajin" type="double"/>
+		<!--抄表计划日期（财务日期）-->
+		<property name="f_handdate" type="date"/>
+		<!--机表滞纳金天数-->
+		<property name="f_zhinajintianshu" type="int"/>
+		<!--机表滞纳金开始计算日期-->
+		<property name="f_zhinajindate" type="date"/>
+		<!--用户编号-->
+		<property name="f_userinfoid" type="string" />
+		<!--组织代码-->
+		<property name="f_orgstr" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>	
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--市 -->
+		<property name="f_city" type="string"/>
+		<!--区 -->
+		<property name="f_area" type="string"/>
+		<!--街道 -->
+		<property name="f_road" type="string"/>
+		<!--小区-->
+		<property name="f_districtname" type="string"/>
+		<!--册号 -->
+		<property name="f_books" type="string"/>
+		<!--单元号 -->
+		<property name="f_cusDy" type="string"/>
+		<!--楼号 -->
+		<property name="f_cusDom" type="string"/>
+		<!--楼层 -->
+		<property name="f_cusFloor" type="string"/>
+		<!--门牌号 -->
+		<property name="f_apartment" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表编号-->
+		<property name="f_meternumber" type="string"/>
+		<!--表状态-->
+		<property name="f_meterstate" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--气表类型-->
+		<property name="f_gasmeterstyle" type="string"/>
+		<!--分公司名称-->
+		<property name="f_filiale" type="string"/>
+		<!--应交气量-->
+		<property name="oughtamount" type="double"/>
+		<!--临界内气量-->
+		<property name="ljqnl" type="double"/>
+		<!--临界气量-->
+		<property name="ljql" type="double"/>
+		<!--临界外气量-->
+		<property name="ljwql" type="double"/>
+		<!--临界内气价-->
+		<property name="linjienqj" type="double"/>
+		<!--临界外气价-->
+		<property name="linjiewqj" type="double"/>
+		<!--临界内用气金额-->
+		<property name="ljnyqje" type="double"/>
+		<!--临界外用气金额-->
+		<property name="ljwyqje" type="double"/>
+		<!--应交金额-->
+		<property name="oughtfee" type="double"/>
+		<!--本次抄表底数-->
+		<property name="lastrecord" type="double"/>
+		<!--卡表剩余气量-->
+		<property name="f_leftgas" type="double"/>
+		<!--上次抄表底数-->
+		<property name="lastinputgasnum" type="double"/>
+		<!--比较录入的上次指数-->
+		<property name="bj" type="double"/>
+		<!--上次抄表日期-->
+		<property name="scinputdate" type="date"/>
+		<!--抄表日期-->
+		<property name="lastinputdate" type="date"/>
+		<!--交费截止日期-->
+		<property name="f_endjfdate" type="date"/>
+		<!--抄表 员-->
+		<property name="f_inputtor" type="string"/>
+		<!--门站 -->
+		<property name="f_menzhan" type="string"/>
+		<!--责任部门-->
+		<property name="f_zerenbumen" type="string"/>
+		<!-- 表安装位置 -->
+		<property name="f_weizhi" type="string"/>
+		<!--是否低保户-->
+		<property name="f_dibaohu" type="boolean"/>
+		
+        <!--上次账户余额-->
+		<property name="f_zhye" type="double"/>
+		<!--本次结算余额-->
+		<property name="f_bczhye" type="double"/>
+		<!--网点-->
+		<property name="f_network" type="string"/>
+		<!--操 作 员-->
+		<property name="f_operator" type="string"/>
+	    <!--操作时间-->
+		<property name="f_stime" type="time"/>
+		<!--录入日期-->
+		<property name="f_inputdate" type="date"/>
+		<!--yi-->
+		<property name="yi" type="int"/>
+		<!--临时底数属性-->
+		<property name="f_temp" type="double"/>
+		<!--选择属性-->
+		<property name="f_checked" type="string"/>
+		<!--用户性质-->
+		<property name="f_yhxz" type="string"/>
+		<!--旧系统标记-->
+		<property name="Flag" type="string"/>
+		<!--旧系统销售结账-->
+		<property name="XiaoShou_JE" type="double"/>
+		
+		<!--是否缴费-->
+		<property name="shifoujiaofei" type="string"/>
+		<!--抄表单状态-->
+		<property name="f_state" type="string"/>
+		<!--是否已生成短信，是、否-->
+		<property name="f_sms" type="string"/>	
+		<!--实际欠费金额,有结余就减去-->
+	    <property name="f_debtmoney" type="double"/>
+	    <!-- 抄表记录id -->
+	    <property name="cid" type="string"/>
+	    <!-- 抄表系统剩余金额 -->
+	    <property name="jval" type="double"/>
+		<property name="zhye" type="double"/>	
+		<property name="zhye_jval" type="double"/>		
+		
+			<!-- **************阶梯气价信息**************** -->
+	<!-- 存储用户当前购气时，气价和气量的具体信息，购气量在阶段几种  获得当前阶段的单价 算出购气金额 -->
+		<!--阶梯气价类型-->
+		<property name="f_stairtype" type="string"/>
+		<!--阶段一气量-->
+		<property name="f_stair1amount" type="double"/>
+		<!--阶段一单价-->
+		<property name="f_stair1price" type="double"/>
+		<!--阶段一金额-->
+		<property name="f_stair1fee" type="double"/>
+		<!--阶段二气量-->
+		<property name="f_stair2amount" type="double"/>
+		<!--阶段二单价-->
+		<property name="f_stair2price" type="double"/>
+		<!--阶段二金额-->
+		<property name="f_stair2fee" type="double"/>
+		<!--阶段三气量-->
+		<property name="f_stair3amount" type="double"/>
+		<!--阶段三单价-->
+		<property name="f_stair3price" type="double"/>
+		<!--阶段三金额-->
+		<property name="f_stair3fee" type="double"/>
+		<!--阶段四气量-->
+		<property name="f_stair4amount" type="double"/>
+		<!--阶段四单价-->
+		<property name="f_stair4price" type="double"/>
+		<!--阶段四金额-->
+		<property name="f_stair4fee" type="double"/>
+		<!--当前阶段开始日期-->
+		<property name="f_stardate" type="string"/>
+		<!--当前阶段结束日期-->
+		<property name="f_enddate" type="string"/>
+		<!--当前阶段累计购气量-->
+		<property name="f_allamont" type="double"/>
+		
+		<!--用户档案 -->
+		<many-to-one name="users" entity-name="t_userfiles"></many-to-one>
+		
+		<!-- **********银行部分的配置******************-->
+		<!--开户名称-->
+		<property name="f_usermc" type="string"/>
+		<!--银行名-->
+		<property name="f_bankname" type="string"/>
+		<!--银行开户账号-->
+		<property name="f_idofcard" type="string"/>
+		<!-- 送盘时间 -->
+		<property name="f_sendtime" type="timestamp"/>
+		<!--旧系统uuid-->
+		<property name="f_olduuid" type="string"/>
+		<!--旧系统用户编号-->
+		<property name="f_olduserid" type="string"/>
+		<!--旧系统中缴费方式例如：银行代扣，现金，转账等-->
+		<property name="paytype" type="string"/>
+		<!--旧系统中 是否还款[是，否（默认）-->
+		<property name="ispay" type="string"/>
+		<!--旧系统银行代扣状态-->
+		<property name="withholdingstatus_uuid" type="string"/>
+		<!--旧系统表具uuid-->
+		<property name="meter_uuid" type="string"/>
+
+	</class>
+</hibernate-mapping>

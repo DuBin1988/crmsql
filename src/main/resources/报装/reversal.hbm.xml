@@ -1,0 +1,24 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--冲正明细-->
+    <class   entity-name="t_reversal" table="t_reversalt_reversal" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--金额-->
+		<property name="f_fee" type="double"/>
+		<!--操作人部门-->
+		<property name="f_department" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--冲正原因-->
+		<property name="f_yuanyin" type="string"/>
+		<!--冲正日期-->
+		<property name="f_reversaldate" type="date"/>
+		<!-- 对应的报装编号 -->
+		<property name="applyid" type="int"/>
+	</class>
+</hibernate-mapping>

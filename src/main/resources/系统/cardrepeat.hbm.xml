@@ -1,0 +1,52 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!--系统组织信息-->
+	<class entity-name="t_cardrepeat" table="t_cardrepeat" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--单位编号 -->
+		<property name="f_unitid" type="string"/>
+		<!--用户编号-->
+		<property name="f_userinfoid" type="string" />
+		<!--用户档案编号-->
+		<property name="f_userid" type="string" />
+		<!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		
+		
+		<!--市 -->
+		<property name="f_city" type="string"/>
+		<!--区 -->
+		<property name="f_area" type="string"/>
+		<!--街道 -->
+		<property name="f_road" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--楼号 -->
+		<property name="f_cusDom" type="string"/>
+		<!--单元号 -->
+		<property name="f_cusDy" type="string"/>
+		<!--楼层 -->
+		<property name="f_cusFloor" type="string"/>
+		<!--门牌号 -->
+		<property name="f_apartment" type="string"/>
+		
+		
+		<!--地址/过度用 -->
+		<property name="f_address" type="string"/>
+		<!--操作员 -->
+		<property name="operator" type="string"/>
+		
+		
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>

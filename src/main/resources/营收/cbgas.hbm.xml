@@ -1,0 +1,37 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--物联表抄表-->
+	<class  entity-name="t_cbgas" table="t_cbgas" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>		
+		<!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--收费类型-->
+		<property name="f_payfeetype" type="string"/>
+		<!--购气有效类型-->
+		<property name="f_payfeevalid" type="string"/>
+		<!--操 作 员-->
+		<property name="f_sgoperator" type="string"/>
+		<!--交费时间-->
+		<property name="f_deliverytime" type="time"/>
+		<!--交费日期-->
+		<property name="f_deliverydate" type="date"/>
+		<!--收　　款-->
+		<property name="f_grossproceeds" type="double"/>
+		<!--缴费时间，同步用-->
+		<property name="f_deliverydate_tb" type="string"/>
+		<!--同步状态-->
+		<property name="f_status_tb" type="string"/>		
+		
+</class>
+</hibernate-mapping>

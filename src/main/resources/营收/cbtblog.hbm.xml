@@ -1,0 +1,33 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--物联表抄表-->
+	<class  entity-name="t_cbtblog" table="t_cbtblog" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>		
+		<!--抄表时间-->
+		<property name="f_tbdate" type="date"/>
+		<!-- 气表过滤条件 -->
+		<property name="f_gasmeterstyle" type="string"/>
+		<!-- 同步URL -->
+		<property name="f_tburl" type="string"/>
+		<!-- 同步URI -->
+		<property name="f_tburi" type="string"/>
+		<!-- 请求的json -->
+		<property name="f_json" type="string"/>
+		<!-- 同步json -->
+		<property name="f_tbjson" type="string"/>
+		<!-- 返回的json -->
+		<property name="f_rejson" type="string"/>
+		<!-- 同步是否请求 -->
+		<property name="f_tbhttp" type="string"/>
+		<!-- 同步请求正常 -->
+		<property name="f_tbstatus" type="string"/>
+		
+		
+		
+</class>
+</hibernate-mapping>

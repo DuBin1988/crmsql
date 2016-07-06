@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--小区表-->
+	<class entity-name="t_area2" table="t_area2" dynamic-update="true">
+	   <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--市 -->
+		<property name="f_city" type="string"/>
+		<!--区 -->
+		<property name="f_area" type="string"/>
+		<!--街道 -->
+		<property name="f_road" type="string"/>
+		<!--小区名称-->
+		<property name="f_district" type="string"/>
+		<!--楼号 -->
+		<property name="f_cusDom" type="string"/>
+		<!--单元号 -->
+		<property name="f_cusDy" type="string"/>
+		<!--楼层 -->
+		<property name="f_cusFloor" type="string"/>
+		<!--门牌号 -->
+		<property name="f_doorplate" type="string"/>
+		<!--小区当前用户编号-->
+		<property name="f_usernumber" type="string"/>
+		<!-- 操作员 -->
+		<property name="f_operator" type="string"/>
+		<!-- 操作日期 -->
+		<property name="f_date" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+
+		<!-- 秦华安检用 -->
+		<!-- 归口单位 -->
+		<property name="f_guikouunit" type="string"/>
+		<!-- 网格编码 -->
+		<property name="f_gridcode" type="string"/>
+		<!-- 联系方式 -->
+		<property name="f_phone" type="string"/>
+		<!-- 状态 -->
+		<property name="f_state" type="string"/>
+	 
+	</class>
+</hibernate-mapping>

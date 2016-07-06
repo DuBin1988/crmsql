@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--安检员位置-->
+    <class   entity-name="t_geolocation" table="t_geolocation" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		<!--安检员姓名-->
+		<property name="username" type="string"/>
+		<!--起始日期-->
+		<property name="uploadTime" type="date"/>
+		<!--截止日期-->
+		<property name="updateTime" type="date"/>
+		<!--经度-->
+		<property name="longitude" type="string"/>
+		<!--纬度-->
+		<property name="latitude" type="string"/>
+		<!--高度-->
+		<property name="altitude" type="string"/>
+		<!--坐标-->
+		<property name="provider" type="string"/>
+	</class>
+</hibernate-mapping>

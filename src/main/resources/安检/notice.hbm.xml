@@ -1,0 +1,29 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="T_NOTICE" table="T_NOTICE">
+        <id name="id" type="string">
+        </id>
+        <!-- 标题 -->
+        <property name="f_title" type="string">
+        </property>
+        <!-- 内容 -->
+        <property name="f_context" type="string">
+        </property>
+        <!--站点-->
+		<property name="f_station" type="string"/>
+		<!--部门-->
+		<property name="f_departments" type="string"/>
+		<!--操作人-->
+		<property name="f_coperator" type="string"/>
+		<!--分公司-->
+		<property name="f_filiale" type="string"/>
+		<!--操作日期-->
+		<property name="f_time" type="time"/>
+        <!-- 发布时间 -->
+        <property name="f_publishdate" type="date">
+        </property>
+    </class>
+</hibernate-mapping>

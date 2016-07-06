@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--重发卡售气记录-->
+    <class   entity-name="t_refaka" table="t_refaka" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userinfoid" type="string"/>
+		<!--表编号-->
+		<property name="f_usern" type="string"/>
+		<!--用户名称-->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表位置-->
+		<property name="f_weizhi" type="string"/>
+		<!--仪表方向-->
+		<property name="f_aroundmeter" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--预购气量-->
+		<property name="f_pregas" type="double"/>
+		<!--预购金额-->
+		<property name="f_preamount" type="double"/>
+		<!--备注-->
+		<property name="f_beizhu" type="string"/>
+		
+		
+		
+		<!--网点-->
+		<property name="f_network" type="string"/>
+		<!--分公司-->
+		<property name="f_filiale" type="string"/>
+		<!--操作人-->
+		<property name="f_operator" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+	</class>
+</hibernate-mapping>

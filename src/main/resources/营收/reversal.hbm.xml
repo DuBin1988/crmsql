@@ -1,0 +1,107 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--读卡-->
+    <class   entity-name="t_reversal" table="t_reversal" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户/单位名称-->
+		<property name="f_username" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--地址-->	
+		<property name="f_address" type="string"/>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		
+		
+		<!--用气设备-灶具-->
+		<property name="f_kitchen" type="string"/>
+		<!--用气设备-热水器-->
+		<property name="f_waterheater" type="string"/>
+		<!--用气设备-壁挂炉-->
+		<property name="f_wallhangboiler" type="string"/>
+		
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>		
+		<!--卡内气量-->
+		<property name="f_gas" type="int"/>
+		<!--最后购气量-->
+		<property name="f_finallybought" type="double"/>
+		<!--最后购气日期-->
+		<property name="f_finallyboughtgasdate" type="date"/>
+		
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>	
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>	
+		<!--维护费单价-->
+		<property name="f_unitfee" type="double"/>
+		<!--上次总累计购气量-->
+		<property name="f_upbuynum" type="double"/>
+		<!--本次总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--表上次累计购气量-->
+		<property name="f_premetergasnums" type="double"/>
+		<!--表上次累计购气量-->
+		<property name="f_metergasnums" type="double"/>
+		<!--维修费起始月份-->
+		<property name="f_beginfee" type="string"/>
+		<!--维修费截至月份-->
+		<property name="f_endfee" type="string"/>
+		<!--维护费交费月数-->
+		<property name="f_repairnum" type="string"/>
+		<!--预购气量-->
+		<property name="f_pregas" type="double"/>
+		<!--预购金额-->
+		<property name="f_preamount" type="double"/>
+		<!--付款方式-->
+		<property name="f_payment" type="string"/>
+		<!--收　　款-->
+		<property name="f_grossproceeds" type="double"/>
+		<!--应交金额-->
+		<property name="f_totalcost" type="double"/>
+		<!--找　　零-->
+		<property name="f_givechange" type="double"/>	
+		<!--网　　点-->
+		<property name="f_sgnetwork" type="string"/>
+		<!--操 作 员-->
+		<property name="f_sgoperator" type="string"/>
+		<!--交费日期-->
+		<property name="f_deliverydate" type="date"/>
+		<!--冲正原因-->
+		<property name="f_reversalcause" type="string"/>
+		<!--网　　点-->
+		<property name="f_parentname" type="string"/>
+		<!--冲正人-->
+		<property name="f_reversalname" type="string"/>
+		<!--冲正日期-->
+		<property name="f_reversaldate" type="date"/>
+<!--隐藏域-->
+		<!--购气次数-->
+		<property name="f_times" type="string"/>
+		<!--表厂别名-->
+		<property name="f_aliasname" type="string"/>
+		
+		
+	</class>
+</hibernate-mapping>

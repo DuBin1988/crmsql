@@ -1,0 +1,65 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--启用-->
+    <class   entity-name="t_enabled" table="t_enabled" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户地址-->	
+		<property name="f_address" type="string"/>
+		<!--身份证号-->
+		<property name="f_idnumber" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--停用底数-->
+		<property name="f_aisableradix" type="double"/>
+		<!--停用日期-->
+		<property name="f_stopdate" type="date"/>
+		<!--抄表日期-->
+		<property name="f_mrdate" type="date"/>
+		<!--启用底数-->
+		<property name="f_openingradix" type="double"/>
+		<!--启用日期-->
+		<property name="f_openingdate" type="date"/>
+		<!--抄表人-->
+		<property name="f_mrperson" type="string"/>
+		<!--操作人-->
+		<property name="f_rcoperator" type="string"/>
+		<!--部门-->
+		<property name="f_parentname" type="string"/>
+		<!--操作日期-->
+		<property name="f_edate" type="date"/>
+		<!--操作时间-->
+		<property name="f_time" type="time"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		
+<!--隐藏域 -->
+		<!--用户状态-->
+		<property name="f_userstate" type="string"/>
+		<!--停用底数-->
+		<property name="f_gasmeteraccomodations" type="double"/>
+		
+		<!--厂家别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--购气次数-->
+		<property name="f_times" type="double"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--卡内气量-->
+		<property name="f_gas" type="double"/>
+	</class>
+</hibernate-mapping>

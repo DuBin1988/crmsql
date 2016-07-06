@@ -1,0 +1,154 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--发卡售气表-->
+	<class  entity-name="t_myfaka" table="t_myfaka" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--发票号， -->
+		<property name="f_invoicenum" type="string"/>
+		<!--公司类型，分为天然气公司、银行 -->
+		<property name="f_comtype" type="string"/>
+		<!--卡号加1，给后台卡号中回写-->
+		<property name="f_cardidjia" type="long"/>
+		<!--海力表型编码-->
+		<property name="f_watchnum" type="string"/>
+		<!--脉冲(表系数)-->
+		<property name="f_maichong" type="string"/>
+		<!--表型号对应类型-->
+		<property name="f_type" type="string"/>
+	 	<!-- 用户名称/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--证件号码-->
+		<property name="f_idnumber" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="double"/>
+		
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--表号-->
+		<property name="f_meternumber" type="string"/>
+		<!--气表厂家-->
+		<property name="f_gasmetermanufacturers" type="string"/>		
+		
+        <!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--卡 编 号-->
+		<property name="f_cardnumber" type="string"/>
+		<!--卡号-->
+		<property name="f_cardid" type="string"/>
+		<!--当前表累计购气量-->
+		<property name="f_metergasnums" type="double"/>
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double"/>
+		<!--发卡日期-->
+		<property name="f_givecarddate" type="date"/>	
+		<!--维修费起始月份-->
+		<property name="f_beginfee" type="date"/>	
+		<!--营业厅部门-->
+		<property name="f_departments" type="string"/>
+		<!--营业厅操作人-->
+        <property name="f_operator" type="string"/>
+		<!--大小卡-->
+		<property name="f_bigsmallcard" type="string"/>
+		<!--卡费-->
+		<property name="f_cardfees" type="double"/>
+		<!--单次最大购气量-->
+		<property name="f_singlegasnum" type="double"/>	
+		<!--预购气量-->
+		<property name="f_pregas" type="double"/>
+		<!--预购金额-->
+		<property name="f_preamount" type="double"/>
+		<!--购气日期-->
+		<property name="f_deliverydate" type="date"/>	
+		<!--购气日期-->
+		<property name="f_deliverytime" type="time"/>				
+		<!--上次总累计购气量-->
+		<property name="f_upbuynum" type="double"/>
+		<!--当前表上次累计购气量-->
+		<property name="f_premetergasnums" type="double"/>
+		<!--限购气量-->
+		<property name="f_limitbuygas" type="double"/>	
+		<!--收      款-->
+		<property name="f_grossproceeds" type="double"/>
+		<!--应交金额-->
+		<property name="f_totalcost" type="double"/>
+		<!--找零-->
+		<property name="f_givechange" type="double"/>
+		<!--操作员-->
+		<property name="f_sgoperator" type="string"/>
+		
+		<!--付款方式-->
+		<property name="f_payment" type="string"/>
+		<!--是否发卡-->
+		<property name="f_whethergivecard" type="string"/>
+		<!--是否发折-->
+		<property name="f_whethergivepassbook" type="string"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!--网点 -->
+		<property name="f_sgnetwork" type="string"/>
+		<!-- 分公司编号-->
+		<property name="f_fengongsinum" type="string"/>
+		<!--是否低保户-->
+		<property name="f_dibaohu" type="boolean"/>
+		
+	<!--混合用户发卡售气 -->	
+		<!--民用气量-->
+		<property name="f_myqiliang" type="double"/>
+		<!--民用气量金额-->
+		<property name="f_myqiliangjine" type="double"/>
+		<!--非民用气量-->
+		<property name="f_feimyqiliang" type="double"/>
+		<!--非民用气量金额-->
+		<property name="f_feimyqiliangjine" type="double"/>
+		<!--民用气价-->
+		<property name="f_myprice" type="double"/>
+		<!--所占比率-->
+		<property name="f_myfenzhi" type="double"/>
+		<!--非民用气价-->
+		<property name="f_gsprice" type="double"/>
+		<!--所占比率-->
+		<property name="f_gsfenzhi" type="double"/>
+	<!--超用用户发卡售气 -->		
+		<!--超用气量-->
+		<property name="f_cypregas" type="double"/>
+		<!--换表类型-->
+		<property name="f_replacewatchtype" type="string"/>
+		<!--换表表费-->
+		<property name="f_watchfee" type="double"/>
+		
+<!--隐藏域 -->
+		<!--用户上次累计购气量-->
+		<property name="f_zongleiji" type="double"/>
+		<!--当前表累计购气量-->
+		<property name="f_biaoleiji" type="double"/>
+		<!--别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--写卡次数-->
+		<property name="f_times" type="int"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		
+		<!--是否有效-->
+		<property name="f_payfeevalid" type="string"/>
+						 
+		<!--组织代码-->
+		<property name="f_orgstr" type="string"/>
+		<!--用户编号-->
+		<property name="f_userinfoid" type="string" />
+</class>
+</hibernate-mapping>

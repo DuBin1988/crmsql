@@ -1,0 +1,174 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--管线建设-->
+    <class   entity-name="t_pipeline" table="t_pipeline" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+<!--管线建设登记字段-->	
+		<!--管线建设编号-->
+		<property name="f_num" type="string"/>
+		<!--片区选择-->
+		<property name="f_area" type="string"/>
+		<!--设计人-->
+		<property name="f_designers" type="string"/>
+		<!--道路名-->
+		<property name="f_road" type="string"/>
+		<!--起点-->
+		<property name="f_startearea" type="string"/>
+		<!--终点-->
+		<property name="f_endarea" type="string"/>
+		<!--支干线-->
+		<property name="f_branchline" type="string"/>
+		<!--管径-->
+		<property name="f_gj" type="string"/>
+		<!--管材料-->
+		<property name="f_gc" type="string"/>
+		<!--长度-->
+		<property name="f_long" type="string"/>
+		<!--实际完成长度-->
+		<property name="f_sjlong" type="string"/>
+		<!--管线规划报批情况-->
+		<property name="f_bpqinkuang" type="string" length="1000"/>
+		<!--设计周期-->
+		<property name="f_shejizhq" type="string"/>
+		<!--登记部门-->
+		<property name="f_depa" type="string"/>
+		<!--登记操作人-->
+		<property name="f_oper" type="string"/>
+		<!--登记日期-->
+		<property name="f_date" type="date"/>	
+		<!--总状态，报装总的流程状态-->
+		<property name="f_state" type="string"/>
+		<!--子状态，记录每步是否完成-->
+		<property name="f_substate" type="string"/>
+		
+<!--管线建设派工字段-->		
+		<!--建设工期-->
+		<property name="f_jsgongqi" type="string"/>
+		<!--球阀类型-->
+		<property name="f_qiufatype" type="string"/>
+		<!--焊接方式-->
+		<property name="f_hanjietype" type="string"/>
+		<!--防腐补扣补伤形式-->
+		<property name="f_bushangtype" type="string" length="1000"/>
+		<!--检测比例-->
+		<property name="f_bili" type="string"/>
+		<!--开挖回填恢复情况-->
+		<property name="f_huitiantype" type="string"/>	
+		<!--吹扫试压-->
+		<property name="f_shiya" type="string"/>
+	    <!--施工单位-->
+		<property name="f_constructionunit" type="string"/>
+	    <!--土建单位-->
+		<property name="f_tujianunit" type="string"/>
+		<!--检测单位-->
+		<property name="f_jianceunit" type="string"/>
+		<!--监理单位-->
+		<property name="f_jlunit" type="string"/>
+		<!--建设单位-->
+		<property name="f_jsunit" type="string"/>
+		<!--派工单部门-->
+		<property name="f_pg1depa" type="string"/>
+		<!--派工单操作人-->
+		<property name="f_pg1oper" type="string"/>
+		<!--派工单日期-->
+		<property name="f_pg1date" type="date"/>
+		
+<!--管线建设派工单打印字段-->	
+        <!--工程主要内容及工作量-->
+		<property name="f_projecttext" type="string" length="1000"/>
+		<!--本工程相关要求-->
+		<property name="f_gongchengyaoqiu" type="string" length="1000"/>
+		<!--派工类型-->
+		<property name="f_paigongtype" type="string"/>	
+	
+		<!--派工打印部门-->
+		<property name="f_pgdepa" type="string"/>
+		<!--派工打印操作人-->
+		<property name="f_pgoper" type="string"/>
+		<!--派工打印日期-->
+		<property name="f_pgdate" type="date"/>
+		<!--安装单位现场负责人-->
+		<property name="f_anzhuangpeople" type="string"/>
+		<!--安装完成情况-->
+		<property name="f_wanchengqk" type="string" length="1000"/>
+		<!--土建单位现场负责人-->
+		<property name="f_tujianpeople" type="string"/>
+		<!--土建完成情况-->
+		<property name="f_tjwanchengqk" type="string" length="1000"/> 
+		<!--检测单位负责人-->
+		<property name="f_jiancepeople" type="string"/>
+		<!--检测完成情况-->
+		<property name="f_jcwanchengqk" type="string" length="1000"/> 
+		<!--监理单位现场代表-->
+		<property name="f_jldwdaibiao" type="string"/>
+		<!--监理验收情况-->
+		<property name="f_jldwqink" type="string" length="1000"/>
+		<!--建设单位现场代表-->
+		<property name="f_jsdwdaibiao" type="string"/>
+		<!--土建验收意见-->
+		<property name="f_jsdwqink" type="string" length="1000"/> 
+		<!--管网所-->
+		<property name="f_gwsdaibiao" type="string"/>
+		<!--验收意见-->
+		<property name="f_gwsqink" type="string" length="1000"/> 
+		
+<!--管线建设开材料字段-->		
+		<!--开据号-->
+		<property name="f_kaijuno" type="string"/> 
+		<!--是否已开材料-->
+		<property name="f_ifmaterial" type="boolean"/>
+		<!--开材料备注-->
+		<property name="f_materialmark" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_materialdepartment" type="string"/>
+		<!--操作人-->
+		<property name="f_materialopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_materialdate" type="date"/>
+
+<!--管线建设竣工-->	
+		<!--竣工资料-->
+		<property name="f_jungzil" type="string"/> 
+		<!--蓝图资料-->
+		<property name="f_lantzil" type="string"/> 
+        <!--工程完成情况及验收意见-->
+		<property name="f_projectyanshou" type="string" length="1000"/>
+		<!--开工日期-->
+		<property name="f_stratedodate" type="date"/>	
+		<!--竣工日期-->
+		<property name="f_finishdodate" type="date"/>
+		<!--工期-->
+		<property name="f_gongqi" type="string"/>
+		<!--用户负责人签字日期-->
+		<property name="f_userdate" type="date"/>
+		<!--施工单位现场负责人签字日期-->
+		<property name="f_sgunitdate" type="date"/>
+		<!--监理单位现场代表签字日期-->
+		<property name="f_jlunitdate" type="date"/>
+		<!--建设单位现场代表签字日期-->
+		<property name="f_jsunitdate" type="date"/>
+		<!--用户负责人签字-->
+		<property name="f_usersign" type="string"/>
+		<!--施工单位现场负责人签字-->
+		<property name="f_sgunitsign" type="string"/>
+		<!--监理单位现场代表签字-->
+		<property name="f_jlunitsign" type="string"/>
+		<!--建设单位现场代表签字-->
+		<property name="f_jsunitsign" type="string"/>
+		<!--派竣登记工部门-->
+		<property name="f_jgdepa" type="string"/>
+		<!--竣工登记操作人-->
+		<property name="f_jgoper" type="string"/>
+		<!--竣工登记日期-->
+		<property name="f_jgdate" type="date"/>
+		<set name="f_tunnel"  cascade="delete-orphan" order-by="id">
+          <key column="applyid" /> 
+          <one-to-many entity-name="t_tunnel"   /> 
+        </set> 
+	</class> 
+</hibernate-mapping>

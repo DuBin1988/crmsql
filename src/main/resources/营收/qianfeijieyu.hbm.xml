@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--欠费结余信息-->
+    <class   entity-name="t_qianfeijieyu" table="t_qianfeijieyu" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--统计日期 -->
+		<property name="f_tjdate" type="string"/>
+		<!--民用机表欠费结余-->
+		<property name="f_civiljb" type="double"/>
+		<!--非民用机表欠费结余-->
+		<property name="f_unciviljb" type="double"/>
+		<!--民用卡表欠费结余-->
+		<property name="f_civilkb" type="double"/>
+		<!-- 非民用卡表欠费结余 -->
+		<property name="f_uncivilkb" type="double"/>
+		<!-- 金额合计 -->
+		<property name="f_sumfee" type="double"/>
+	</class>
+</hibernate-mapping>

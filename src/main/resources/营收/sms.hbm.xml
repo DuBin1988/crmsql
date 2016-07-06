@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--短信发送表-->
+	<class entity-name="t_sms" table="t_sms" dynamic-update="true">
+	   <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--内容-->
+		<property name="f_content" type="string"/>
+		<!--状态，已发、未发、出错-->
+		<property name="f_state" type="string"/>
+		<!--错误内容-->
+		<property name="f_error" type="string"/>
+		
+		<!--用户名-->
+		<property name="f_username" type="string"/>
+		<!--类型 民用,非民用  -->
+		<property name="f_usertype" type="string"/>
+		<!--生成日期  -->
+		<property name="f_createdate" type="date"/>
+		<!--小区名称  -->
+		<property name="f_districtname" type="string"/>
+		<!--发送日期  -->
+		<property name="f_senddate" type="date"/>
+		<!--发送时间  -->
+		<property name="f_sendtime" type="time"/>
+		<!--模板名  -->
+		<property name="f_templatename" type="time"/>
+	
+	</class>
+</hibernate-mapping>

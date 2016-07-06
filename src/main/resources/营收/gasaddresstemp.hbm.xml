@@ -1,0 +1,52 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--用气地址临时表-->
+	<class entity-name="t_gasaddresstemp" table="t_gasaddresstemp" dynamic-update="true">
+	   <id name="ID" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<!--用气地址-->
+		<property name="f_gasaddress" type="string"/>
+		<!--计算编号-->
+		<property name="f_jisuannum" type="int"/>
+		<!--小区名称-->
+		<property name="f_districtname" type="string"/> 
+		<!--单元号 -->
+		<property name="f_cusDy" type="string"/>
+		<!--楼号 -->
+		<property name="f_cusDom" type="string"/>
+		<!--楼层 -->
+		<property name="f_cusFloor" type="string"/>
+		<!--门牌号 -->
+		<property name="f_apartment" type="string"/>
+		<!--开始楼号 -->
+		<property name="f_startbuild" type="string"/>
+		<!--结束楼号 -->
+		<property name="f_endbuild" type="string"/>
+		<!--开始单元 -->
+		<property name="f_startunit" type="string"/>
+		<!--结束单元 -->
+		<property name="f_endunit" type="string"/>
+		<!--开始层-->
+		<property name="f_startlayer" type="string"/>
+		<!--结束层-->
+		<property name="f_endlayer" type="string"/>
+		<!--开始室-->
+		<property name="f_startroom" type="string"/>
+		<!--结束室-->
+		<property name="f_endroom" type="string"/>
+		<!-- 操作员 -->
+		<property name="f_operator" type="string"/>
+		<!-- 操作日期 -->
+		<property name="f_date" type="date"/>
+		<!-- 分公司 -->
+		<property name="f_filiale" type="string"/>
+		<!--街道 -->
+		<property name="f_road" type="string"/>
+		<!--用气地址状态 -->
+		<property name="f_gasaddressstate" type="string"/>
+		</class>
+</hibernate-mapping>

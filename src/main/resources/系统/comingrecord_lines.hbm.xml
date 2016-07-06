@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<class entity-name="t_comingrecord_lines" table="t_comingrecord_lines">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<property name="Number" type="string"/>
+		<property name="ConnectToLine" type="string"/>
+		<property name="islink" type="string"/>
+		<property name="Type" type="string"/>
+		<property name="state" type="string"/>
+		<property name="state_old" type="string"/>
+		<property name="gonghao" type="string"/>
+		<property name="date" type="string"/>
+		<property name="date1" type="string"/>
+		<property name="id_c" type="string"/>
+
+	</class>
+</hibernate-mapping>

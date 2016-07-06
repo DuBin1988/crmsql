@@ -1,0 +1,89 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--报建申请表-->
+	<class  entity-name="t_feechange" table="t_feechange" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+<!-- 基础通用字段  -->	
+		
+		
+<!-- 申请登记 -->	
+	<!-- 常用基本字段 -->
+		
+		<!-- 申请人 -->
+	 	<property name="f_username" type="string"/>
+	 	<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!-- 小区名称/申请单位 -->
+	 	<property name="f_minyongdept" type="string"/>
+	 	<!--地址 -->
+		<property name="f_address" type="string"/>
+		<!--区域选择-->
+		<property name="f_area" type="string"/>
+		<!-- 报建编号 -->
+		<property name="f_code" type="string"/>
+		
+	<!-- 变更前字段 -->
+		<!-- 合同编号 -->
+		<property name="f_htnum" type="string"/>
+        <!--排空费-->
+		<property name="f_emptyingfee" type="double"/>
+		<!--工程材料费-->
+		<property name="f_materialfee" type="double"/>
+		<!--自闭阀费-->
+		<property name="f_selfclosfee" type="double"/>
+		<!--报警器费-->
+		<property name="f_alarmfee" type="double"/>
+		<!--合计-->
+		<property name="f_totalfee" type="double"/>
+		<!--收费标准操作部门-->
+		<property name="f_feedepartment" type="string"/>
+		<!--收费标准操作人-->
+		<property name="f_feeopertor" type="string"/> 
+		<!--收费标准操作日期-->
+		<property name="f_feedate" type="date"/>		
+		<!--壁挂锅炉费-->
+		<property name="f_bgglf" type="double"/>
+		<!--热水器费-->
+		<property name="f_rsqf" type="double"/>
+        <!--材料费-->
+		<property name="f_cailiaofei" type="double"/>
+		<!--人工费-->
+		<property name="f_rengongfei" type="double"/>
+		<!--接驳费-->
+		<property name="f_jiebofei" type="double"/>		
+	
+
+	<!-- 变更后字段 -->
+		<!-- 合同编号 -->
+		<property name="f_htnumchange" type="string"/>
+        <!--排空费-->
+		<property name="f_emptyingfeechange" type="double"/>
+		<!--工程材料费-->
+		<property name="f_materialfeechange" type="double"/>
+		<!--自闭阀费-->
+		<property name="f_selfclosfeechange" type="double"/>
+		<!--报警器费-->
+		<property name="f_alarmfeechange" type="double"/>
+		<!--合计-->
+		<property name="f_totalfeechange" type="double"/>
+		<!--壁挂锅炉费-->
+		<property name="f_bgglfchange" type="double"/>
+		<!--热水器费-->
+		<property name="f_rsqfchange" type="double"/>
+        <!--材料费-->
+		<property name="f_cailiaofeichange" type="double"/>
+		<!--人工费-->
+		<property name="f_rengongfeichange" type="double"/>
+		<!--接驳费-->
+		<property name="f_jiebofeichange" type="double"/>		
+
+
+	</class>
+</hibernate-mapping>

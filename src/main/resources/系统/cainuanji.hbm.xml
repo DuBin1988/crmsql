@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--民用壁挂炉采暖季参数-->
+	<class entity-name="cainuanji" table="t_addons">
+	    <id name="id"  type="string"/> 
+	    <!--采暖季开始日期 -->
+		<property name="startdate" type="string"/>
+		<!--采暖季结束日期 -->
+		<property name="enddate" type="string"/>
+		<!--采暖季气量 -->
+		<property name="gas" type="string"/>
+       
+	</class>
+
+	
+
+</hibernate-mapping>

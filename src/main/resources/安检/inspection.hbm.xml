@@ -1,0 +1,592 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--安检单-->
+	<class entity-name="T_INSPECTION" table="T_INSPECTION" dynamic-update="true">
+	    <id name="id" type="string">
+				<generator class="uuid.hex"></generator>
+		</id>
+        <!-- 检查情况 -->
+        <property name="CONDITION" type="string">
+        </property>
+		<!--卡号 -->
+		<property name="f_cardnum" type="string"/>
+		<!--用户编号 -->
+		<property name="f_userid" type="string"/>
+		<!--姓名 -->
+		<property name="f_consumername" type="string"/>
+		<!--电话 -->
+		<property name="f_consumerphone" type="string"/>
+		<!--楼号 -->
+		<property name="f_roomnumber" type="string"/>
+		<!--常住人口 -->
+		<property name="f_renkou" type="int"/>
+		<!--冬季用气量 -->
+		<property name="f_dongjieliang" type="double"/>
+		<!-- 小区 -->
+		<property name="f_community" type="string"/>
+		<!-- 档案中小区 -->
+		<property name="f_community2" type="string"/>
+		<!-- 小区性质 -->
+		<property name="f_property" type="string"/>
+		<!-- 小区地址-->
+		<property name="f_unitaddress" type="string"/>
+	
+		<!-- 安检人员-->
+		<property name="SAVE_PEOPLE" type="string"/>
+		<!-- 安检日期-->
+		<property name="f_anjianriqi" type="date"/>
+		
+		<property name="f_sensor_installation_time" type="string"/>
+
+		<property name="f_sensor_expire_time" type="string"/>
+	
+		<!-- 供暖方式-->
+		<property name="f_gongnuan" type="string"/>
+		<!-- 上次安检日期-->
+		<property name="f_shangciriqi" type="date"/>
+		<!--  拒检-->
+		<property name="f_jujian" type="string"/>
+		<!--  入户-->
+		<property name="f_ruhu" type="string"/>
+        <!-- 到访不遇卡 -->
+        <property name="HASNOTIFIED" type="string">
+         </property>
+		<!--  报警器是否有-->
+		<property name="f_baojingqi" type="string"/>
+		<!--  报警器厂家-->
+		<property name="f_baojingqichang" type="string"/>
+<!--  使用时间  DELETED-->
+		<property name="f_shiyongshijian" type="int"/>
+<!--  探头 DELETED-->
+		<property name="f_tantou" type="string"/>
+		
+		<!--  立管-->
+		 <property name="f_lgzhengchang" type="boolean"/>
+<!--  暗设 -->
+		 <property name="f_lganshe" type="boolean"/>
+<!--  明设 -->
+		 <property name="f_lgmingshe" type="boolean"/>
+		 <!--  腐蚀 -->
+		 <property name="f_lgfushi" type="boolean"/>
+		 <!-- 私改 -->
+		 <property name="f_lgsigai" type="boolean"/>
+		 <!-- 漏气 -->
+		 <property name="f_lglouqi" type="boolean"/>
+<!-- 其它 -->
+		 <property name="f_lgqita" type="boolean"/>
+<!-- 说明 -->
+		 <property name="f_liguan" type="string"/>
+	
+	   	 <!-- 卡号 -->
+		 <property name="f_kahao" type="string"/>
+	   	<!-- 左右表 -->
+		 <property name="f_rqbiaoxing" type="string"/>
+	  	<!-- 基表厂家 -->
+		 <property name="f_biaochang" type="string"/>
+		<!-- 表号 -->
+		 <property name="f_biaohao" type="string"/>
+<!-- 使用时间 DELETED-->
+		 <property name="f_qbshiyong" type="string"/>
+		<!-- 基表读数 -->
+		 <property name="f_jbdushu" type="int"/>
+		<!-- IC卡表厂家 -->
+		 <property name="f_kachangjia" type="string"/>
+		<!-- 剩余气量 -->
+		 <property name="f_shengyu" type="int"/>
+		<!-- 死表 -->
+		 <property name="f_sibiao" type="boolean"/>
+		<!-- 常通 -->
+		 <property name="f_changtong" type="boolean"/>
+<!-- 表蒙损坏 DELETED -->
+		 <property name="f_biaomeng" type="boolean"/>
+<!-- 锈蚀 DELETED -->
+		 <property name="f_qbxiushi" type="boolean"/>
+		<!-- 反装-->
+		 <property name="f_fanzhuang" type="boolean"/>
+		<!-- 漏气-->
+		 <property name="f_qblouqi" type="boolean"/>
+		<!-- 其它-->
+		 <property name="f_qbqita" type="boolean"/>
+		<!-- 其它-->
+		 <property name="f_qibiao" type="string"/>
+		<!-- 处理结果-->
+		 <property name="f_qbchuli" type="string"/>
+		<!-- 处理内容-->
+		 <property name="f_gasdotell" type="string"/>
+		<!--表前阀-->
+		 <property name="f_biaoqianfa" type="string"/>
+		<!--灶前阀-->
+		 <property name="f_zaoqianfa" type="string"/>
+		 <!--自 闭 阀-->
+		 <property name="f_zibifa" type="string"/>
+		 <!--处理结果-->
+		 <property name="f_fmchuli" type="string"/>
+		 
+		 
+		 
+		 <!--表后管是否正常-->
+		 <property name="f_bhgzhengchang" type="boolean"/>
+		 <!--包管-->
+		 <property name="f_bhgbaoguan" type="boolean"/>
+		 <!--漏气-->
+		 <property name="f_bhglouqi" type="boolean"/>
+<!--穿卧室-->
+		 <property name="f_bhgwoshi" type="boolean"/>
+<!--穿客厅-->
+		 <property name="f_bhgketing" type="boolean"/>
+		 <!--改管-->
+		 <property name="f_bhggaiguan" type="boolean"/>
+		 <!--与电源过近-->
+		 <property name="f_bhgdianyuan" type="boolean"/>
+<!--与灶具过近-->
+		 <property name="f_bhgzaoju" type="boolean"/>
+		 <!--表后管未限定-->
+		 <property name="f_bhgwxd" type="boolean"/>
+		  	 <!--处理结果-->
+		 <property name="f_bhgchuli" type="string"/>
+		   	 <!--处理内容-->
+		 <property name="f_qpipedotell" type="string"/>
+			   	 <!--正常-->
+		 <property name="f_jpgzhengchang" type="boolean"/>
+		   	 <!--漏气-->
+		 <property name="f_jpglouqi" type="boolean"/>
+	   	 <!--老化-->
+		 <property name="f_jpglaohua" type="boolean"/>
+		 <!--过长-->
+		 <property name="f_jpgguochang" type="boolean"/>
+<!--无-->
+		 <property name="f_jpgwu" type="boolean"/>
+		 <!--无管夹-->
+		 <property name="f_jpgwuguanjia" type="boolean"/>
+<!--有管夹-->
+		 <property name="f_jpgyouguanjia" type="boolean"/>
+		 <!--胶皮管处理-->
+		 <property name="f_jpgchuli" type="string"/>
+		 <!--处理内容-->
+		 <property name="f_pipedotell" type="string"/>
+		 <!--品牌-->
+		 <property name="f_zjpinpai" type="string"/>
+		 <!--未用-->
+		 <property name="f_zjshiyong" type="boolean"/>
+		 <!--类型-->
+		 <property name="f_zjleixing" type="string"/>
+<!--使用时间-->
+		 <property name="f_zjnian" type="int"/>
+		 <property name="f_zjyue" type="int"/>
+		<!--灶具现状-->
+	 	 <property name="f_zjxianzhuang" type="string"/>
+<!--安全建议-->
+	 	 <property name="f_zjjianyi" type="string"/>
+	
+		  <!--壁挂锅炉品牌-->
+	 	 <property name="f_bglpinpai" type="string"/>
+		 <property name="f_bglshiyong" type="boolean"/>
+<!--壁挂锅炉型号-->
+	 	 <property name="f_bglxinghao" type="string"/>
+		  <!--功率-->
+	 	 <property name="f_bglgonglv" type="int"/>
+<!--使用时间-->
+		 <property name="f_bglnian" type="int"/>
+		 <property name="f_bglyue" type="int"/>
+		 <!-- 位置 -->
+		 <property name="f_bglweizhi" type="string"/>
+<!--安全建议-->
+		 <property name="f_bgljianyi" type="string"/>
+		 <property name="f_beizhu" type="string"/>
+	
+		 <!--维修时间 -->
+		 <property name="f_pipedodate" type="date"/>
+		 <!--客户评价-->
+		 <property name="f_kehupingjia" type="string"/>
+		 
+	
+	
+		<!--热水器品牌-->
+		 <property name="f_rshqpinpai" type="string"/>
+		<!--未用-->
+		 <property name="f_rshqshiyong" type="boolean"/>
+		<!-- 功率-->
+		 <property name="f_rshqxinghao" type="int"/>
+<!-- 使用年-->
+		 <property name="f_rshqnian" type="int"/>
+<!-- 使用月-->
+		 <property name="f_rshqyue" type="int"/>
+		 	<!-- 现妆-->
+		 <property name="f_rshqxianzhuang" type="string"/>
+<!-- 安全建议-->
+		 <property name="f_rshqjianyi" type="string"/>
+	
+	
+	
+		<!--操作员 -->
+		<property name="OP_CODE" type="string"/>
+		<!-- 操作日期 -->
+		<property name="OP_DATE" type="date"/>
+		<!--操作时间-->
+		<property name="OP_TIME" type="time"/>
+		<property name="f_lastshengyu" type="double"/>
+		<property name="f_months" type="double"/>
+		<property name="f_yuejun" type="double"/>
+		<property name="f_vavledotell" type="string"/>
+		<property name="f_shangciyuqi" type="double"/>
+		<property name="BULU" type="string"/>
+		<property name="f_kehuyijian" type="string"/>
+		<property name="f_bglxianzhuang" type="string"/>
+		<property name="yi" type="int"/>
+	 		<property name="f_state" type="string"/>
+	 
+	 <!--安检日期字符串形式，录入使用-->
+			<property name="anjianriqistr" type="string"/>
+				<property name="shiyongshijiandate" type="date"/>
+					<property name="weixiushijianstr" type="string"/>
+					 <!--总购气量-->
+					<property name="f_buygas" type="double"/>
+	
+		 <!--租住-->
+					<property name="f_zuzhu" type="string"/>
+<!--热水器软三通-->
+					<property name="f_rsqrst" type="string"/>
+<!--壁挂锅炉软三通-->
+					<property name="f_bgrst" type="string"/>
+				<property name="f_oldjibiaoshu" type="int"/>
+	
+	 <!--壁挂锅炉使用天数-->
+				<property name="f_bgltian" type="int"/>
+				 <!--灶具备注-->
+				<property name="f_pipebz" type="string"/>
+			 <!--热水器备注-->
+				<property name="f_rsqbz" type="string"/>
+		 <!--壁挂锅炉备注-->
+				<property name="f_biguaguolubz" type="string"/>
+	 <!--燃气灶超年限-->
+				<property name="f_rqzchaonianxian" type="boolean"/>
+	<!--燃气灶无熄火保护或熄火保护装置失效-->
+	 			<property name="f_rqzxh" type="boolean"/>
+	
+	<!--软管过长-->
+	 			<property name="f_rggc" type="boolean"/>
+	<!--软管老化-->
+	 			<property name="f_rglh" type="boolean"/>
+	
+	<!--热水器或锅炉丝口漏气-->
+	 			<property name="f_rsqlq" type="boolean"/>
+	
+	<!--燃气灶连接软管上安装软三通-->
+	 			<property name="f_rqzljst" type="boolean"/>
+	 			
+	 			<!--封闭管道或表具或维修不便-->
+	 			<property name="f_fbwxbb" type="boolean"/>
+	
+			<!--燃气设施与周边设施安全间距不够-->
+	 			<property name="f_julibugou" type="boolean"/>
+		<!--管道挂物-->
+	 			<property name="f_guandaoguawu" type="boolean"/>
+	<!--接触电源线-->
+	 			<property name="f_jiechudianyuan" type="boolean"/>
+	 			<!--更换燃气灶-->
+	 			<property name="f_ghrqz" type="boolean"/>
+	 			
+	 			<!--更换燃气灶或送售后维修-->
+	 			<property name="f_ghrqzorwx" type="boolean"/>
+	 					<!--建议更换软管或进行改造-->
+	 			<property name="f_jianyigaizao" type="boolean"/>
+	 			<!--通知售后维修-->
+	 			<property name="f_tzshwx" type="boolean"/>
+	 <!--由有资质单位进行改造-->
+	 			<property name="f_zzdwgz" type="boolean"/>
+	  <!--封闭处设检修门和通风口-->
+	 			<property name="f_fbjxtf" type="boolean"/>
+	
+	 			 <!--由有资质单位进行改造-->
+	 			<property name="f_zzdwgz2" type="boolean"/>
+			 <!--移除挂物-->
+	 			<property name="f_ycgw" type="boolean"/>
+		 <!--移除电源线-->
+	 			<property name="f_ycdyx" type="boolean"/>
+		 <!--整改备注-->
+	 			<property name="f_zgbeizhu" type="string"/>
+		 <!--是否重点用户-->
+	 			<property name="f_iszhongdian" type="string"/>
+			 <!--市-->
+	 			<property name="city" type="string"/>
+			 <!--区-->
+	 			<property name="f_area" type="string"/>
+			 <!--街道-->
+	 			<property name="ROAD" type="string"/>
+		 	<!--网格编码-->
+	 			<property name="REGION_NAME" type="string"/>
+			 <!--小区名称-->
+	 			<property name="UNIT_NAME" type="string"/>
+	 		<!--小区地址-->
+	 			<property name="UNIT_ADDRESS" type="string"/>
+			<!--楼号-->
+	 			<property name="CUS_DOM" type="string"/>
+			<!--单元号-->
+	 			<property name="CUS_DY" type="string"/>
+			<!--楼层-->
+	 			<property name="CUS_FLOOR" type="string"/>
+			<!--房号-->
+	 			<property name="CUS_ROOM" type="string"/>
+        <!-- 客户签名 -->
+        <property name="USER_SIGN" type="string">
+        </property>
+
+        <!-- 照片1 -->
+        <property name="PHOTO_FIRST" type="string">
+        </property>
+        <!-- 照片2 -->
+        <property name="PHOTO_SECOND" type="string">
+        </property>
+        <!-- 照片3 -->
+        <property name="PHOTO_THIRD" type="string">
+        </property>
+        <!-- 照片4 -->
+        <property name="PHOTO_FOUTH" type="string">
+        </property>
+        <!-- 照片5 -->
+        <property name="PHOTO_FIFTH" type="string">
+        </property>
+        <!-- 是否需要维修 -->
+        <property name="NEEDS_REPAIR" type="string">
+        </property>
+        <!-- 维修人 -->
+        <property name="f_department" type="string"/>
+        <!-- 维修人 -->
+        <property name="REPAIRMAN" type="string">
+        </property>
+        <!-- 维修人ID -->
+        <property name="REPAIRMAN_ID" type="string">
+        </property>
+        <!-- 维修状态 -->
+        <property name="REPAIR_STATE" type="string">
+        </property>
+        <!-- 维修日期 -->
+        <property name="REPAIR_DATE" type="string">
+        </property>
+        <!-- 安检单ID -->
+        <property name="CHECKPAPER_ID" type="string">
+        </property>
+        <!-- 到达时间 -->
+        <property name="ARRIVAL_TIME" type="string">
+        </property>
+        <!-- 离开时间 -->
+        <property name="DEPARTURE_TIME" type="string">
+        </property>
+        <!-- 档案地址 -->
+        <property name="f_archiveaddress" type="string">
+        </property>
+<!--  -->        
+	 	<!--  安装时间-->
+		<property name="f_alarm_installation_time" type="string"/>
+	 	<!--  到期时间-->
+		<property name="f_alarm_expire_time" type="string"/>
+		<!-- 生产时间-->
+		 <property name="f_meter_manufacture_date" type="string"/>
+		<!-- 燃气表表型 G2.5 G4 G6 -->
+		 <property name="f_meter_type" type="string"/>
+		<!-- IC卡类型  普通、远传、射频-->
+		 <property name="f_iccard_type" type="string"/>
+		<!-- 剩余金额  如果IC卡类型不是普通，则按照金额计算-->
+		 <property name="f_balance" type="string"/>
+		<!-- 是否换表-->
+		 <property name="f_newmeter" type="boolean"/>
+		<!-- 表封-->
+		 <property name="f_meter_cover" type="string"/>
+		<!-- 与气量不符-->
+		 <property name="f_reading_mismatch" type="boolean"/>
+		<!--隐患类型 包裹-->
+		 <property name="f_meter_wrapped" type="boolean"/>
+		<!--隐患类型 挂物-->
+		 <property name="f_meter_hanger" type="boolean"/>
+		<!--隐患类型 近火源或电源-->
+		 <property name="f_meter_nearfire" type="boolean"/>
+		<!--隐患类型 不便维修-->
+		 <property name="f_meter_unfavorable" type="boolean"/>		 
+		 
+        <!-- 立管类型 -->
+        <property name="f_plumbing_type" type="string">
+        </property>
+        <!-- 管件详情 立管阀-->
+        <property name="f_plumbing_valve" type="boolean">
+        </property>
+        <!-- 管件详情 活结-->
+        <property name="f_plumbing_slipknot" type="boolean">
+        </property>
+        <!-- 管件详情 伸缩结-->
+        <property name="f_plumbing_scaleknot" type="boolean">
+        </property>
+        <!-- 管件详情 变径-->
+        <property name="f_plumbing_diameter" type="boolean">
+        </property>
+        <!-- 管件隐患类型 包裹-->
+        <property name="f_lgbaoguo" type="boolean">
+        </property>
+        <!-- 管件隐患类型 挂物-->
+        <property name="f_lgguawu" type="boolean">
+        </property>
+        <!-- 管件隐患类型 与电源火源过近-->
+        <property name="f_lghuoyuan" type="boolean">
+        </property>
+        <!-- 管件隐患类型 未固定-->
+        <property name="f_lgweiguding" type="boolean">
+        </property>
+        <!-- 管件隐患类型 穿越禁止区域-->
+        <property name="f_lgchuanyue" type="boolean">
+        </property>
+        <!-- 管件隐患类型 不便维修-->
+        <property name="f_lgbubianweixiu" type="boolean">
+        </property>
+        <!-- 立管漏气位置 立管阀-->
+        <property name="f_plumbing_leakage_valve" type="boolean">
+        </property>
+        <!-- 立管漏气位置 伸缩节-->
+        <property name="f_plumbing_leakage_scaleknot" type="boolean">
+        </property>
+        <!-- 立管漏气位置 活结-->
+        <property name="f_plumbing_leakage_slipknot" type="boolean">
+        </property>
+        <!-- 立管漏气位置 三通-->
+        <property name="f_plumbing_leakage_triple" type="boolean">
+        </property>
+        <!-- 立管漏气位置 变径-->
+        <property name="f_plumbing_leakage_diameter" type="boolean">
+        </property>
+        <!-- 表前阀类型-->
+        <property name="f_metervalve_type" type="string">
+        </property>
+		<!--表后管 挂物 -->
+		<property name="f_bhgguawu" type="boolean"/>
+		<!--表后管 穿越禁止区域 -->
+		<property name="f_bhgjinzhiquyu" type="boolean"/>
+		<!--表后管 软三通 -->
+		<property name="f_bhgrst" type="boolean"/>
+		<!--表后管 腐蚀 -->
+		<property name="f_bhgfushi" type="boolean"/>
+		<!--表后管 不便维修 -->
+		<property name="f_bhgbubianweixiu" type="boolean"/>
+		<!--表后管 其他 -->
+		<property name="f_bhgqita" type="boolean"/>
+		<!--表后管 备注 -->
+		<property name="f_bhgbeizhu" type="string"/>
+	 	<!--胶皮管 穿墙或吊顶-->
+	 	<property name="f_jpgdiaoding" type="boolean"/>
+	 	<!--胶皮管 暗埋-->
+	 	<property name="f_jpganmai" type="boolean"/>
+	 	
+	 	<!-- 灶具安装时间-->
+		<property name="f_cooker_installation_time" type="string"/>
+	 	<!--  到期时间-->
+		<property name="f_cooker_expire_time" type="string"/>
+	 	<!--热水器安装时间-->
+		<property name="f_heater_installation_time" type="string"/>
+	 	<!--  到期时间-->
+		<property name="f_heater_expire_time" type="string"/>
+	 	<!-- 壁挂炉安装时间-->
+		<property name="f_furnace_installation_time" type="string"/>
+	 	<!--  到期时间-->
+		<property name="f_furnace_expire_time" type="string"/>
+		
+	 	<!--灶具 超期使用-->
+	 	<property name="f_cooker_overdue" type="boolean"/>
+	 	<!--灶具 无熄火保护-->
+	 	<property name="f_cooker_nofireprotection" type="boolean"/>
+	 	<!--灶具 漏气-->
+	 	<property name="f_cooker_leakage" type="boolean"/>
+	 	
+	 	<!--热水器 安装位置-->
+		<property name="f_heater_place" type="string"/>
+	 	<!--热水器隐患  超期使用-->
+	 	<property name="f_heater_overdue" type="boolean"/>
+	 	<!--热水器隐患  软管连接-->
+	 	<property name="f_heater_softconnector" type="boolean"/>
+	 	<!--热水器隐患  直排或未排除室外-->
+	 	<property name="f_heater_trapped" type="boolean"/>
+	 	<!--热水器隐患  漏气-->
+	 	<property name="f_heater_leakage" type="boolean"/>
+	 	<!--热水器漏气  接口-->
+	 	<property name="f_heater_leakage_connetor" type="boolean"/>
+	 	<!--热水器漏气  球阀-->
+	 	<property name="f_heater_leakage_valve" type="boolean"/>
+	 	<!--热水器漏气 机身-->
+	 	<property name="f_heater_leakage_heater" type="boolean"/>
+	 	
+	 	<!--壁挂炉隐患  超期使用-->
+	 	<property name="f_furnace_overdue" type="boolean"/>
+	 	<!--壁挂炉隐患  软管连接-->
+	 	<property name="f_furnace_softconnector" type="boolean"/>
+	 	<!--壁挂炉隐患  直排或未排除室外-->
+	 	<property name="f_furnace_trapped" type="boolean"/>
+	 	<!--壁挂炉隐患  漏气-->
+	 	<property name="f_furnace_leakage" type="boolean"/>
+	 	<!--壁挂炉漏气  接口-->
+	 	<property name="f_furnace_leakage_connetor" type="boolean"/>
+	 	<!--壁挂炉漏气  球阀-->
+	 	<property name="f_furnace_leakage_valve" type="boolean"/>
+	 	<!--壁挂炉漏气 机身-->
+	 	<property name="f_furnace_leakage_furnace" type="boolean"/>
+	 	
+	 	<!--灶具隐患备注-->
+		<property name="f_cooker_precaution_remark" type="string"/>
+	 	<!-- 热水器隐患备注-->
+		<property name="f_heater_precaution_remark" type="string"/>
+	 	<!--  壁挂炉隐患备注-->
+		<property name="f_furnace_precaution_remark" type="string"/>
+		
+	 	<!--  隐患 开放式-->
+		<property name="f_precaution_kitchen" type="boolean"/>
+	 	<!--  隐患 多种火源-->
+		<property name="f_precaution_multisource" type="boolean"/>
+	 	<!--  隐患 更改用途-->
+		<property name="f_precaution_otheruse" type="string"/>
+		<!-- 表帽卡 -->
+		<property name="f_meter_ka" type="boolean"/>
+		<!-- 有无表帽卡 -->
+		<property name="f_meterka" type="string"/>
+		<!-- 灶具接驳 -->
+		<property name="f_zjjiebo" type="string"/>
+		<!-- 热水器接驳 -->
+		<property name="f_heaterjiebo" type="string"/>
+		<!-- 表安装位置 -->
+		<property name="f_installationlocation" type="string"/>
+		<!-- 灶具熄火保护检测结果 -->
+		<property name="f_fireprotection_state" type="string"/>
+		<!-- 表锈蚀 -->
+		<property name="f_meter_xiushi" type="boolean"/>
+		<!-- 表不走字-->
+		<property name="f_meter_bupaozi" type="boolean"/>
+		<!-- 表后管接地-->
+		<property name="f_bhgjiedi" type="boolean"/>
+		<!-- 表后管锈蚀-->
+		<property name="f_bhgxiushi" type="boolean"/>
+		<!-- 表后管无堵头-->
+		<property name="f_bhgwudutou" type="boolean"/>
+		<!-- 立管是否腐蚀-->
+		<property name="f_lgshifoufushi" type="boolean"/>
+		<!-- 立管腐蚀等级-->
+		<property name="f_fushilevel" type="string"/>
+		<!-- 热水器胶管状况-->
+		<property name="f_heaterjgzk" type="string"/>
+		<!-- 表后管类型-->
+		<property name="f_bhgtype" type="string"/>
+		<!-- 热水器与壁挂炉公用烟道-->
+		<property name="f_bothyandao" type="boolean"/>
+		
+	 	<!--  整改单单号-->
+		<property name="f_renow_id" type="string"/>
+        
+<!--  -->
+        <!-- 安检单类型-->
+        <property name="f_checktype" type="string">
+        </property>
+        <!--安检计划 -->
+		<many-to-one name="CHECKPLAN_ID" entity-name="T_CHECKPLAN"></many-to-one>
+		<!--维修建议-->
+		<set name="LINES" cascade="all-delete-orphan">
+          <key column="INSPECTION_ID" on-delete="noaction"/>
+          <one-to-many entity-name="T_INSPECTION_LINE" not-found="exception"/>  
+        </set>		
+	</class>
+</hibernate-mapping>

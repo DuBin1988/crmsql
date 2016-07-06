@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!--稽查明细-->
+	<class entity-name="t_inspectdetail" table="t_inspectdetail">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--父id-->
+		<property name="parentid" type="int" />
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--用户姓名-->
+		<property name="f_username" type="string" />
+		<!--卡号-->
+		<property name="f_cardid" type="string" />
+		<!--地址-->
+		<property name="f_address" type="string" />
+		<!--小区-->
+		<property name="f_districtname" type="string" />
+		<!--门牌号 -->
+		<property name="f_apartment" type="string" />
+		<!--联系人 -->
+		<property name="f_linkname" type="string" />
+		<!--电话-->
+		<property name="f_phone" type="string" />
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string" />
+		<!--气表型号-->
+		<property name="f_metertype" type="string" />
+		<!--开户日期-->
+		<property name="f_dateofopening" type="date" />
+		<!--用户类型-->
+		<property name="f_usertype" type="string" />
+		<!--最后购气量-->
+		<property name="f_finallybought" type="double" />
+		<!--最后购气日期-->
+		<property name="f_finabuygasdate" type="date" />
+		<!--当前表累计购气量-->
+		<property name="f_metergasnums" type="double" />
+		<!--总累计购气量-->
+		<property name="f_cumulativepurchase" type="double" />
+		<!--小于最后购气日期-->
+		<property name="f_zuihoudate" type="date" />
+		<!--稽查生成日期-->
+		<property name="f_inspectdate" type="date" />
+		<!--分公司 -->
+		<property name="f_filiale" type="string" />
+
+
+		<!--稽查结果-->
+		<property name="f_result" type="string" />
+		<!--稽查气量-->
+		<property name="f_jichagas" type="double" />
+		<!--稽查表坏处理结果（换表、维修）-->
+		<property name="f_badwatchresult" type="string" />
+		<!--追回气量-->
+		<property name="f_zhuihuigas" type="double" />
+		<!--情况说明-->
+		<property name="f_explain" type="string" length="500" />
+		<!--网点-->
+		<property name="f_network" type="string" />
+		<!--操作员-->
+		<property name="f_operator" type="string" />
+		<!--日期-->
+		<property name="f_date" type="date" />
+		<!--分公司编号-->
+		<property name="f_fengongsinum" type="string" />
+		
+		<!--用户档案 -->
+		<many-to-one name="users" entity-name="t_userfiles"></many-to-one>
+	</class>
+</hibernate-mapping>

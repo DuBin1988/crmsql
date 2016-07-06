@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<class entity-name="t_sendnotes" table="t_sendnotes">
+		<id name="id" type="string">
+	<generator class="uuid.hex"></generator>
+		</id>
+		<!--短信标识id-->
+		<property name="nodeid" type="string"/>
+		<!--发送号码-->
+		<property name="phone" type="string" />
+		<!--发送内容-->
+		<property name="content" type="string" />
+		<!--发送时间-->
+		<property name="sendtime" type="string" />
+		<!--发送结果(值:未发送,成功,失败-->
+		<property name="sendresult" type="string" />
+		<!--发送人-->
+		<property name="sendpeople" type="string" />
+	
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--系统组织信息-->
+	<class entity-name="t_organization" table="t_organization" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" type="string"/>
+		
+		<property name="number" type="string"/>
+		<property name="parentid" type="string"/>
+     
+	</class>
+</hibernate-mapping>

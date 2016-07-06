@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<class entity-name="t_comingrecord" table="t_comingrecord">
+		<id name="id" type="string"/>
+		<property name="comingtime" type="string"/>
+		<property name="trunk" type="string"/>
+		<property name="inline" type="string"/>
+		<property name="callnumber" type="string"/>
+		<property name="rectime" type="string"/>
+		<property name="handuptime" type="string"/>
+		<property name="gonghao" type="string"/>
+		<property name="islink" type="string"/>
+		<property name="recordfile" type="string"/>
+		<property name="n" type="int"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--小区表-->
+	<class entity-name="t_design_address" table="t_design_address" dynamic-update="true">
+	   <id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!-- 业务主键 -->
+		<property name="iid" type="string"/>
+		<!--名字-->
+		<property name="name" type="string"/>
+		<!--备注-->
+		<property name="remark" type="string"/>
+		<!--小区-->
+		<property name="residentialAreaName" type="string"/>
+		<!--父id-->
+		<property name="pid" type="string"/>
+		<!--层-->
+		<property name="level" type="int"/>
+		<!--排序号-->
+		<property name="rank" type="int"/>
+		<!--状态-->
+		<property name="addressId" type="string"/>
+	</class>
+</hibernate-mapping>

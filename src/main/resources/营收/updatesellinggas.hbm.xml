@@ -1,0 +1,82 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--地址管理-->
+    <class   entity-name="t_updatesellinggas" table="t_updatesellinggas" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		 
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户编号-->
+		<property name="f_newuserid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--用户姓名-->
+		<property name="f_newusername" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--地址-->
+		<property name="f_newaddress" type="string"/>
+		<!--小区名称-->	
+		<property name="f_districtname" type="string"/>
+		<!--小区名称-->	
+		<property name="f_newdistrictname" type="string"/>		
+
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!--收费记录编号-->
+		<property name="f_sellid" type="string"/>
+		<!--修改前滞纳金-->	
+		<property name="f_zhinajin" type="double"/>
+		<!--修改后滞纳金-->
+		<property name="f_newzhinajin" type="double"/>
+		<!--修改前维护费-->
+		<property name="f_weihufei" type="double"/>
+		<!--修改后维护费-->
+		<property name="f_newweihufei" type="double"/>
+		<!--修改前是否有效-->
+		<property name="f_shifouyouxiao" type="string"/>
+		<!--修改后是否有效-->
+		<property name="f_newshifouyouxiao" type="string"/>
+		<!--修改前用气量-->
+		<property name="f_pregas" type="double"/>
+		<!--修改后用气量-->
+		<property name="f_newpregas" type="double"/>
+		<!--修改前用气金额-->
+		<property name="f_preamount" type="double"/>
+		<!--修改后用气金额-->
+		<property name="f_newpreamount" type="double"/>
+		<!--修改前收费金额-->
+		<property name="f_shoukuan" type="double"/>
+		<!--修改后收费金额-->
+		<property name="f_newshoukuan" type="double"/>
+		<!--修改前余额-->
+		<property name="f_zhye" type="double"/>
+		<!--修改后余额-->
+		<property name="f_newzhye" type="double"/>	
+		<!--修改前上期余额-->
+		<property name="f_shangqizhye" type="double"/>
+		<!--修改后上期余额-->
+		<property name="f_newshangqizhye" type="double"/>	
+		<!--修改前上期指数-->
+		<property name="f_lastinputgasnums" type="double"/>
+		<!--修改后上期指数-->
+		<property name="f_newlastinputgasnums" type="double"/>	
+		<!--修改前本期指数-->
+		<property name="f_lastrecord" type="double"/>
+		<!--修改后本期指数-->
+		<property name="f_newlastrecord" type="double"/>	
+		
+		
+		<!--修改原因-->
+		<property name="f_updatenote" type="string"/>	
+		<!--操作人-->
+		<property name="f_sellinggasoperator" type="string"/>
+		<!--操作日期-->
+		<property name="f_sellinggasdate" type="date"/>		
+	</class>
+</hibernate-mapping>

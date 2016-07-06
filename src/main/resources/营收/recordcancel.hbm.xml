@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--抄表撤销-->
+    <class   entity-name="t_recordcancel" table="t_recordcancel" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户编号-->
+		<property name="f_username" type="string"/>
+		<!--撤销人-->
+		<property name="f_cancelname" type="string"/>
+		<!--撤销日期-->
+		<property name="f_canceldate" type="string"/>
+		<!--撤销原因-->
+		<property name="f_cancelreason" type="string"/>
+		<!--抄表编号-->
+		<property name="f_recordid" type="int"/>
+	</class>
+</hibernate-mapping>

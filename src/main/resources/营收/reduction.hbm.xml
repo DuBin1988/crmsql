@@ -1,0 +1,30 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--滞纳金减免信息-->
+    <class   entity-name="t_reduction" table="t_reduction" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--用户编号-->
+		<property name="f_userid" type="string"/>
+		<!--用户姓名-->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--滞纳金合计-->
+		<property name="f_zhinajin" type="double"/>
+		<!--修改截止日期-->
+		<property name="f_endjfdate" type="date"/>
+		<!--备注-->
+		<property name="f_beizhu" type="string"/>
+		<!--部门-->
+		<property name="f_department" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--日期-->
+		<property name="f_date" type="date"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="test">
+	<!--ip与语音通道设置-->
+	<class entity-name="iptongdao" table="t_iptongdao">
+		<id name="id" type="string">
+			<generator class="uuid.hex"></generator>
+		</id>
+	    <!--ip地址-->   
+	    <property name="loginip" type="string"/>
+	    <!--语音通道号-->   
+	    <property name="tongdao" type="string"/>
+	</class>
+</hibernate-mapping>

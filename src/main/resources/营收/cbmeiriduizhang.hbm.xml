@@ -1,0 +1,38 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--物联表抄表-->
+	<class  entity-name="t_cbmeiriduizhang" table="t_cbmeiriduizhang" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>		
+		<!-- 用户姓名/单位名称 -->
+		<property name="f_username" type="string"/>
+		<!--地址-->
+		<property name="f_address" type="string"/>
+		<!--用户编号-->
+		<property name="f_userid" type="string" />
+		<!--交费时间-->
+		<property name="f_deliverydate" type="date"/>
+		<property name="f_deliverydate_tb" type="string"/>
+		<!--交费金额-->
+		<property name="f_grossproceeds" type="double"/>
+		<!-- 上期结余 -->
+		<property name="f_zhye" type="double"/>
+		<!-- 本期结余 -->
+		<property name="f_benqizhye" type="double"/>
+		<!--最新抄表时间 -->
+		<property name="f_lastinputdate_cb" type="string"/>
+		<!--表余额-->
+		<property name="f_lastinputjval_cb" type="double"/>
+		<!--表指数-->
+		<property name="f_lastinputgasnum_cb" type="double"/>
+		<!--表指数-->
+		<property name="f_lastinputgasnum" type="double"/>
+		<!--是否确认-->
+		<property name="f_isqueren" type="string"/>
+
+</class>
+</hibernate-mapping>

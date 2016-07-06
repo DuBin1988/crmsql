@@ -1,0 +1,83 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--涉县工程进度表-->
+    <class   entity-name="t_projectplan" table="t_projectplan"  dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		
+		
+		<!-- 申请人 -->
+		<property name="f_username" type="string" />
+		<!-- 报建编号 -->
+		<property name="f_code" type="string"/>
+		<!-- 报建日期 -->
+		<property name="f_date" type="date"/>
+		<!-- 民用单位 -->
+		<property name="f_minyongdept" type="string"/>
+		<!-- 非民用单位 -->
+		<property name="f_applydept" type="string"/>
+		<!-- 地址 -->
+		<property name="f_address" type="string"/>
+		<!-- 电话 -->
+		<property name="f_phone" type="string"/>
+		<!-- 用气类型 -->
+		<property name="f_usertype" type="string"/>
+		<!-- 房屋类型 -->
+		<property name="f_usertypepro" type="string"/>
+		<!-- 片区 -->
+		<property name="f_area" type="string"/>
+		<!-- 报建状态-->
+		<property name="f_state" type="string"/>
+		
+		
+		<!-- 关联id，对应apply -->
+        <property name="applyid" type="int" />
+		
+		<!-- 工程名称 -->
+		<property name="f_projectname" type="string"/>
+		<!-- 开工日期 -->
+		<property name="f_kaigongdate" type="date"/>
+		<!-- 施工项目负责人 -->
+		<property name="f_sgxmfzrname" type="string"/>
+		<!-- 报验项目 -->
+		<property name="f_byxm" type="string"/>
+		<!-- 报验内容1 -->
+		<property name="f_bynr1" type="string"/>
+		<!-- 报验内容2 -->
+		<property name="f_bynr2" type="string"/>
+		<!-- 报验内容3 -->
+		<property name="f_bynr3" type="string"/>
+		<!-- 报验内容4 -->
+		<property name="f_bynr4" type="string"/>
+		<!-- 预约报验日期 -->
+		<property name="f_yybydate" type="date"/>
+		<!-- 报验日期 -->
+		<property name="f_bydate" type="date"/>
+		<!-- 报验人 -->
+		<property name="f_byr" type="string"/>
+		<!-- 报验备注 -->
+		<property name="f_bybz" type="string" length="1000"/>
+		
+	
+		<!-- 验收日期 -->
+		<property name="f_ysdate" type="date"/>
+		<!-- 验收负责人 -->
+		<property name="f_ysfzr" type="string"/>
+		<!-- 验收合格长度/户数 -->
+		<property name="f_yshgcdhhs" type="string"/>
+		<!-- 验收不合格长度/户数 -->
+		<property name="f_ysbhgcdhhs" type="string"/>
+		<!-- 验收结果-->
+		<property name="f_ysjg" type="string"/>
+		<!-- 验收备注 -->
+		<property name="f_ysbz" type="string" length="1000"/>
+		<!-- 竣工日期 -->
+		<property name="f_ysjgdate" type="date"/>
+		<!-- 质检项目负责人 -->
+		<property name="f_zjxmfzr" type="string"/>
+	</class> 
+</hibernate-mapping>

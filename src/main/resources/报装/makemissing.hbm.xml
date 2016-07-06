@@ -1,0 +1,30 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--补打记录-->
+    <class   entity-name="t_makemissing" table="t_makemissing" >
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+		<!--交费记录id-->
+		<property name="f_paydetailid" type="int"/>
+		<!--交费记录金额-->
+		<property name="f_fee" type="double"/>
+		<!--付款方式-->
+		<property name="f_paytype" type="string"/>
+		<!--交费记录的交费日期-->
+		<property name="f_payfeedate" type="date"/>
+		<!-- 对应的报装编号 -->
+		<property name="applyid" type="int"/>
+		<!-- 补打原因 -->
+		<property name="f_cause" type="string"/>
+		<!--操作人部门-->
+		<property name="f_department" type="string"/>
+		<!--操作人-->
+		<property name="f_opertor" type="string"/>
+		<!--操作日期-->
+		<property name="f_date" type="date"/>
+	</class>
+</hibernate-mapping>

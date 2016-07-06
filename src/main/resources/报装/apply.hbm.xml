@@ -1,0 +1,739 @@
+﻿<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--报建申请表-->
+	<class  entity-name="t_apply" table="t_apply" dynamic-update="true">
+		<id name="id" type="int">
+			<generator class="identity"></generator>
+		</id>
+<!-- 基础通用字段  -->	
+		<!-- 流程实例id -->
+		<property name="f_processid" type="string"/>	
+		<!--子状态，记录每步操作保存未提交-->
+		<property name="f_substate" type="string"/>	
+		 <!--总状态，报装总的流程状态-->
+		<property name="f_state" type="string"/>
+		<!--民用转商用-->
+		<property name="f_isminzhsha" type="boolean"/> 	
+		<!-- 是否下发 -->
+		<property name="f_isdownloads" type="string"/>
+		<!-- 合同约定-->
+		<property name="f_htyuding" type="string"/>
+		<!-- 阶梯气价类型-->
+		<property name="f_stairtype" type="string"/>
+		
+		<!--小区名称 -->
+		<property name="f_district" type="string"/>
+		<!--门牌号-->
+		<property name="f_doorplate" type="string"/>
+		<!--楼号-->
+		<property name="f_cusDy" type="string"/>
+		<!--单元-->
+		<property name="f_cusDom" type="string"/>
+		<!--楼层-->
+		<property name="f_cusFloor" type="string"/>
+		<!--身份证-->
+		<property name="f_sfzcode" type="string"/>
+		<!-- 报建类型 -->
+		<property name="f_projecttype" type="string"/>
+		<!--导库是否完成-->
+		<property name="f_daokuover" type="boolean"/>
+		<property name="f_daokustate" type="string"/>
+		<property name="f_nodaodevices" type="boolean"/>	
+		
+<!-- 费用变更字段 -->
+		<!-- 部门 -->
+		<property name="f_fybgdepartment" type="string"/>
+		<!-- 操作人 -->
+		<property name="f_chargeopertor" type="string"/>
+		<!-- 时间 -->
+		<property name="f_chargeopertdate" type="date"/>
+		
+			
+		
+<!-- 申请登记 -->	
+	<!-- 常用基本字段 -->
+		<!-- 申请登记完成状态 -->
+		<property name="f_sqdjzt" type="string"/>
+		<!-- 申请人 -->
+	 	<property name="f_username" type="string"/>
+	 	<!-- 身份证号 -->
+	 	<property name="f_feicard" type="string"/>
+	 	<!--电话-->
+		<property name="f_phone" type="string"/>
+		<!--用户类型-->
+		<property name="f_usertype" type="string"/>
+		<!-- 小区名称/申请单位 -->
+	 	<property name="f_minyongdept" type="string"/>
+	 	<!--地址 -->
+		<property name="f_address" type="string"/>
+		<!--区域选择-->
+		<property name="f_area" type="string"/>
+		<!--民用申请户数/非民用申请几处-->
+		<property name="f_applycount" type="int"/>
+		<!--民用房屋类型-->
+		<property name="f_usertypepro" type="string"/>
+		<!--热水器户数-->
+		<property name="f_geyser" type="int"/>
+		<!--壁挂炉户数-->
+		<property name="f_boiler" type="int"/>
+		<!--报建登记日期-->
+		<property name="f_date" type="date"/>
+		<!--报建登记操作人所在部门-->
+		<property name="f_department" type="string"/>
+		<!--报建登记操作人-->
+		<property name="f_opertor" type="string"/>
+		<!-- 报建编号 -->
+		<property name="f_code" type="string"/>
+		<!--报建备注-->
+		<property name="f_baojbeizhu" type="string" length="1000"/>
+		<!--用气性质-->
+		<property name="f_gasproperties" type="string"/>
+		<!--气价类型-->
+		<property name="f_gaspricetype" type="string"/>
+		<!--气价-->
+		<property name="f_gasprice" type="string"/>
+	<!-- 涉县添加字段 -->	
+		<!--安装工程费-->
+		<property name="f_azgcfee" type="double"/>
+		<!--管网建设费-->
+		<property name="f_gwjsfee" type="double"/>
+		<!--设计费-->
+		<property name="f_sjfee" type="double"/>
+		<!-- 押金费用合计 -->
+		<property name="f_yjfyfee" type="double"/>
+		
+<!--报建申请核对字段-->
+	<!-- 常用基本字段 -->
+		<!--申请核对状态-->
+		<property name="f_sqhdzt" type="string"/>
+		<!--核对意见-->
+		<property name="f_hdopinion" type="string" length="1000"/>
+		<!--核对部门-->
+		<property name="f_hddepartment" type="string"/>
+		<!--核对操作人-->
+		<property name="f_hdopertor" type="string"/> 
+		<!--核对日期-->
+		<property name="f_hdoperdate" type="date"/>
+
+
+     
+<!-- 放线任务分配 -->
+	<!-- 常用基本字段 -->
+		<!-- 放线任务分配完成状态 -->
+		<property name="f_fprwzt" type="string"/>
+		<!--分配的放线人，就是勘察人员--> 
+        <property name="f_survey" type="string"/>
+        <!-- 是否分配放线人 --> 
+        <property name="f_issurvey" type="boolean"></property>  
+        <!--分配放线人时间-->  
+        <property name="f_surveydate" type="date"/>
+        <!-- 放线人分配人员 -->
+        <property name="f_surveyopertor" type="string"/>
+        <!-- 设计人 -->
+        <property name="f_designers" type="string"/>
+         <!-- 是否分配设计人 -->
+        <property name="f_isdesigners" type="boolean"></property>
+        <!-- 设计人分配人员 -->
+        <property name="f_designersdate" type="date"/>
+        <!-- 设计人分配人员 -->
+        <property name="f_designersopertor" type="string"/>  
+		<!-- 放线任务分配操作人员 -->
+		<property name="f_fprwopertor" type="string"/>
+		<!--放线任务分配操作日期-->
+		<property name="f_fprwdate" type="date"/>
+		<!--放线任务分配操作人所在部门-->
+		<property name="f_fprwdepartment" type="string"/>
+
+
+
+<!-- 现场勘察 -->
+	<!-- 常用基本字段 -->
+		<!--现场勘察状态-->
+		<property name="f_xckczt" type="string"/>	
+		<!--民用安装户数、非民用安装几处-->
+		<property name="f_installnum" type="int"/>
+		<!--交费户数-->
+		<property name="f_payfeenum" type="int"/>
+		<!--民用用气类型-->
+		<property name="f_gastype" type="string"/>
+		<!--实际现场勘查人员-->
+		<property name="f_sjxckcry" type="string"/>
+		<!--现场勘查意见-->
+		<property name="f_gcbkcopinion" type="string" length="1000"/>
+		<!--现场勘查操作部门-->
+		<property name="f_gcbkcdepartment" type="string"/>
+		<!--现场勘查操作日期-->
+		<property name="f_gcbkcoperdate" type="date"/>
+		<!--现场勘查操作人-->
+		<property name="f_gcbkcopertor" type="string"/>
+
+
+<!--设计审核字段-->
+	<!-- 常用基本字段 -->
+		<!--设计审核状态-->
+		<property name="f_sjshzt" type="string"/>	
+        <!--是否可以进行设计-->
+		<property name="f_designe" type="boolean"/>
+		<!--设计审核备注-->
+		<property name="f_sjexambz" type="string" length="1000"/>
+		<!--设计审核部门-->
+		<property name="f_sjexamdepartment" type="string"/>
+		<!--设计审核操作人-->
+		<property name="f_sjexamopertor" type="string"/>
+		<!--设计审核日期-->
+		<property name="f_sjexamdate" type="date"/>
+
+<!--工程部审核字段-->
+	<!-- 常用基本字段 -->
+		<!--工程部审核状态-->
+		<property name="f_gcbshzt" type="string"/>
+        <!--是否具备安装交款-->
+		<property name="f_havepay" type="boolean"/>
+		<!--审核意见-->
+		<property name="f_opinion" type="string" length="1000"/>
+		<!--工程部审核操作部门-->
+		<property name="f_gcbshdepartment" type="string"/>
+		<!--工程部审核操作日期-->
+		<property name="f_gcbshoperdate" type="date"/>
+		<!--工程部审核操作人-->
+		<property name="f_gcbshopertor" type="string"/> 
+
+<!--设计费押金收取字段-->
+	<!-- 常用基本字段 -->
+		<!--设计费押金收取状态-->
+		<property name="f_sjfsqzt" type="string"/>
+        <!--押金收取费用/设计费收取金额-->
+		<property name="f_yjsqfyfee" type="double"/>
+		<!-- 押金是否已结清 -->
+		<property name="f_sjfsfyjq" type="string"/>
+		<!--设计费押金收取备注-->
+		<property name="f_sjfyjsqbz" type="string" length="1000"/>
+		<!--设计费押金收取部门-->
+		<property name="f_sjfyjsqdepartment" type="string"/>
+		<!--设计费押金收取操作人-->
+		<property name="f_sjfyjsqopertor" type="string"/>
+		<!--设计费押金收取日期-->
+		<property name="f_sjfyjsqdate" type="date"/>
+
+<!--预算字段-->
+	<!-- 常用基本字段 -->
+		<!--预算状态-->
+		<property name="f_yszt" type="string"/>
+		<!--工程款-->
+		<property name="f_gckfee" type="double"/>
+		<!--小锅炉费用-->
+		<property name="f_xglfyfee" type="double"/>
+        <!--预算合计-->
+		<property name="f_ysfee" type="double"/>
+		<!--预算备注-->
+		<property name="f_ysbz" type="string" length="1000"/>
+		<!--预算部门-->
+		<property name="f_ysdepartment" type="string"/>
+		<!--预算操作人-->
+		<property name="f_ysopertor" type="string"/>
+		<!--预算日期-->
+		<property name="f_ysdate" type="date"/>
+		
+<!--预算审核字段-->
+	<!-- 常用基本字段 -->
+		<!--预算审核状态-->
+		<property name="f_yssh" type="string"/>
+        <!--预算审核状态-->
+		<property name="f_ysshzt" type="string"/>
+		<!--预算审核备注-->
+		<property name="f_ysshbz" type="string" length="1000"/>
+		<!--预算审核部门-->
+		<property name="f_ysshdepartment" type="string"/>
+		<!--预算审核操作人-->
+		<property name="f_ysshopertor" type="string"/>
+		<!--预算审核日期-->
+		<property name="f_ysshdate" type="date"/>	
+	
+<!--合同签订字段-->
+	<!-- 常用基本字段 -->
+		<!--合同签订状态-->
+		<property name="f_htqdzt" type="string"/>
+		<!--合同编号-->
+		<property name="f_htnum" type="string"/>
+		<!--签订日期-->
+		<property name="f_signdate" type="date"/>
+		<!--供气方式-->
+		<property name="f_givegasfund" type="string"/>
+		<!--供气单价-->
+		<property name="f_givegasprice" type="double"/>
+		<!--合同签订部门-->
+		<property name="f_htsigndepa" type="string"/>
+		<!--合同签订操作人-->
+		<property name="f_htsignoper" type="string"/>
+		<!--合同签订日期-->
+		<property name="f_htsigndate" type="date"/>
+		<!--备注-->
+		<property name="f_htqdbeizhu" type="string"  length="1000"/> 
+		<!--供气人-->
+		<property name="f_gtren" type="string"/>
+		<!--用气人-->
+		<property name="f_usegasren" type="string"/>
+
+<!--收费标准字段-->
+	<!-- 常用基本字段 -->
+		<!--收费标准状态-->
+		<property name="f_sfbzzt" type="string"/>
+        <!--排空费-->
+		<property name="f_emptyingfee" type="double"/>
+		<!--工程材料费-->
+		<property name="f_materialfee" type="double"/>
+		<!--自闭阀费-->
+		<property name="f_selfclosfee" type="double"/>
+		<!--报警器费-->
+		<property name="f_alarmfee" type="double"/>
+		<!--合计-->
+		<property name="f_totalfee" type="double"/>
+		<!--减免合计-->
+		<property name="f_jmhj" type="double"/>
+		<!--收费标准操作部门-->
+		<property name="f_feedepartment" type="string"/>
+		<!--收费标准操作人-->
+		<property name="f_feeopertor" type="string"/> 
+		<!--收费标准操作日期-->
+		<property name="f_feedate" type="date"/>		
+		<!--壁挂锅炉费-->
+		<property name="f_bgglf" type="double"/>
+		<!--热水器费-->
+		<property name="f_rsqf" type="double"/>
+        <!--材料费-->
+		<property name="f_cailiaofei" type="double"/>
+		<!--人工费-->
+		<property name="f_rengongfei" type="double"/>
+		<!--接驳费-->
+		<property name="f_jiebofei" type="double"/>		
+        <!--收费标准备注-->
+		<property name="f_budget" type="string" length="1000"/>
+		
+<!--银行返单字段-->
+	<!-- 常用基本字段 -->
+		<!--银行返单状态-->
+		<property name="f_yhfdzt" type="string"/>
+        <!--实交金额-->
+		<property name="f_actualfee" type="double"/>
+		<!--收费标准操作部门-->
+		<property name="f_bankdepartment" type="string"/>
+		<!--收费标准操作人-->
+		<property name="f_bankopertor" type="string"/> 
+		<!--收费标准操作日期-->
+		<property name="f_bankdate" type="date"/>		
+
+<!--分包合同字段-->
+	<!-- 常用基本字段 -->
+		<!--分包合同状态-->
+		<property name="f_fbhtzt" type="string"/>
+		<!--分包合同是否签订-->
+		<property name="f_fbhtsfqd" type="string"/>
+		<!--分包合同备注-->
+		<property name="f_fbhtbeizhu" type="string" length="1000"/>
+		<!--分包合同操作部门-->
+		<property name="f_fbhtdepartment" type="string"/>
+		<!--分包合同操作人-->
+		<property name="f_fbhtopertor" type="string"/> 
+		<!--分包合同操作日期-->
+		<property name="f_fbhtdate" type="date"/>			
+		
+<!--承包合同字段-->
+	<!-- 常用基本字段 -->
+		<!--承包合同状态-->
+		<property name="f_cbhtzt" type="string"/>
+		<!--承包合同是否签订-->
+		<property name="f_cbhtsfqd" type="string"/>
+		<!--承包合同备注-->
+		<property name="f_cbhtbeizhu" type="string" length="1000"/>
+		<!--承包合同操作部门-->
+		<property name="f_cbhtdepartment" type="string"/>
+		<!--承包合同操作人-->
+		<property name="f_cbhtopertor" type="string"/> 
+		<!--承包合同操作日期-->
+		<property name="f_cbhtdate" type="date"/>			
+		
+<!--技术交底字段-->
+	<!-- 常用基本字段 -->
+		<!--技术交底状态-->
+		<property name="f_jsjdzt" type="string"/>
+		<!--技术交底是否签订-->
+		<property name="f_jsjdsfqd" type="string"/>
+		<!--技术交底备注-->
+		<property name="f_jsjdbeizhu" type="string" length="1000"/>
+		<!--技术交底操作部门-->
+		<property name="f_jsjddepartment" type="string"/>
+		<!--技术交底操作人-->
+		<property name="f_jsjdopertor" type="string"/> 
+		<!--技术交底操作日期-->
+		<property name="f_jsjddate" type="date"/>		
+		
+ <!--安装通知登记字段-->
+ 	<!-- 常用基本字段 -->
+ 		<!--安装通知登记状态-->
+		<property name="f_aztzdjzt" type="string"/>
+		<!--自闭阀个数-->
+		<property name="f_selfclosnum" type="int"/>
+        <!--安装通知备注-->
+		<property name="f_aznoticebz" type="string" length="1000"/>
+		<!--安装通知类型-->
+		<property name="f_aztype" type="string"/>
+		<!--安装通知部门-->
+		<property name="f_aznotidepa" type="string"/>
+		<!--安装通知操作人-->
+		<property name="f_aznotioper" type="string"/>
+		<!--安装通知日期-->
+		<property name="f_aznotiate" type="date"/>
+		<!--安装通知时间-->
+		<property name="f_aznotitime" type="time"/>
+		
+<!--安装通知审核字段-->
+	<!-- 常用基本字段 -->
+		<!--安装通知审核状态-->
+		<property name="f_aztzshzt" type="string"/>
+		<!--安装通知审核意见-->
+		<property name="f_azexamtext" type="string" length="1000"/>
+		<!--安装通知审核部门-->
+		<property name="f_azexamdepa" type="string"/>
+		<!--安装通知审核操作人-->
+		<property name="f_azexamoper" type="string"/>
+		<!--安装通知审核日期-->
+		<property name="f_azexamdate" type="date"/>
+		<!--安装通知审核时间-->
+		<property name="f_azexamtime" type="time"/>     
+		
+<!--定表型字段-->
+	<!-- 常用基本字段 -->
+		<!--定表型状态-->
+		<property name="f_dbxzt" type="string"/>
+		<!--施工单位-->
+		<property name="f_constructionunit" type="string"/>
+		<!--调压装置-->
+		<property name="f_pressure" type="string"/>
+		<!--气表品牌-->
+		<property name="f_gaswatchbrand" type="string"/>
+		<!--气表型号-->
+		<property name="f_metertype" type="string"/>
+		<!--气表厂家-->
+		<property name="f_changjia" type="string"/>
+		<!--气表类型-->
+		<property name="f_type" type="string"/>
+		<!--别名-->
+		<property name="f_aliasname" type="string"/>
+		<!--设计周期-->
+		<property name="f_designcycle" type="string"/>
+		<!--工期-->
+		<property name="f_projecttime" type="string"/>
+		<!--操作部门-->
+		<property name="f_watchdepartment" type="string"/>
+		<!--操作人-->
+		<property name="f_watchopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_watchdate" type="date"/>
+  
+<!--设计出图字段-->
+	<!-- 常用基本字段 -->
+		<!--设计出图状态-->
+		<property name="f_sjctzt" type="string"/>
+		<!--图纸设计人-->
+		<property name="f_designdrawings" type="string"/>
+		<!--设计出图说明-->
+		<property name="f_designdescription" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_sjctpartment" type="string"/>
+		<!--操作人-->
+		<property name="f_sjctopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_sjctdate" type="date"/>
+		
+<!--开材料字段-->
+	<!-- 常用基本字段 -->
+		<!--设计出图状态-->
+		<property name="f_kclzt" type="string"/>
+		<!--是否已开材料-->
+		<property name="f_ifmaterial" type="boolean"/>
+		<!--开材料备注-->
+		<property name="f_materialmark" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_materialdepartment" type="string"/>
+		<!--操作人-->
+		<property name="f_materialopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_materialdate" type="date"/>
+		<!--特殊备注-->
+		<property name="f_specialnote" type="string" length="1000"/> 
+		<!--开据号-->
+		<property name="f_kaijuno" type="string"/> 
+		<!--返回设计出图原因-->
+		<property name="f_fanhuisjct" type="string" length="500"/>
+      
+<!--派工审核字段-->
+	<!-- 常用基本字段 -->
+		<!--派工审核状态-->
+		<property name="f_pgshzt" type="string"/>
+		<!--派工类型-->
+		<property name="f_worktype" type="string"/>
+		<!--派工审核说明-->
+		<property name="f_workscription" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_pgshpartment" type="string"/>
+		<!--操作人-->
+		<property name="f_pgshopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_pgshdate" type="date"/>
+      
+<!--派工单字段-->
+	<!-- 常用基本字段 -->
+		<!--派工登记状态-->
+		<property name="f_pgdjzt" type="string"/>
+		<!--验收人-->
+		<property name="f_tqr" type="string"/>
+		<!--工程编号-->
+		<property name="f_pgdgcbh" type="string"/>
+		<!--计划开工日期-->
+		<property name="f_jgysdjhkgdate" type="date"/>
+		<!--计划竣工日期-->
+		<property name="f_jgysdjhjgdate" type="date"/>
+		<!--工作量-->
+		<property name="f_pgdgzl" type="string" length="1000"/>
+		<!--工程内容-->
+		<property name="f_projectcontent" type="string" length="1000"/>
+		<!--现场代表-->
+		<property name="f_xcdb" type="string"/>
+		<!--本工程的相关要求-->
+		<property name="f_gongchengyaoqiu" type="string" length="1000"/>
+		<!--派工类型 民用户内-->
+		<property name="f_indoortype" type="boolean"/>
+		<!--派工类型 民用庭院-->
+		<property name="f_outdoortype" type="boolean"/>
+		<!--派工类型 餐饮-->
+		<property name="f_catertype" type="boolean"/>
+		<!--派工类型 锅炉-->
+		<property name="f_boilertype" type="boolean"/>
+		<!--派工类型 管线-->
+		<property name="f_pipelinetype" type="boolean"/>
+		<!--监理单位-->
+		<property name="f_supervisionunit" type="string"/>
+		<!--建设单位-->
+		<property name="f_buildunit" type="string"/>
+		<!--操作部门-->
+		<property name="f_senddepartment" type="string"/>
+		<!--操作人-->
+		<property name="f_sendopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_senddate" type="date"/>
+		
+		
+			 
+<!--施工字段-->
+	<!-- 常用基本字段 -->
+		<!--施工状态-->
+		<property name="f_sgzt" type="string"/>	 	
+		<!--施工资料-->
+		<property name="f_jungzil" type="string"/> 
+		<!--蓝图资料-->
+		<property name="f_lantzil" type="string"/> 
+		<!--实际开工日期-->
+		<property name="f_jgysdsjkgdate" type="date"/>
+		<!--操作部门-->
+		<property name="f_finishdepartment" type="string"/>
+		<!--操作人-->
+		<property name="f_finishopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_finishdate" type="date"/>
+<!--户内工程-->
+		<!--户内是否竣工-->
+		<property name="f_huneiover" type="boolean"/>
+		<!--二次回单-->
+		<property name="f_ercifandan" type="boolean"/>
+		<!--实际安装户数-->
+		<property name="f_ininstallnum" type="int"/>
+		<!--实际安装表品牌-->
+		<property name="f_ingaswatchbrand" type="string"/>
+		<!--户内竣工备注-->
+		<property name="f_huneibeizhu" type="string" length="1000"/>
+		<!--实际安装自闭阀个数-->
+		<property name="f_inselfclosnum" type="int"/>
+		<!--工程完成情况及验收意见-->
+		<property name="f_inprojectopinion" type="string" length="1000"/>
+		<!--开工日期-->
+		<property name="f_inprojectstatedate" type="date"/>
+		<!--竣工日期-->
+		<property name="f_inprojectfinishdate" type="date"/>
+		<!--工期-->
+		<property name="f_inprojecttime" type="string"/>	
+<!--庭院工程-->		
+		<!--庭院是否竣工-->
+		<property name="f_tingyuanover" type="boolean"/>
+		<!--工程完成情况及验收意见-->
+		<property name="f_outprojectopinion" type="string" length="1000"/>
+		<!--开工日期-->
+		<property name="f_outprojectstatedate" type="date"/>
+		<!--竣工日期-->
+		<property name="f_outprojectfinishdate" type="date"/>
+		<!--工期-->
+		<property name="f_outprojecttime" type="string"/>
+		
+	
+<!--竣工验收字段-->
+	<!-- 常用基本字段 -->
+		<!--竣工验收状态-->
+		<property name="f_jgyszt" type="string"/>	
+		<!--审核施工资料-->
+		<property name="f_jgysdshsgzl" type="string"/>
+		<!--审核蓝图-->
+		<property name="f_jgysdshlt" type="string"/>
+		<!--实际竣工日期-->
+		<property name="f_jgysdsjjgdate" type="date"/>
+		<!--施工单位现场负责人签字-->
+		<property name="f_jgysdsgdwqzr" type="string"/>
+		<!--施工单位现场负责人签字日期-->
+		<property name="f_jgysdsgdwqzdate" type="date"/>
+		<!--设计单位负责人签字-->
+		<property name="f_jgysdsjdwqzr" type="string"/>
+		<!--设计单位负责人签字日期-->
+		<property name="f_jgysdsjdwqzdate" type="date"/>
+		<!--建设单位现场代表签字-->
+		<property name="f_jgysdjsdwqzr" type="string"/>
+		<!--建设单位现场代表签字日期-->
+		<property name="f_jgysdjsdwqzdate" type="date"/>
+		<!--监理单位现场代表签字-->
+		<property name="f_jgysdjldwqzr" type="string"/>
+		<!--监理单位现场代表签字日期-->
+		<property name="f_jgysdjldwqzdate" type="date"/>
+		<!--验收进度备注-->
+		<property name="f_jgysdbz" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_jgysddepa" type="string"/>
+		<!--操作人-->
+		<property name="f_jgysdoper" type="string"/> 
+		<!--操作日期-->
+		<property name="f_jgysddate" type="date"/>
+		
+	
+<!--碰口字段-->
+	<!-- 常用基本字段 -->
+		<!--碰口状态-->
+		<property name="f_pkzt" type="string"/>	
+		<!--工程公司验收接口图-->
+		<property name="f_pkgcgsshjktyssftg" type="string"/>
+		<!--工程公司验收竣工图-->
+		<property name="f_pkgcgsshjgtyssftg" type="string"/>
+		<!--监理公司验收接口图-->
+		<property name="f_pkjlgsshjktyssftg" type="string"/>
+		<!--监理公司验收竣工图-->
+		<property name="f_pkjlgsshjgtyssftg" type="string"/>
+		<!--管网运行验收接口图-->
+		<property name="f_pkgwyxbshjktyssftg" type="string"/>
+		<!--管网运行验收竣工图-->
+		<property name="f_pkgwyxbshjgtyssftg" type="string"/>
+		<!--原有管道口径-->
+		<property name="f_pkgcgsshyygdkj" type="string"/>
+		<!--衔接管道口径-->
+		<property name="f_pkgcgsshxjgdkj" type="string"/>
+		<!--置换是否完成-->
+		<property name="f_pengkouzhsfwc" type="string"/>
+		<!--碰口是否完成-->
+		<property name="f_pkgcgsshpksfwc" type="string"/>
+		<!--气源是否接入调压箱-->
+		<property name="f_pkgwyxbshqyyjrtyx" type="string"/>
+		<!--验收进度备注-->
+		<property name="f_pengkoubz" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_pengkoudepa" type="string"/>
+		<!--操作人-->
+		<property name="f_pengkouoper" type="string"/> 
+		<!--操作日期-->
+		<property name="f_pengkoudate" type="date"/>
+		
+			
+		
+<!--开通气单字段-->
+	<!-- 常用基本字段 -->
+		<!--开通气单状态-->
+		<property name="f_ktqdzt" type="string"/>
+		<!--开通气单部门-->
+		<property name="f_transgasdepa" type="string"/>
+		<!--开通气单操作人-->
+		<property name="f_transgasoper" type="string"/>
+		<!--开通气单日期-->
+		<property name="f_transgasdate" type="date"/>
+		<!--开通气单时间-->
+		<property name="f_transgastime" type="time"/>
+		<!-- 开通气备注 -->
+		<property name="f_transdescripte" type="string" length="1000"/>	
+		
+		
+<!--通气单审核字段-->
+	<!-- 常用基本字段 -->
+		<!--通气单审核状态-->
+		<property name="f_tqdshzt" type="string"/>	
+		<!--通气员-->
+		<property name="f_tqy" type="string"/>		
+		<!--开通气单审核意见-->
+		<property name="f_tqexamtext" type="string" length="1000"/>
+		<!--开通气单审核部门-->
+		<property name="f_tqexamdepa" type="string"/>
+		<!--开通气单审核操作人-->
+		<property name="f_tgqexamoper" type="string"/>
+		<!--开通气单审核日期-->
+		<property name="f_tqexamdate" type="date"/>
+		<!--开通气单审核时间-->
+		<property name="f_tqexamtime" type="time"/>	
+				
+<!--通气单登记字段-->
+	<!-- 常用基本字段 -->
+		<!--通气单登记状态-->
+		<property name="f_tqdjzt" type="string"/>	
+		<!--通气前安检情况-->
+		<property name="f_ventilationsecurity" type="string" length="1000"/>
+		<!--已通气户数-->
+		<property name="f_ventilausernum" type="int"/>
+		<!--未通气户数-->
+		<property name="f_notventilausernum" type="int"/>
+		<!--通气备注信息-->
+		<property name="f_ventilamark" type="string" length="1000"/>
+		<!--操作部门-->
+		<property name="f_ventilationdepartment" type="string"/>
+		<!--操作人-->
+		<property name="f_ventilationopertor" type="string"/> 
+		<!--操作日期-->
+		<property name="f_ventilationdate" type="date"/>
+
+
+
+	 	<!-- 下面是对于的花名册表 -->
+	    <set name="f_applycustomer"  cascade="delete-orphan" order-by="id">
+          <key column="applyid" /> 
+          <one-to-many entity-name="t_applycustomer"/> 
+        </set> 
+        <!-- 下面是用气设备 -->
+	    <set name="f_device" cascade="all-delete-orphan"  order-by="id">
+          <key column="applyid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_device" not-found="exception"/> 
+        </set> 
+        <!-- 图片信息 -->
+        <set name="f_applyimage" cascade="all-delete-orphan">
+          <key column="applyid" on-delete="noaction" />
+          <one-to-many entity-name="t_applyimage" not-found="exception"/>        
+        </set>
+        <!-- 附件信息 -->
+        <set name="f_applyannex" cascade="all-delete-orphan">
+          <key column="applyid" on-delete="noaction" />
+          <one-to-many entity-name="t_applyannex" not-found="exception"/>        
+        </set>
+		<!--费用减免明细列表-->
+	    <set name="f_costreduction"   cascade="all-delete-orphan">
+          <key column="applyid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_costreduction" not-found="exception"/> 
+        </set> 
+		<!--交费明细列表-->
+	    <set name="f_paydetail" cascade="all-delete-orphan">
+          <key column="applyid" on-delete="noaction" /> 
+          <one-to-many entity-name="t_paydetail" not-found="exception"/> 
+        </set>
+
+	</class>
+</hibernate-mapping>

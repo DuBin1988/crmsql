@@ -1,0 +1,215 @@
+<?xml version="1.0"  encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="T_IC_SAFECHECK_PAPER" table="T_IC_SAFECHECK_PAPER">
+        <id name="id" type="string">
+        <generator class="uuid.hex"></generator>
+        </id>
+        <!-- 检查情况 -->
+        <property name="CONDITION" type="string">
+        </property>
+        <!-- 到访不遇卡 -->
+        <property name="HASNOTIFIED" type="string">
+         </property>
+        <!-- 用户名称 -->
+        <property name="USER_NAME" type="string">
+        </property>
+        <!-- 电话 -->
+        <property name="TELPHONE" type="string">
+        </property>
+        <!-- 到达时间 -->
+        <property name="ARRIVAL_TIME" type="string">
+        </property>
+        <!-- 离开时间 -->
+        <property name="DEPARTURE_TIME" type="string">
+        </property>
+        <!-- 街道 -->
+        <property name="ROAD" type="string">
+        </property>
+        <!-- 小区 -->
+        <property name="UNIT_NAME" type="string">
+        </property>
+        <!-- 楼号 -->
+        <property name="CUS_DOM" type="string">
+        </property>
+        <!-- 单元 -->
+        <property name="CUS_DY" type="string">
+        </property>
+        <!-- 楼层 -->
+        <property name="CUS_FLOOR" type="string">
+        </property>
+        <!-- 房间 -->
+        <property name="CUS_ROOM" type="string">
+        </property>
+        <!-- 地址 -->
+        <property name="OLD_ADDRESS" type="string">
+        </property>
+        <!-- 房屋结构 -->
+        <property name="ROOM_STRUCTURE" type="string">
+        </property>
+        <!-- 供暖方式 -->
+        <property name="WARM" type="string">
+        </property>
+        <!-- 安检员 -->
+        <property name="SAVE_PEOPLE" type="string">
+        </property>
+        <!-- IC卡表厂名称 -->
+        <property name="IC_METER_NAME" type="string">
+        </property>
+        <!-- 基表厂家名称 -->
+        <property name="JB_METER_NAME" type="string">
+        </property>
+        <!-- 表型 -->
+        <property name="METER_TYPE" type="string">
+        </property>
+        <!-- 卡号 -->
+        <property name="CARD_ID" type="string">
+        </property>
+        <!-- 基表数 -->
+        <property name="JB_NUMBER" type="big_decimal">
+        </property>
+        <!-- 剩余气量 -->
+        <property name="SURPLUS_GAS" type="big_decimal">
+        </property>
+        <!-- 燃气表左右表 -->
+        <property name="RQB_AROUND" type="string">
+        </property>
+        <!-- 燃气表基表号 -->
+        <property name="RQB_JBCODE" type="string">
+        </property>
+        <!-- 燃气表生产年份 -->
+        <property name="METERMADEYEAR" type="string">
+        </property>
+        <!-- 燃气表 -->
+        <property name="RQB" type="string">
+        </property>
+        <!-- 立管 -->
+        <property name="STANDPIPE" type="string">
+        </property>
+        <!-- 严密性测试 -->
+        <property name="RIGIDITY" type="string">
+        </property>
+        <!-- 静止压力 -->
+        <property name="STATIC" type="string">
+        </property>
+        <!-- 静止压力值 -->
+        <property name="STATIC_DATA" type="string">
+        </property>
+        <!-- 表前阀 -->
+        <property name="TABLE_TAP" type="string">
+        </property>
+        <!-- 灶前阀 -->
+        <property name="COOK_TAP" type="string">
+        </property>
+        <!-- 自闭阀 -->
+        <property name="CLOSE_TAP" type="string">
+        </property>
+        <!-- 户内管 -->
+        <property name="INDOOR" type="string">
+        </property>
+        <!-- 灶具漏气 -->
+        <property name="LEAKAGE_COOKER" type="string">
+        </property>
+        <!-- 热水器漏气 -->
+        <property name="LEAKAGE_HEATER" type="string">
+        </property>
+        <!-- 壁挂炉漏气 -->
+        <property name="LEAKAGE_BOILER" type="string">
+        </property>
+        <!-- 安检告知书 -->
+        <property name="LEAKAGE_NOTIFIED" type="string">
+        </property>
+        <!-- 漏气位置 -->
+        <property name="LEAKGEPLACE" type="string">
+        </property>
+        <!-- 灶具品牌 -->
+        <property name="COOK_BRAND" type="string">
+        </property>
+        <!-- 灶具型号 -->
+        <property name="COOK_TYPE" type="string">
+        </property>
+        <!-- 灶具软管 -->
+        <property name="COOKPIPE_NORMAL" type="string">
+        </property>
+        <!-- 安装管卡个数 -->
+        <property name="COOKERPIPECLAMPCOUNT" type="string">
+        </property>
+        <!-- 更换软管长度 -->
+        <property name="COOKERPIPYLENGTH" type="string">
+        </property>
+        <!-- 灶具购置日期 -->
+        <property name="COOK_DATE" type="string">
+        </property>
+        <!-- 热水器品牌 -->
+        <property name="WATER_BRAND" type="string">
+        </property>
+        <!-- 热水器型号 -->
+        <property name="WATER_TYPE" type="string">
+        </property>
+        <!--  热水器软管-->
+        <property name="WATER_PIPE" type="string">
+        </property>
+        <!-- 热水器烟道 -->
+        <property name="WATER_FLUE" type="string">
+        </property>
+        <!-- 热水器管卡个数 -->
+        <property name="WATER_NUME" type="string">
+        </property>
+        <!-- 热水器购置日期 -->
+        <property name="WATER_DATE" type="string">
+        </property>
+        <!-- 热水器隐患 -->
+        <property name="WATER_HIDDEN" type="string">
+        </property>
+        <!-- 壁挂炉品牌 -->
+        <property name="WHE_BRAND" type="string">
+        </property>
+        <!-- 壁挂炉型号 -->
+        <property name="WHE_TYPE" type="string">
+        </property>
+        <!-- 壁挂炉日期 -->
+        <property name="WHE_DATE" type="string">
+        </property>
+        <!-- 壁挂炉隐患 -->
+        <property name="WHE_HIDDEN" type="string"/>
+        <!-- 客户意见 -->
+        <property name="USER_SUGGESTION" type="string">
+        </property>
+        <!-- 可以满意度 -->
+        <property name="USER_SATISFIED" type="string">
+        </property>
+        <!-- 客户签名 -->
+        <property name="USER_SIGN" type="string">
+        </property>
+        <!-- 隐患 -->
+        <property name="THREAT" type="string">
+        </property>
+        <!-- 照片1 -->
+        <property name="PHOTO_FIRST" type="string">
+        </property>
+        <!-- 照片2 -->
+        <property name="PHOTO_SECOND" type="string">
+        </property>
+        <!-- 照片3 -->
+        <property name="PHOTO_THIRD" type="string">
+        </property>
+        <!-- 照片4 -->
+        <property name="PHOTO_FOUTH" type="string">
+        </property>
+        <!-- 照片5 -->
+        <property name="PHOTO_FIFTH" type="string">
+        </property>
+        <!-- 照片6 -->
+        <property name="PHOTO_SIXTH" type="string">
+        </property>
+        <!-- 照片7 -->
+        <property name="PHOTO_SEVENTH" type="string">
+        </property>
+        <!-- 计划id -->
+        <property name="CHECKPLANID" type="string"/>
+        <!-- user id -->
+        <property name="f_userid" type="string"/>
+    </class>
+</hibernate-mapping>
