@@ -1,4 +1,4 @@
-//各地区月明细表
+//各地区月明细表查询
 //time:查询时间,districtname:小区名称,usertype:用户类型,condition:查询条件
 //return：日期，居民气量，实际金额，户数，用户气量单价
 select 
