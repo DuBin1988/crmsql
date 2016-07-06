@@ -8,17 +8,8 @@
 	<!-- 小区用户售气情况查询 -->
 	<sql alias='usergas' path='usergas.sql'/>
 	
-	<!-- 日现金气量核对 -->
-	<sql alias='dailygas' path='dailygas.sql'/>
-	
-	<!-- 各地区日现金气量核对 -->
-	<sql alias='byarea' path='byarea.sql'/>
-	
-	<!-- 民用日现金气量核对-->
-	<sql alias='civil' path='civil.sql'/>
-	
-	<!-- 非民用日现金气量核对-->
-	<sql alias='nocivil' path='nocivil.sql'/>
+	<!-- 各地区月明细表 -->
+	<sql alias='detailbymonth' path='detailbymonth.sql'/>
 	
 	<!-- 小区抄表 统计表-->
 	<sql alias='districthandplan' path='districthandplan.sql'/>
