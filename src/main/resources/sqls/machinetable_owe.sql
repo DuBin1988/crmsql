@@ -1,8 +1,10 @@
 //机表欠费报表查询
 //condition:查询条件
-//return:用户编号，用户姓名，地址，电话，最新抄表指数，抄表欠费，账户余额，实际余额，交费总额，欠费次数，欠费月份，抄表员，最后购气日期
+//return:用户编号（u.f_userid），用户姓名（u.f_username），地址（u.f_address），电话（u.f_phone），最新抄表指数（u.lastinputgasnum），
+//       抄表欠费（qf.je），账户余额（u.f_zhye），实际余额（actualamount），交费总额（sf.totalamount），欠费次数（qf.times），
+//		 欠费月份（months.f_date），抄表员（u.f_inputtor），最后购气日期（f_finabuygasdate）
 select u.f_userid,u.f_username,u.f_address,u.f_phone,u.lastinputgasnum,qf.je,u.f_zhye,u.f_zhye-qf.je actualamount,
-	   sf.totalamount,qf.times,u.f_inputtor,
+	   sf.totalamount,qf.times,months.f_date,u.f_inputtor,
 	   substring(convert(varchar(50),u.f_finabuygasdate,120),1,10) f_finabuygasdate
 from t_userfiles u
 right join --欠费金额,次数
