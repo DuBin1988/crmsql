@@ -20,4 +20,7 @@
 	<!-- 机表欠费报表 -->
 	<sql alias='machinetable_owe' path='machinetable_owe.sql'/>
 	
+	<!-- 根据id求项目内容 -->
+	<sql alias='byid' path='byid.sql'/>
+	
 </cfg>
