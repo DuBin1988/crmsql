@@ -32,9 +32,6 @@
 	<!-- 有阶梯欠费用户 -->
 	<sql alias='getowninfo' path='getowninfo.sql'/>
 	
-	<!-- 有详细阶梯欠费用户 -->
-	<sql alias='getinfo' path='getinfo.sql'/>
-	
 	<!-- 获取缴费总气量 -->
 	<sql alias='getalreadbuygas' path='getalreadbuygas.sql'/>
 	
