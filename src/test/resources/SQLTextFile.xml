@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 对应sql测试文档         SQL名(name),测试路径(URL),测试数据及归规范(data) -->
+<textInfo>
+
+	<name>byId.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/byId</URL>
+	<data>{data:{entitytype:t_userfiles,id ='12'}}</data>
+
+	<name>detailByMonth.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/detailByMonth</URL>
+	<data>{data:{time:'2016-04-01',districtname:'太和景苑'}}</data>
+	
+	<name>districtHandPlan.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/districtHandPlan</URL>
+	
+	<name>getAlreadBuyGas.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getAlreadBuyGas</URL>
+	<data>{data:{userid:'1',deliverdate:'2016-04-10'}}</data>
+	
+	<name>getCount.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getCount</URL>
+	<data>{data:{userinfoid:'1'}}</data>
+	
+	<name>getDebts.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getDebts</URL>
+	<data>{data:{userinfoid:'1'}}</data>
+	
+	<name>getOwnInfo.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getOwnInfo</URL>
+	<data>{data:{userinfoid:'1'}}</data>
+	
+	<name>getUserInfo.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getUserInfo</URL>
+	<data>{data:{condition:" id ='4181718' "}}</data>
+	
+	<name>infoHandPlan.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/infoHandPlan</URL>
+	<data>{data:{condition:" id ='12' "}}</data>
+	
+	<name>userGas.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/userGas</URL>
+	<data>{data:{startTime:'2016-04-01',endTime:'2016-04-10'}}</data>
+	
+	<name>getUserFile.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getUserFile</URL>
+	<data>{data:{cardid:'5000000724',aliasname:'BeiTe',fengongsinum='11'}}</data>
+	
+	<name>getUserInfo.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getUserInfo</URL>
+	<data>{data:{cardid:'5000000724',aliasname:'BeiTe',fengongsinum='11'}}</data>
+	
+	<name>isLock.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/isLock</URL>
+	<data>{data:{cardid:'5000000724',aliasname:'BeiTe'}}</data>
+	
+	<name>singleTable.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/singleTable</URL>
+	<data>{data:{tablename: t_userfiles,condition:" id ='12' "}}</data>
+	
+</textInfo>

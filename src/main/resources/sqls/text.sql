@@ -1,3 +1,5 @@
+//测试用例
+
 SELECT * FROM
 	(
 	SELECT DATEPART(year,DATEADD(year,{e},f_last_check_date)) AS f_plan_year,
