@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 对应sql测试文档         SQL名(name),测试路径(URL),测试数据及归规范(data) -->
+<!-- 对应sql测试文档         SQL名(name),测试路径(URL),测试数据及规范(data) -->
 <textInfo>
 
 	<name>byId.sql</name>
