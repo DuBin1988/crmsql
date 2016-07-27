@@ -6,40 +6,40 @@
 	<sql alias='项目汇总' path='项目汇总.sql'/>
 	
 	<!-- 小区用户售气情况查询 -->
-	<sql alias='usergas' path='usergas.sql'/>
+	<sql alias='userGas' path='userGas.sql'/>
 	
 	<!-- 各地区月明细表 -->
-	<sql alias='detailbymonth' path='detailbymonth.sql'/>
+	<sql alias='detailByMonth' path='detailByMonth.sql'/>
 	
 	<!-- 小区抄表 统计表-->
-	<sql alias='districthandplan' path='districthandplan.sql'/>
+	<sql alias='districtHandPlan' path='districtHandPlan.sql'/>
 	
 	<!-- 抄表信息汇总表 -->
-	<sql alias='infohandplan' path='infohandplan.sql'/>
+	<sql alias='infoHandPlan' path='infoHandPlan.sql'/>
 	
 	<!-- 机表欠费报表 -->
-	<sql alias='machinetable_owe' path='machinetable_owe.sql'/>
+	<sql alias='machineTable_Owe' path='machineTable_Owe.sql'/>
 	
 	<!-- 根据id求项目内容 -->
-	<sql alias='byid' path='byid.sql'/>
+	<sql alias='byId' path='byId.sql'/>
 	
 	<!-- 单表查询 -->
-	<sql alias='singletable' path='basesql/singletable.sql'/>
+	<sql alias='singleTable' path='basesql/singleTable.sql'/>
 	
 	<!-- 查找用户数据量 -->
-	<sql alias='getcount' path='getcount.sql'/>
+	<sql alias='getCount' path='getCount.sql'/>
 	
 	<!-- 有阶梯欠费用户 -->
-	<sql alias='getowninfo' path='getowninfo.sql'/>
+	<sql alias='getOwnInfo' path='getOwnInfo.sql'/>
 	
 	<!-- 获取缴费总气量 -->
-	<sql alias='getalreadbuygas' path='getalreadbuygas.sql'/>
+	<sql alias='getAlreadBuyGas' path='getAlreadBuyGas.sql'/>
 	
 	<!-- 查询欠费记录 -->
-	<sql alias='getdebts' path='getdebts.sql'/>
+	<sql alias='getDebts' path='getDebts.sql'/>
 	
 	<!-- 查找用户信息 -->
-	<sql alias='getuserinfo' path='getuserinfo.sql'/>
+	<sql alias='getUserInfo' path='getUserInfo.sql'/>
 	
 	<!-- 判断用户是否被锁定 -->
 	<sql alias='isLock' path='bank/isLock.sql'/>
@@ -49,4 +49,8 @@
 	
 	<!-- 查询用户基本信息 -->
 	<sql alias='getUserInfo' path='bank/getUserInfo.sql'/>
+	
+	<!-- 测试用例 -->
+	<sql alias='text' path='text.sql'/>
+	
 </cfg>
