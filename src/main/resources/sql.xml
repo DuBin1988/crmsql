@@ -53,6 +53,15 @@
 	<!-- 查询用户基本信息 -->
 	<sql alias='getUserInfo' path='bank/getUserInfo.sql'/>
 	
+	<!-- 查询用户指定时间点后抄表记录明细 -->
+	<sql alias='userHPDetail' path='lasa/userHPDetail.sql'/>
+	
+	<!-- 查询用户指定时间点后抄表记录汇总 -->
+	<sql alias='userHPCount' path='lasa/userHPCount.sql'/>
+	
+	<!-- 获取用户本期指数 -->
+	<sql alias='getCurrentIndex' path='lasa/getCurrentIndex.sql'/>
+	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
 	

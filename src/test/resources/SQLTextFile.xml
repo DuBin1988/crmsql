@@ -57,6 +57,18 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/singleTable_OrderBy</URL>
 	<data>{data:{tablename:t_userfiles,condition:'1=1',orderitem:id}}</data>
 	
+	<name>userHPDetail.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/userHPDetail</URL>
+	<data>{data:{username:'张三',lastinputdate:'2016-04-10'}}</data>
+	
+	<name>userHPCount.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/userHPCount</URL>
+	<data>{data:{username:'张三',lastinputdate:'2016-04-10'}}</data>
+	
+	<name>getCurrentIndex.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getCurrentIndex</URL>
+	<data>{data:{lastinputdate:'2015-08-13'}}</data>
+	
 	
 	
 </textInfo>

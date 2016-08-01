@@ -22,6 +22,8 @@
 		  - 查询用户基本信息:getUserInfo.sql
 		  - 查询用户基本信息:getUserFile.sql
 		  - 查找用户数量:getCount.sql
+		  - 查询用户抄表记录明细:userHPDetail.sql
+		  - 查询用户抄表记录汇总:userHPCount.sql
 	 * 抄表查询
 		  - 抄表信息汇总:infoHandPlan.sql
 		  	  
@@ -33,6 +35,7 @@
 		  - 有阶梯欠费用户(用户、抄表关联):getOwnInfo.sql.sql
 		  - 机表欠费报表查询(用户、抄表、收费关联):machineTable_Owe.sql
 		  - 查找用户信息(t_userinfo中f_userid源于子查询信息):getUserInfo.sql
+		  - 获取多个用户该时间点前的最后一条抄表记录的本期指数:getCurrentIndex.sql
 		     
        
 4. 测试SQL
