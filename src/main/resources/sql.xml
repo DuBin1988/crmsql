@@ -26,6 +26,9 @@
 	<!-- 单表查询 -->
 	<sql alias='singleTable' path='basesql/singleTable.sql'/>
 	
+	<!-- 排序单表查询 -->
+	<sql alias='singleTable_OrderBy' path='basesql/singleTable_OrderBy.sql'/>
+	
 	<!-- 查找用户数据量 -->
 	<sql alias='getCount' path='getCount.sql'/>
 	

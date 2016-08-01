@@ -53,8 +53,10 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/isLock</URL>
 	<data>{data:{cardid:'5000000724',aliasname:'BeiTe'}}</data>
 	
-	<name>singleTable.sql</name>
-	<URL>http://localhost:8081/crmsql/rs/sql/singleTable</URL>
-	<data>{data:{tablename: t_userfiles,condition:" id ='12' "}}</data>
+	<name>singleTable_OrderBy.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/singleTable_OrderBy</URL>
+	<data>{data:{tablename:t_userfiles,condition:'1=1',orderitem:id}}</data>
+	
+	
 	
 </textInfo>

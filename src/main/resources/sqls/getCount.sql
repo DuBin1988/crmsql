@@ -1,5 +1,5 @@
 //查找用户数量
-//userinfoid:用户信息id
+//userinfoid:用户编号
 //return：用户数量(c)
 select COUNT(*) c  
 from t_userfiles 
