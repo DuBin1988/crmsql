@@ -2,5 +2,5 @@
 //username:用户名 lastinputdate:抄表日期
 //return：抄表汇总
  select COUNT(*) c 
- from t_handplan h
+ from t_handplan 
  where  f_username ='{username}' and lastinputdate >'{lastinputdate }' 
