@@ -18,6 +18,7 @@
 		  - 各地区月明细表查询:detailByMonth.sql
 		  - 获取缴费总气量:getAlreadBuyGas.sql
 		  - 小区居民城网是售气情况:userGas。sql
+		  - 根据ID查询收费记录:getBilById.sql
 	 * 用户查询
 		  - 查询用户基本信息:getUserInfo.sql
 		  - 查询用户基本信息:getUserFile.sql

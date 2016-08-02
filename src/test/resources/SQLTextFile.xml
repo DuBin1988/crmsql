@@ -73,6 +73,10 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/productMarket</URL>
 	<data>{data:{startlastinputdate:'2011-11-01',endlastinputdate:'2011-11-30'}}</data>
 	
+	<name>getBilById.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getBilById</URL>
+	<data>{data:{id:'41289165'}}</data>
+	
 	
 	
 </textInfo>

@@ -65,6 +65,9 @@
 	<!-- 修文产销情况汇总 -->
 	<sql alias='productMarket' path='xiuwen/productMarket.sql'/>
 	
+	<!-- 查询欠费记录 -->
+	<sql alias='getBilById' path='getBilById.sql'/>
+	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
 	
