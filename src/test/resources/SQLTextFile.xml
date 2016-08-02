@@ -69,6 +69,10 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/getCurrentIndex</URL>
 	<data>{data:{lastinputdate:'2015-08-13'}}</data>
 	
+	<name>productMarket.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/productMarket</URL>
+	<data>{data:{startlastinputdate:'2011-11-01',endlastinputdate:'2011-11-30'}}</data>
+	
 	
 	
 </textInfo>

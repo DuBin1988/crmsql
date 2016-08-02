@@ -62,6 +62,9 @@
 	<!-- 获取用户本期指数 -->
 	<sql alias='getCurrentIndex' path='lasa/getCurrentIndex.sql'/>
 	
+	<!-- 修文产销情况汇总 -->
+	<sql alias='productMarket' path='xiuwen/productMarket.sql'/>
+	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
 	

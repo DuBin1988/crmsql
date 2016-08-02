@@ -16,7 +16,7 @@
 		class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-     	<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;database=tonghuagas;" />
+     	<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;database=sellingwater;" />
  		<property name="username" value="sa" />
  		<property name="password" value="sqlserver" />
 	</bean>

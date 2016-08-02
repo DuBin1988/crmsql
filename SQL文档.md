@@ -36,6 +36,7 @@
 		  - 机表欠费报表查询(用户、抄表、收费关联):machineTable_Owe.sql
 		  - 查找用户信息(t_userinfo中f_userid源于子查询信息):getUserInfo.sql
 		  - 获取多个用户该时间点前的最后一条抄表记录的本期指数:getCurrentIndex.sql
+		  - 产销情况汇总(修文):productMarket.sql
 		     
        
 4. 测试SQL

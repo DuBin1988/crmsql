@@ -1,5 +1,5 @@
 //有阶梯欠费用户
-//userinfoid：用户信息id  17034982
+//userinfoid：用户信息id  h:t_handplan,u:t_userfiles
 //return：欠费信息（gasFee）
 select gasFee 
 from (select SUM(isnull(h.f_stair2fee,0)+isnull(h.f_stair3fee,0)) gasFee 
