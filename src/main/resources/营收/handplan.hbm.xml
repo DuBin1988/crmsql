@@ -72,7 +72,7 @@
 		<property name="f_gasmetermanufacturers" type="string"/>
 		<!--表厂别名-->
 		<property name="f_aliasname" type="string"/>
-		<!--气表类型-->
+		<!--气表-->
 		<property name="f_gasmeterstyle" type="string"/>
 		<!--分公司名称-->
 		<property name="f_filiale" type="string"/>
@@ -162,6 +162,7 @@
 			<!-- **************阶梯气价信息**************** -->
 	<!-- 存储用户当前购气时，气价和气量的具体信息，购气量在阶段几种  获得当前阶段的单价 算出购气金额 -->
 		<!--阶梯气价类型-->
+		
 		<property name="f_stairtype" type="string"/>
 		<!--阶段一气量-->
 		<property name="f_stair1amount" type="double"/>
