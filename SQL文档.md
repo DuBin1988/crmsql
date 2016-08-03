@@ -19,6 +19,9 @@
 		  - 获取缴费总气量:getAlreadBuyGas.sql
 		  - 小区居民城网是售气情况:userGas。sql
 		  - 根据ID查询收费记录:getBilById.sql
+		  - 售气查询:sellGas.sql
+		  - 补气查询:repairGas.sql
+		  - 补卡查询:repairCard.sql
 	 * 用户查询
 		  - 查询用户基本信息:getUserInfo.sql
 		  - 查询用户基本信息:getUserFile.sql
@@ -38,6 +41,8 @@
 		  - 查找用户信息(t_userinfo中f_userid源于子查询信息):getUserInfo.sql
 		  - 获取多个用户该时间点前的最后一条抄表记录的本期指数:getCurrentIndex.sql
 		  - 产销情况汇总(修文):productMarket.sql
+		  - 换表记录查询:changeForm.sql
+		  - 过户记录查询:reachHouse.sql
 		     
        
 4. 测试SQL

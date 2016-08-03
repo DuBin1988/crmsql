@@ -77,6 +77,22 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/getBilById</URL>
 	<data>{data:{id:'41289165'}}</data>
 	
+	<name>sellGas.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/sellGas</URL>
+	<data>{data:{network:'通化营业厅',operator:'s006',startDate:'2015-01-01',endDate:'2016-01-01'}}</data>
+	
+	<name>repairGas.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/repairGas</URL>
+	<data>{data:{network:'营业办公室',operator:'郑立红',startDate:'2015-01-01',endDate:'2016-01-01'}}</data>
+	
+	<name>changeForm.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/changeForm</URL>
+	<data>{data:{network:'梅河口燃气有限公司',operator:'超级管理员',startDate:'2015-04-23',endDate:'2016-01-28'}}</data>
+	
+	<name>reachHouse.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/reachHouse</URL>
+	<data>{data:{network:'安顺达管道天然气有限公司',operator:'超级管理员',startDate:'2012-01-20',endDate:'2014-04-20'}}</data>
+	
 	
 	
 </textInfo>

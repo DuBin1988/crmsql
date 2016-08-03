@@ -21,7 +21,7 @@
 	<sql alias='machineTable_Owe' path='machineTable_Owe.sql'/>
 	
 	<!-- 根据id求项目内容 -->
-	<sql alias='byId' path='byId.sql'/>
+	<sql alias='byId' path='basesql/byId.sql'/>
 	
 	<!-- 单表查询 -->
 	<sql alias='singleTable' path='basesql/singleTable.sql'/>
@@ -67,6 +67,21 @@
 	
 	<!-- 查询欠费记录 -->
 	<sql alias='getBilById' path='getBilById.sql'/>
+	
+	<!-- 售气查询 -->
+	<sql alias='sellGas' path='kashi/sellGas.sql'/>
+	
+	<!-- 补气查询 -->
+	<sql alias='repairGas' path='kashi/repairGas.sql'/>
+	
+	<!-- 补卡查询 -->
+	<sql alias='repairCard' path='kashi/repairCard.sql'/>
+	
+	<!-- 换表记录查询 -->
+	<sql alias='changeForm' path='kashi/changeForm.sql'/>
+	
+	<!-- 过户记录查询 -->
+	<sql alias='reachHouse' path='kashi/reachHouse.sql'/>
 	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
