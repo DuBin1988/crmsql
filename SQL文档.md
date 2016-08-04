@@ -10,6 +10,7 @@
 		  - 根据id求项目内容:byId.sql
 		  - 单表查询:singleTable.sql
 		  - 排序单表查询:singleTable_OrderBy.sql
+		  - 汇总单表查询:singleTable_Count.sql
 	 
           
 2. 单表查询

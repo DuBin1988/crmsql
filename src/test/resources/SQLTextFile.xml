@@ -53,9 +53,21 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/isLock</URL>
 	<data>{data:{cardid:'5000000724',aliasname:'BeiTe'}}</data>
 	
+	<name>singleTable.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/singleTable</URL>
+	<data>{data:{tablename:t_userfiles,condition:'1=1'}}</data>
+	
 	<name>singleTable_OrderBy.sql</name>
 	<URL>http://localhost:8081/crmsql/rs/sql/singleTable_OrderBy</URL>
+	<data>{data:{items:'*',tablename:t_userfiles,condition:'1=1',orderitem:id}}</data>
+	
+	<name>singleTable_Count.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/singleTable_Count</URL>
 	<data>{data:{tablename:t_userfiles,condition:'1=1',orderitem:id}}</data>
+	
+	<name>singleTable_Final.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/singleTable_Final</URL>
+	<data>{data:{items:'f_userid,f_username',tablename:t_fillgas,condition:'1=1',groupitem:'f_userid,f_username,id',orderitem:id}}</data>
 	
 	<name>userHPDetail.sql</name>
 	<URL>http://localhost:8081/crmsql/rs/sql/userHPDetail</URL>
