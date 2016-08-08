@@ -92,7 +92,7 @@
 	<!-- 小区抄表统计总和 -->
 	<sql alias='handSum' path='tonghua/handSum.sql'/>
 	
-	<!-- 查询收费记录-->
+	<!-- 查询缴费记录详细-->
 	<sql alias='chargeRecord' path='tonghua/chargeRecord.sql'/>
 	
 	<!-- 测试用例 -->
