@@ -89,6 +89,12 @@
 	<!-- 过户记录查询 -->
 	<sql alias='reachHouse' path='kashi/reachHouse.sql'/>
 	
+	<!-- 小区抄表统计总和 -->
+	<sql alias='handSum' path='tonghua/handSum.sql'/>
+	
+	<!-- 查询收费记录-->
+	<sql alias='chargeRecord' path='tonghua/chargeRecord.sql'/>
+	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
 	

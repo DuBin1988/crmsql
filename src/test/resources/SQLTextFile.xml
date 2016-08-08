@@ -101,10 +101,18 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/changeForm</URL>
 	<data>{data:{network:'梅河口燃气有限公司',operator:'超级管理员',startDate:'2015-04-23',endDate:'2016-01-28'}}</data>
 	
-	<name>reachHouse.sql</name>
-	<URL>http://localhost:8081/crmsql/rs/sql/reachHouse</URL>
-	<data>{data:{network:'安顺达管道天然气有限公司',operator:'超级管理员',startDate:'2012-01-20',endDate:'2014-04-20'}}</data>
+	<name>getBilById.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/getBilById</URL>
+	<data>{data:{id:'41289165'}}</data>
 	
+	<name>handSum.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/handSum</URL>
+	<data>{data:{condition:' 1=1 ',orderitem:'SUBSTRING(f_books,0,5)'}}</data>
+	
+	<name>chargeRecord.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/chargeRecord</URL>
+	<data>{data:{condition:"h.f_userid ='200510303061' ",orderitem:'SUBSTRING(CONVERT(VARCHAR
+		  (10),h.lastinputdate,120),0,8)'}}</data>
 	
 	
 </textInfo>

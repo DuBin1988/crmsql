@@ -31,6 +31,7 @@
 		  - 查询用户抄表记录汇总:userHPCount.sql
 	 * 抄表查询
 		  - 抄表信息汇总:infoHandPlan.sql
+		  - 小区抄表统计总和:handSum.sql
 		  	  
 		         
 3. 关联查询
@@ -44,6 +45,7 @@
 		  - 产销情况汇总(修文):productMarket.sql
 		  - 换表记录查询:changeForm.sql
 		  - 过户记录查询:reachHouse.sql
+		  - 查询收费记录(抄表收费关联):chargeRecord.sql
 		     
        
 4. 测试SQL
