@@ -113,6 +113,10 @@
 	<URL>http://localhost:8081/crmsql/rs/sql/chargeRecord</URL>
 	<data>{data:{condition:"h.f_userid ='200510303061' ",orderitem:'SUBSTRING(CONVERT(VARCHAR
 		  (10),h.lastinputdate,120),0,8)'}}</data>
+		  
+	<name>recordDetails.sql</name>
+	<URL>http://localhost:8081/crmsql/rs/sql/recordDetails</URL>
+	<data>{data:{condition:'f_jpglouqi=0'}}</data>
 	
 	
 </textInfo>

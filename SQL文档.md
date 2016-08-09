@@ -21,8 +21,6 @@
 		  - 小区居民城网是售气情况:userGas。sql
 		  - 根据ID查询收费记录:getBilById.sql
 		  - 售气查询:sellGas.sql
-		  - 补气查询:repairGas.sql
-		  - 补卡查询:repairCard.sql
 	 * 用户查询
 		  - 查询用户基本信息:getUserInfo.sql
 		  - 查询用户基本信息:getUserFile.sql
@@ -32,8 +30,15 @@
 	 * 抄表查询
 		  - 抄表信息汇总:infoHandPlan.sql
 		  - 小区抄表统计总和:handSum.sql
-		  	  
-		         
+	 * 补卡查询
+		  - 补卡查询:repairCard.sql
+		  - 其他补气查询:repairGas_Other.sql	  		  	  
+	 * 补气查询
+		  - 补气查询:repairGas.sql
+		  - 补卡处理卡次数统计:repairCard_Dispose.sql
+	 * 安检查询
+		  - 查询安检记录详情:recordDetails.sql
+		    	         
 3. 关联查询
 	 * 关联查询
 		  - 小区抄表统计(用户、抄表关联):districtHandPlan.sql

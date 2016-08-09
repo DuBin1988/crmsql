@@ -80,8 +80,14 @@
 	<!-- 补气查询 -->
 	<sql alias='repairGas' path='kashi/repairGas.sql'/>
 	
+	<!-- 其他补气查询 -->
+	<sql alias='repairGas_Other' path='kashi/repairGas_Other.sql'/>
+	
 	<!-- 补卡查询 -->
 	<sql alias='repairCard' path='kashi/repairCard.sql'/>
+	
+	<!-- 补卡处理卡次数统计 -->
+	<sql alias='repairCard_Dispose' path='kashi/repairCard_Dispose.sql'/>
 	
 	<!-- 换表记录查询 -->
 	<sql alias='changeForm' path='kashi/changeForm.sql'/>
@@ -94,6 +100,9 @@
 	
 	<!-- 查询缴费记录详细-->
 	<sql alias='chargeRecord' path='tonghua/chargeRecord.sql'/>
+	
+	<!-- 查询安检记录详情-->
+	<sql alias='recordDetails' path='security/recordDetails.sql'/>
 	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
