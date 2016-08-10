@@ -77,6 +77,9 @@
 	<!-- 售气查询 -->
 	<sql alias='sellGas' path='kashi/sellGas.sql'/>
 	
+	<!-- 查询超用记录-->
+	<sql alias='overRecord' path='kashi/overRecord.sql'/>
+	
 	<!-- 补气查询 -->
 	<sql alias='repairGas' path='kashi/repairGas.sql'/>
 	
