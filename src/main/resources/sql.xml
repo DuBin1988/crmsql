@@ -107,6 +107,9 @@
 	<!-- 查询安检记录详情-->
 	<sql alias='recordDetails' path='security/recordDetails.sql'/>
 	
+	<!-- 查询安检计划详情-->
+	<sql alias='securityPlan' path='security/securityPlan.sql'/>
+	
 	<!-- 测试用例 -->
 	<sql alias='text' path='text.sql'/>
 	

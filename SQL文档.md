@@ -38,6 +38,7 @@
 		  - 补卡处理卡次数统计:repairCard_Dispose.sql
 	 * 安检查询
 		  - 查询安检记录详情:recordDetails.sql
+		  - 查询某个时间段的安检计划:securityPlan.sql
 		    	         
 3. 关联查询
 	 * 关联查询
