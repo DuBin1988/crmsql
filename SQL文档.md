@@ -30,6 +30,7 @@
 	 * 抄表查询
 		  - 抄表信息汇总:infoHandPlan.sql
 		  - 小区抄表统计总和:handSum.sql
+		  - 抄表汇总:handCount.sql
 	 * 补卡查询
 		  - 补卡查询:repairCard.sql
 		  - 其他补气查询:repairGas_Other.sql	  		  	  
